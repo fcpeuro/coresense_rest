@@ -1,6 +1,9 @@
 # coresense_rest
   
 This is a fun little gem that tries to provide a simple object oriented access to the coresense api.
+
+Implementation Caveat: This libarary does not offer support for multiple concurrent connections to different 
+coresense servers, expecting only 1 base endpoint to be defined.
 ##Examples:
 
 ### Initialize a Client Object

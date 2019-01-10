@@ -4,101 +4,124 @@ module CoresenseRest
   describe 'client' do
 
     before(:all) do
-      @host = 'Coresense Url'
-      @user_id = 'USER ID'
-      @key = 'KEY'
-      @client = Client.new(@host, @user_id, @key)
+      CoresenseRest::Client.host = '<CORESENSE URL>'
+      CoresenseRest::Client.user_id = '<USER ID>'
+      CoresenseRest::Client.key = '<KEY>'
     end
 
     context 'Request' do
-      let(:request){Request.new("#{@host}/resource", {})}
+      let(:request){RequestRead.new("#{CoresenseRest::Client.host}/resource", {}, Resource)}
 
       it "Creates requests correctly" do
-        expect(request.current_path).to   eq("#{@host}/resource")
-        expect(request.order('field').current_path).to   eq("#{@host}/resource?&order=field")
-        expect(request.where("field1=15").current_path).to   eq("#{@host}/resource?&q[]=field1=15")
-        expect(request.where('field1=15 AND field2=5').current_path).to   eq("#{@host}/resource?&q[]=field1=15&q[]=field2=5")
-        expect(request.where({'field1'=>15, 'field2'=>5}).current_path).to   eq("#{@host}/resource?&q[]=field1=15&q[]=field2=5")
+        expect(request.current_path).to   eq("#{CoresenseRest::Client.host}/resource")
+        expect(request.order('field').current_path).to   eq("#{CoresenseRest::Client.host}/resource?&order=field")
+        expect(request.where("field1=15").current_path).to   eq("#{CoresenseRest::Client.host}/resource?&q[]=field1=15")
+        expect(request.where('field1=15 AND field2=5').current_path).to   eq("#{CoresenseRest::Client.host}/resource?&q[]=field1=15&q[]=field2=5")
+        expect(request.where({'field1'=>15, 'field2'=>5}).current_path).to   eq("#{CoresenseRest::Client.host}/resource?&q[]=field1=15&q[]=field2=5")
       end
     end
 
     context 'Affiliate' do
-      it 'Can find an affiliate' do
-        expect(@client.affiliates.find(1)).to eq(1)#not_to be_nil
+      it 'Hits the Correct Endpoint' do
+        expect(Affiliate.full_path).to   eq("#{CoresenseRest::Client.host}/affiliate")
+      end
+
+      it "Can find an affiliate" do
+        affiliate = Affiliate.find(1)
+        expect(affiliate).to be_an_instance_of(Affiliate)
+        expect(affiliate.id).to eq(1)
       end
 
       it 'Can list all affiliates' do
-        expect(@client.affiliates.select).be eq(1)#not_to be_empty
+        expect(Affiliate.select).to be_an_instance_of(Array)
+        expect(Affiliate.select[0]).to be_an_instance_of(Affiliate)
+        expect(Affiliate.select[0].id).to eq(1)
       end
 
       it 'Can search affiliates' do
-        expect(@client.affiliates.where({'id' => 1}).select).be eq(1)
-        expect(@client.affiliates.where({:id => 1}).select).be eq(1)
-        expect(@client.affiliates.where('id= 1 ').select).be eq(1)
+        expect(Affiliate.where({'id' => 1}).select[0].id).to eq(1)
+        expect(Affiliate.where({:id => 1}).select[0].id).to eq(1)
+        expect(Affiliate.where('id= 1 ').select[0].id).to eq(1)
       end
     end
 
     context 'Barcode' do
-      it 'Can find an barcode' do
-        expect(@client.barcodes.find(1)).to eq(1)#not_to be_nil
+      it 'Hits the Correct Endpoint' do
+        expect(Affiliate.full_path).to   eq("#{CoresenseRest::Client.host}/barcode")
+      end
+
+      it 'Can find a barcode' do
+        expect(Barcode.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all barcodes' do
-        expect(@client.barcodes.select).be eq(1)#not_to be_empty
+        expect(Barcode.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search barcodes' do
-        expect(@client.barcodes.where({'id' => 1}).select).be eq(1)
-        expect(@client.barcodes.where({:id => 1}).select).be eq(1)
-        expect(@client.barcodes.where('id= 1 ').select).be eq(1)
+        expect(Barcode.where({'id' => 1}).select).to eq(1)
+        expect(Barcode.where({:id => 1}).select).to eq(1)
+        expect(Barcode.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'BarcodeSKU' do
+      it 'Hits the Correct Endpoint' do
+        expect(BarcodeSKU.full_path).to   eq("#{CoresenseRest::Client.host}/barcodesku")
+      end
+
       it 'Can find an barcode_sku' do
-        expect(@client.barcode_skus.find(1)).to eq(1)#not_to be_nil
+        expect(BarcodeSKU.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all barcode_skus' do
-        expect(@client.barcode_skus.select).be eq(1)#not_to be_empty
+        expect(BarcodeSKU.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search barcode_skus' do
-        expect(@client.barcode_skus.where({'id' => 1}).select).be eq(1)
-        expect(@client.barcode_skus.where({:id => 1}).select).be eq(1)
-        expect(@client.barcode_skus.where('id= 1 ').select).be eq(1)
+        expect(BarcodeSKU.where({'id' => 1}).select).to eq(1)
+        expect(BarcodeSKU.where({:id => 1}).select).to eq(1)
+        expect(BarcodeSKU.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Brand' do
+      it 'Hits the Correct Endpoint' do
+        expect(Brand.full_path).to   eq("#{CoresenseRest::Client.host}/brand")
+      end
+
       it 'Can find an brand' do
-        expect(@client.brands.find(1)).to eq(1)#not_to be_nil
+        expect(Brand.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all brands' do
-        expect(@client.brands.select).be eq(1)#not_to be_empty
+        expect(Brand.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search brands' do
-        expect(@client.brands.where({'id' => 1}).select).be eq(1)
-        expect(@client.brands.where({:id => 1}).select).be eq(1)
-        expect(@client.brands.where('id= 1 ').select).be eq(1)
+        expect(Brand.where({'id' => 1}).select).to eq(1)
+        expect(Brand.where({:id => 1}).select).to eq(1)
+        expect(Brand.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Category' do
+      it 'Hits the Correct Endpoint' do
+        expect(Category.full_path).to   eq("#{CoresenseRest::Client.host}/category")
+      end
+
       it 'Can find an category' do
-        expect(@client.categories.find(1)).to eq(1)#not_to be_nil
+        expect(Category.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all categories' do
-        expect(@client.categories.select).be eq(1)#not_to be_empty
+        expect(Category.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search categories' do
-        expect(@client.categories.where({'id' => 1}).select).be eq(1)
-        expect(@client.categories.where({:id => 1}).select).be eq(1)
-        expect(@client.categories.where('id= 1 ').select).be eq(1)
+        expect(Category.where({'id' => 1}).select).to eq(1)
+        expect(Category.where({:id => 1}).select).to eq(1)
+        expect(Category.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Can create a new categoy' do
@@ -127,18 +150,22 @@ module CoresenseRest
     end
 
     context 'Channel' do
+      it 'Hits the Correct Endpoint' do
+        expect(Channel.full_path).to   eq("#{CoresenseRest::Client.host}/channel")
+      end
+
       it 'Can find an channel' do
-        expect(@client.channels.find(1)).to eq(1)#not_to be_nil
+        expect(Channel.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all channels' do
-        expect(@client.channels.select).be eq(1)#not_to be_empty
+        expect(Channel.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search channels' do
-        expect(@client.channels.where({'id' => 1}).select).be eq(1)
-        expect(@client.channels.where({:id => 1}).select).be eq(1)
-        expect(@client.channels.where('id= 1 ').select).be eq(1)
+        expect(Channel.where({'id' => 1}).select).to eq(1)
+        expect(Channel.where({:id => 1}).select).to eq(1)
+        expect(Channel.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Retrieve all products in a channel' do
@@ -151,18 +178,22 @@ module CoresenseRest
     end
 
     context 'Contact' do
+      it 'Hits the Correct Endpoint' do
+        expect(Contact.full_path).to   eq("#{CoresenseRest::Client.host}/contact")
+      end
+
       it 'Can find an contact' do
-        expect(@client.contacts.find(1)).to eq(1)#not_to be_nil
+        expect(Contact.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all contacts' do
-        expect(@client.contacts.select).be eq(1)#not_to be_empty
+        expect(Contact.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search contacts' do
-        expect(@client.contacts.where({'id' => 1}).select).be eq(1)
-        expect(@client.contacts.where({:id => 1}).select).be eq(1)
-        expect(@client.contacts.where('id= 1 ').select).be eq(1)
+        expect(Contact.where({'id' => 1}).select).to eq(1)
+        expect(Contact.where({:id => 1}).select).to eq(1)
+        expect(Contact.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Can create a new contact' do
@@ -171,34 +202,42 @@ module CoresenseRest
     end
 
     context 'Country' do
+      it 'Hits the Correct Endpoint' do
+        expect(Country.full_path).to   eq("#{CoresenseRest::Client.host}/country")
+      end
+
       it 'Can find an country' do
-        expect(@client.countries.find(1)).to eq(1)#not_to be_nil
+        expect(Country.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all countries' do
-        expect(@client.countries.select).be eq(1)#not_to be_empty
+        expect(Country.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search countries' do
-        expect(@client.countries.where({'id' => 1}).select).be eq(1)
-        expect(@client.countries.where({:id => 1}).select).be eq(1)
-        expect(@client.countries.where('id= 1 ').select).be eq(1)
+        expect(Country.where({'id' => 1}).select).to eq(1)
+        expect(Country.where({:id => 1}).select).to eq(1)
+        expect(Country.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Customer' do
+      it 'Hits the Correct Endpoint' do
+        expect(Customer.full_path).to   eq("#{CoresenseRest::Client.host}/customer")
+      end
+
       it 'Can find an customer' do
-        expect(@client.customers.find(1)).to eq(1)#not_to be_nil
+        expect(Customer.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all customers' do
-        expect(@client.customers.select).be eq(1)#not_to be_empty
+        expect(Customer.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search customers' do
-        expect(@client.customers.where({'id' => 1}).select).be eq(1)
-        expect(@client.customers.where({:id => 1}).select).be eq(1)
-        expect(@client.customers.where('id= 1 ').select).be eq(1)
+        expect(Customer.where({'id' => 1}).select).to eq(1)
+        expect(Customer.where({:id => 1}).select).to eq(1)
+        expect(Customer.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Can create a customer' do
@@ -211,11 +250,15 @@ module CoresenseRest
     end
 
     context 'Help' do
+      it 'Hits the Correct Endpoint' do
+        expect(Affiliate.full_path).to   eq("#{CoresenseRest::Client.host}/help")
+      end
+
       it 'Retrieves all error codes.' do
         fail
       end
 
-      it 'Pings the API to verify status. Can be used to check authentication credentials.' do
+      it 'Pings the API to verify status. Can to used to check authentication credentials.' do
         fail
       end
 
@@ -225,82 +268,102 @@ module CoresenseRest
     end
 
     context 'Inventory' do
+      it 'Hits the Correct Endpoint' do
+        expect(Inventory.full_path).to   eq("#{CoresenseRest::Client.host}/inventory")
+      end
+
       it 'Can find an inventory_unit' do
-        expect(@client.inventory_units.find(1)).to eq(1)#not_to be_nil
+        expect(Inventory.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all inventory_units' do
-        expect(@client.inventory_units.select).be eq(1)#not_to be_empty
+        expect(Inventory.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search inventory_units' do
-        expect(@client.inventory_units.where({'id' => 1}).select).be eq(1)
-        expect(@client.inventory_units.where({:id => 1}).select).be eq(1)
-        expect(@client.inventory_units.where('id= 1 ').select).be eq(1)
+        expect(Inventory.where({'id' => 1}).select).to eq(1)
+        expect(Inventory.where({:id => 1}).select).to eq(1)
+        expect(Inventory.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Location' do
+      it 'Hits the Correct Endpoint' do
+        expect(Location.full_path).to   eq("#{CoresenseRest::Client.host}/location")
+      end
+
       it 'Can find an location' do
-        expect(@client.inventory_units.find(1)).to eq(1)#not_to be_nil
+        expect(Location.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all inventory_units' do
-        expect(@client.inventory_units.select).be eq(1)#not_to be_empty
+        expect(Location.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search inventory_units' do
-        expect(@client.inventory_units.where({'id' => 1}).select).be eq(1)
-        expect(@client.inventory_units.where({:id => 1}).select).be eq(1)
-        expect(@client.inventory_units.where('id= 1 ').select).be eq(1)
+        expect(Location.where({'id' => 1}).select).to eq(1)
+        expect(Location.where({:id => 1}).select).to eq(1)
+        expect(Location.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'LocationType' do
+      it 'Hits the Correct Endpoint' do
+        expect(LocationType.full_path).to   eq("#{CoresenseRest::Client.host}/locationtype")
+      end
+
       it 'Can find an location_type' do
-        expect(@client.location_types.find(1)).to eq(1)#not_to be_nil
+        expect(LocationType.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all location_types' do
-        expect(@client.location_types.select).be eq(1)#not_to be_empty
+        expect(LocationType.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search location_types' do
-        expect(@client.location_types.where({'id' => 1}).select).be eq(1)
-        expect(@client.location_types.where({:id => 1}).select).be eq(1)
-        expect(@client.location_types.where('id= 1 ').select).be eq(1)
+        expect(LocationType.where({'id' => 1}).select).to eq(1)
+        expect(LocationType.where({:id => 1}).select).to eq(1)
+        expect(LocationType.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Manufacturer' do
+      it 'Hits the Correct Endpoint' do
+        expect(Manufacturer.full_path).to   eq("#{CoresenseRest::Client.host}/manufacturer")
+      end
+
       it 'Can find an manufacturer' do
-        expect(@client.manufacturers.find(1)).to eq(1)#not_to be_nil
+        expect(Manufacturer.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all manufacturers' do
-        expect(@client.manufacturers.select).be eq(1)#not_to be_empty
+        expect(Manufacturer.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search manufacturers' do
-        expect(@client.manufacturers.where({'id' => 1}).select).be eq(1)
-        expect(@client.manufacturers.where({:id => 1}).select).be eq(1)
-        expect(@client.manufacturers.where('id= 1 ').select).be eq(1)
+        expect(Manufacturer.where({'id' => 1}).select).to eq(1)
+        expect(Manufacturer.where({:id => 1}).select).to eq(1)
+        expect(Manufacturer.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Order' do
+      it 'Hits the Correct Endpoint' do
+        expect(Order.full_path).to   eq("#{CoresenseRest::Client.host}/order")
+      end
+
       it 'Can find an order' do
-        expect(@client.orders.find(1)).to eq(1)#not_to be_nil
+        expect(Order.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all orders' do
-        expect(@client.orders.select).be eq(1)#not_to be_empty
+        expect(Order.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search orders' do
-        expect(@client.orders.where({'id' => 1}).select).be eq(1)
-        expect(@client.orders.where({:id => 1}).select).be eq(1)
-        expect(@client.orders.where('id= 1 ').select).be eq(1)
+        expect(Order.where({'id' => 1}).select).to eq(1)
+        expect(Order.where({:id => 1}).select).to eq(1)
+        expect(Order.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Can create a new order.' do
@@ -313,18 +376,22 @@ module CoresenseRest
     end
 
     context 'Product' do
+      it 'Hits the Correct Endpoint' do
+        expect(Product.full_path).to   eq("#{CoresenseRest::Client.host}/product")
+      end
+
       it 'Can find an product' do
-        expect(@client.products.find(1)).to eq(1)#not_to be_nil
+        expect(Product.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all products' do
-        expect(@client.products.select).be eq(1)#not_to be_empty
+        expect(Product.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search products' do
-        expect(@client.products.where({'id' => 1}).select).be eq(1)
-        expect(@client.products.where({:id => 1}).select).be eq(1)
-        expect(@client.products.where('id= 1 ').select).be eq(1)
+        expect(Product.where({'id' => 1}).select).to eq(1)
+        expect(Product.where({:id => 1}).select).to eq(1)
+        expect(Product.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Retrieves all product locations.' do
@@ -343,34 +410,42 @@ module CoresenseRest
     end
 
     context 'ReceivableType' do
+      it 'Hits the Correct Endpoint' do
+        expect(ReceivableType.full_path).to   eq("#{CoresenseRest::Client.host}/recievabletype")
+      end
+
       it 'Can find an receivable_type' do
-        expect(@client.receivable_types.find(1)).to eq(1)#not_to be_nil
+        expect(ReceivableType.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all receivable_types' do
-        expect(@client.receivable_types.select).be eq(1)#not_to be_empty
+        expect(ReceivableType.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search receivable_types' do
-        expect(@client.receivable_types.where({'id' => 1}).select).be eq(1)
-        expect(@client.receivable_types.where({:id => 1}).select).be eq(1)
-        expect(@client.receivable_types.where('id= 1 ').select).be eq(1)
+        expect(ReceivableType.where({'id' => 1}).select).to eq(1)
+        expect(ReceivableType.where({:id => 1}).select).to eq(1)
+        expect(ReceivableType.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Receiver' do
+      it 'Hits the Correct Endpoint' do
+        expect(Receiver.full_path).to   eq("#{CoresenseRest::Client.host}/reciever")
+      end
+
       it 'Can find an receiver' do
-        expect(@client.receivers.find(1)).to eq(1)#not_to be_nil
+        expect(Receiver.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all receivers' do
-        expect(@client.receivers.select).be eq(1)#not_to be_empty
+        expect(Receiver.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search receivers' do
-        expect(@client.receivers.where({'id' => 1}).select).be eq(1)
-        expect(@client.receivers.where({:id => 1}).select).be eq(1)
-        expect(@client.receivers.where('id= 1 ').select).be eq(1)
+        expect(Receiver.where({'id' => 1}).select).to eq(1)
+        expect(Receiver.where({:id => 1}).select).to eq(1)
+        expect(Receiver.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Create a new receiver.' do
@@ -383,18 +458,22 @@ module CoresenseRest
     end
 
     context 'Shipment' do
+      it 'Hits the Correct Endpoint' do
+        expect(Shipment.full_path).to   eq("#{CoresenseRest::Client.host}/shipment")
+      end
+
       it 'Can find an shipment' do
-        expect(@client.shipments.find(1)).to eq(1)#not_to be_nil
+        expect(Shipment.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all shipments' do
-        expect(@client.shipments.select).be eq(1)#not_to be_empty
+        expect(Shipment.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search shipments' do
-        expect(@client.shipments.where({'id' => 1}).select).be eq(1)
-        expect(@client.shipments.where({:id => 1}).select).be eq(1)
-        expect(@client.shipments.where('id= 1 ').select).be eq(1)
+        expect(Shipment.where({'id' => 1}).select).to eq(1)
+        expect(Shipment.where({:id => 1}).select).to eq(1)
+        expect(Shipment.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Update a specific shipment.' do
@@ -407,18 +486,22 @@ module CoresenseRest
     end
 
     context 'ShipmentBox' do
+      it 'Hits the Correct Endpoint' do
+        expect(ShipmentBox.full_path).to   eq("#{CoresenseRest::Client.host}/shipmentbox")
+      end
+
       it 'Can find an shipment_box' do
-        expect(@client.shipment_boxes.find(1)).to eq(1)#not_to be_nil
+        expect(ShipmentBox.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all shipment_boxes' do
-        expect(@client.shipment_boxes.select).be eq(1)#not_to be_empty
+        expect(ShipmentBox.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search shipment_boxes' do
-        expect(@client.shipment_boxes.where({'id' => 1}).select).be eq(1)
-        expect(@client.shipment_boxes.where({:id => 1}).select).be eq(1)
-        expect(@client.shipment_boxes.where('id= 1 ').select).be eq(1)
+        expect(ShipmentBox.where({'id' => 1}).select).to eq(1)
+        expect(ShipmentBox.where({:id => 1}).select).to eq(1)
+        expect(ShipmentBox.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Retrieves all inventory for a shipment box.' do
@@ -427,34 +510,42 @@ module CoresenseRest
     end
 
     context 'ShippingMethod' do
+      it 'Hits the Correct Endpoint' do
+        expect(ShippingMethod.full_path).to   eq("#{CoresenseRest::Client.host}/shippingmethod")
+      end
+
       it 'Can find an shipping_method' do
-        expect(@client.shipping_methods.find(1)).to eq(1)#not_to be_nil
+        expect(ShippingMethod.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all shipping_methods' do
-        expect(@client.shipping_methods.select).be eq(1)#not_to be_empty
+        expect(ShippingMethod.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search shipping_methods' do
-        expect(@client.shipping_methods.where({'id' => 1}).select).be eq(1)
-        expect(@client.shipping_methods.where({:id => 1}).select).be eq(1)
-        expect(@client.shipping_methods.where('id= 1 ').select).be eq(1)
+        expect(ShippingMethod.where({'id' => 1}).select).to eq(1)
+        expect(ShippingMethod.where({:id => 1}).select).to eq(1)
+        expect(ShippingMethod.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'SKU' do
+      it 'Hits the Correct Endpoint' do
+        expect(SKU.full_path).to   eq("#{CoresenseRest::Client.host}/sku")
+      end
+
       it 'Can find an sku' do
-        expect(@client.skus.find(1)).to eq(1)#not_to be_nil
+        expect(SKU.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all skus' do
-        expect(@client.skus.select).be eq(1)#not_to be_empty
+        expect(SKU.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search skus' do
-        expect(@client.skus.where({'id' => 1}).select).be eq(1)
-        expect(@client.skus.where({:id => 1}).select).be eq(1)
-        expect(@client.skus.where('id= 1 ').select).be eq(1)
+        expect(SKU.where({'id' => 1}).select).to eq(1)
+        expect(SKU.where({:id => 1}).select).to eq(1)
+        expect(SKU.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Retrieve all inventory for a SKU.' do
@@ -463,62 +554,78 @@ module CoresenseRest
     end
 
     context 'SKU Inventory' do
+      it 'Hits the Correct Endpoint' do
+        expect(SkuInventory.full_path).to   eq("#{CoresenseRest::Client.host}/skuinventory")
+      end
+
       it 'Can find an sku_inventory' do
-        expect(@client.sku_inventory.find(1)).to eq(1)#not_to be_nil
+        expect(SkuInventory.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all sku_inventory' do
-        expect(@client.sku_inventory.select).be eq(1)#not_to be_empty
+        expect(SkuInventory.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search sku_inventory' do
-        expect(@client.sku_inventory.where({'id' => 1}).select).be eq(1)
-        expect(@client.sku_inventory.where({:id => 1}).select).be eq(1)
-        expect(@client.sku_inventory.where('id= 1 ').select).be eq(1)
+        expect(SkuInventory.where({'id' => 1}).select).to eq(1)
+        expect(SkuInventory.where({:id => 1}).select).to eq(1)
+        expect(SkuInventory.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'SKU Vendor' do
+      it 'Hits the Correct Endpoint' do
+        expect(SkuVendor.full_path).to   eq("#{CoresenseRest::Client.host}/skuvendor")
+      end
+
       it 'Can list all sku_vendors' do
-        expect(@client.sku_vendors.select).be eq(1)#not_to be_empty
+        expect(SkuVendor.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search sku_vendors' do
-        expect(@client.sku_vendors.where({'id' => 1}).select).be eq(1)
-        expect(@client.sku_vendors.where({:id => 1}).select).be eq(1)
-        expect(@client.sku_vendors.where('id= 1 ').select).be eq(1)
+        expect(SkuVendor.where({'id' => 1}).select).to eq(1)
+        expect(SkuVendor.where({:id => 1}).select).to eq(1)
+        expect(SkuVendor.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'State' do
+      it 'Hits the Correct Endpoint' do
+        expect(State.full_path).to   eq("#{CoresenseRest::Client.host}/state")
+      end
+
       it 'Can find an state' do
-        expect(@client.states.find(1)).to eq(1)#not_to be_nil
+        expect(State.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all states' do
-        expect(@client.states.select).be eq(1)#not_to be_empty
+        expect(State.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search states' do
-        expect(@client.states.where({'id' => 1}).select).be eq(1)
-        expect(@client.states.where({:id => 1}).select).be eq(1)
-        expect(@client.states.where('id= 1 ').select).be eq(1)
+        expect(State.where({'id' => 1}).select).to eq(1)
+        expect(State.where({:id => 1}).select).to eq(1)
+        expect(State.where('id= 1 ').select).to eq(1)
       end
     end
 
     context 'Transfer' do
+      it 'Hits the Correct Endpoint' do
+        expect(Transfer.full_path).to   eq("#{CoresenseRest::Client.host}/transfer")
+      end
+
       it 'Can find an transfer' do
-        expect(@client.transfers.find(1)).to eq(1)#not_to be_nil
+        expect(Transfer.find(1)).to eq(1)#not_to be_nil
       end
 
       it 'Can list all transfers' do
-        expect(@client.transfers.select).be eq(1)#not_to be_empty
+        expect(Transfer.select).to eq(1)#not_to be_empty
       end
 
       it 'Can search transfers' do
-        expect(@client.transfers.where({'id' => 1}).select).be eq(1)
-        expect(@client.transfers.where({:id => 1}).select).be eq(1)
-        expect(@client.transfers.where('id= 1 ').select).be eq(1)
+        expect(Transfer.where({'id' => 1}).select).to eq(1)
+        expect(Transfer.where({:id => 1}).select).to eq(1)
+        expect(Transfer.where('id= 1 ').select).to eq(1)
       end
 
       xit 'Create a new transfer.' do
@@ -545,7 +652,11 @@ module CoresenseRest
     end
 
     context 'Warehouse' do
-      it 'needs to be scaffolded and implemented' do
+      it 'Hits the Correct Endpoint' do
+        expect(Warehouse.full_path).to   eq("#{CoresenseRest::Client.host}/warehouse")
+      end
+
+      it 'needs to to scaffolded and implemented' do
         fail
       end
     end

@@ -5,7 +5,7 @@ require "base64"
 require 'jwt'
 require 'httparty'
 #Base Class
-require_relative 'resources/Request'
+require_relative 'resources/Request_Read'
 #Functional Modules
 require_relative 'resources/Findable'
 require_relative 'resources/Searchable'
@@ -16,57 +16,27 @@ require_relative 'resources/Resources'
 module CoresenseRest
   class Client
 
-    def initialize(host, user_id, key)
-      @host = host
-      @token = get_token user_id, key
-      @affiliate = Affiliate.new(@host, @token)
-      @barcode = Barcode.new(@host, @token)
-      @barcode_sku = BarcodeSKU.new(@host, @token)
-      @brand = Brand.new(@host, @token)
-      @category = Category.new(@host, @token)
-      @channel = Channel.new(@host, @token)
-      @contact = Contact.new(@host, @token)
-      @country = Country.new(@host, @token)
-      @customer = Customer.new(@host, @token)
-      @help = Help.new(@host, @token)
-      @inventory = Inventory.new(@host, @token)
-      @location = Location.new(@host, @token)
-      @location_type = LocationType.new(@host, @token)
-      @manufacturer = Manufacturer.new(@host, @token)
-      @order = Order.new(@host, @token)
-      @product = Product.new(@host, @token)
-      @product_price = ProductPrice.new(@host, @token)
-      @receivable_type = ReceivableType.new(@host, @token)
-      @receiver = Receiver.new(@host, @token)
-      @shipment = Shipment.new(@host, @token)
-      @shipment_box = ShipmentBox.new(@host, @token)
-      @shipping_method = ShippingMethod.new(@host, @token)
-      @sku = SKU.new(@host, @token)
-      @sku_inventory = SkuInventorySKU.new(@host, @token)
-      @sku_vendor = SkuVendor.new(@host, @token)
-      @state = State.new(@host, @token)
-      @transfer = Transfer.new(@host, @token)
-      @warehouse = Warehouse.new(@host, @token)
-    end
+    class << self; attr_accessor :host, :user_id, :key end
 
+=begin
     def affiliates
-      @affiliate
+      Affiliate
     end
 
     def barcodes
-      @barcode
+      Barcode
     end
 
     def barcode_skus
-      @barcode_sku
+      BarcodeSKU
     end
 
     def brands
-      @brand
+      Brand
     end
 
     def catergories
-      @category
+      Category
     end
 
     def channels
@@ -156,15 +126,14 @@ module CoresenseRest
     def warehouses
       @warehouse
     end
+=end
 
-    private
-
-    def get_token(user_id, key)
+    def self.get_token
       header = {
           'alg' => 'HS256'
       }
       payload = {
-          'sub' => user_id,
+          'sub' => self.user_id,
           'exp' => Time.now.to_i + 3600,
       }
 
@@ -172,7 +141,7 @@ module CoresenseRest
       t2 = Base64.urlsafe_encode64(payload.to_json.encode("UTF-8"))
 
       signeddata = t1 + '.' + t2
-      signature = OpenSSL::HMAC.digest('SHA256', key, signeddata)
+      signature = OpenSSL::HMAC.digest('SHA256', self.key, signeddata)
       t3 = Base64.urlsafe_encode64(signature)
 
       token = signeddata + '.' + t3

@@ -1,76 +1,80 @@
 module CoresenseRest
 
   class Affiliate < Resource
-    include Searchable
-    include Findable
+    extend Findable
+    extend Searchable
+    attr_accessor :active,:address1,:address2,:city,:commission_rate_id,:company_name,
+                  :contact_first_name,:contact_last_name,:country_id,:email,:fax,:id,
+                  :password,:payment_notification_template_id,:phone,:sale_notification,
+                  :sale_notification_template_id, :state_id, :url,:username, :zip
   end
 
   class Barcode < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class BarcodeSKU < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Brand < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Category < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Channel < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Contact < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Country < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Customer < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Help < Resource
   end
 
   class Inventory < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Location < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class LocationType < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Manufacturer < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Order < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Product < Resource
@@ -79,60 +83,60 @@ module CoresenseRest
   end
 
   class ProductPrice < Resource
-    include Findable
+    extend Findable
   end
 
   class ReceivableType < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Receiver < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Shipment < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class ShipmentBox < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class ShippingMethod < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class SKU < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class SkuInventory < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class SkuVendor < Resource
-    include Searchable
-    #include Findable #Since the id driven get returns a list and not the id of the resource, this does not have parity with AR's find function, opting to not implement
+    extend Searchable
+    #extend Findable #Since the id driven get returns a list and not the id of the resource, this does not have parity with AR's find function, opting to not implement
   end
 
   class State < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Transfer < Resource
-    include Searchable
-    include Findable
+    extend Searchable
+    extend Findable
   end
 
   class Warehouse < Resource
-    include Findable
+    extend Findable
   end
 end

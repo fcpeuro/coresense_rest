@@ -1,39 +1,41 @@
+require 'byebug'
 module CoresenseRest
-  class Request
+  class RequestRead
     include HTTParty
 
-    def initialize(root, headers, query = '')
+    def initialize(root, headers, request_class, query = '')
       @headers = headers
       @root = root
       @query = query
+      @request_class = request_class
     end
 
     def select
       response = HTTParty.get(current_path, :headers => @headers, format: :json)
-      raise response.parsed_response.to_s unless response.code == 200
-      JSON.parse(response.parsed_response)
+      raise response.body unless response.code == 200
+      @request_class.parse_self response.body
     end
 
     def where(clause)
       #No support for OR in chain
       query_string = parse_query(clause)
-      self.class.new(@root, @headers, @query + "&#{query_string}")
+      self.class.new(@root, @headers, @request_class, "#{@query}&#{query_string}")
     end
 
     def order(field)
-      self.class.new(@root, @headers, @query + "&order=#{field}")
+      self.class.new(@root, @headers, @request_class, "#{@query}&order=#{field}")
     end
 
     def page_size(size)
-      self.class.new(@root, @headers, @query + "&page_size=#{size}")
+      self.class.new(@root, @headers, @request_class, "#{@query}&page_size=#{size}")
     end
 
     def page(pg_num)
-      self.class.new(@root, @headers, @query + "&page=#{pg_num}")
+      self.class.new(@root, @headers, @request_class, "#{@query}&page=#{pg_num}")
     end
 
     def limit(max_result_count)
-      self.class.new(@root, @headers, @query + "&max=#{max_result_count}")
+      self.class.new(@root, @headers, @request_class, "#{@query}&max=#{max_result_count}")
     end
 
     def current_path

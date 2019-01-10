@@ -2,7 +2,7 @@ module CoresenseRest
   module Findable
 
     def find id
-      Request.new(full_path + '/' + id.to_s, @headers).select
+      RequestRead.new(full_path + '/' + id.to_s, headers, self).select
     end
 
   end
