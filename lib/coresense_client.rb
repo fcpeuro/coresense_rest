@@ -4,6 +4,7 @@ require 'json'
 require "base64"
 require 'jwt'
 require 'httparty'
+require 'ostruct'
 #Base Class
 require_relative 'resources/Request_Read'
 #Functional Modules
