@@ -5,7 +5,7 @@ class String
 end
 
 module CoresenseRest
-  class Resource # < OpenStruct
+  class Resource < OpenStruct
     class << self; attr_accessor :endpoint_override end
 
     def self.endpoint

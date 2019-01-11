@@ -227,17 +227,17 @@ module CoresenseRest
       end
 
       it 'Can find an customer' do
-        expect(Customer.find(1).client_id).to eq(1)#not_to be_nil
+        expect(Customer.find(1).id).to eq(1.to_s)
       end
 
       it 'Can list all customers' do
-        expect(Customer.select[0].client_id).to eq(1)#not_to be_empty
+        expect(Customer.select[0].id).to eq(1.to_s)
       end
 
       it 'Can search customers' do
-        expect(Customer.where({'client_id' => 1}).select[0].client_id).to eq(1)
-        expect(Customer.where({:client_id => 1}).select[0].client_id).to eq(1)
-        expect(Customer.where('client_id= 1 ').select[0].client_id).to eq(1)
+        expect(Customer.where({'client_id' => 1}).select[0].id).to eq(1.to_s)
+        expect(Customer.where({:client_id => 1}).select[0].id).to eq(1.to_s)
+        expect(Customer.where('client_id= 1 ').select[0].id).to eq(1.to_s)
       end
 
       xit 'Can create a customer' do
@@ -353,17 +353,17 @@ module CoresenseRest
       end
 
       it 'Can find an order' do
-        expect(Order.find(1000).order_num).to eq(1000)#not_to be_nil
+        expect(Order.find(1000).id).to eq(1000.to_s)
       end
 
       it 'Can list all orders' do
-        expect(Order.select[0].order_num).to eq(1000)#not_to be_empty
+        expect(Order.select[0].id).to eq(1000.to_s)
       end
 
       it 'Can search orders' do
-        expect(Order.where({'order_num' => 1000}).select[0].order_num).to eq(1000)
-        expect(Order.where({:order_num => 1000}).select[0].order_num).to eq(1000)
-        expect(Order.where('order_num= 1000 ').select[0].order_num).to eq(1000)
+        expect(Order.where({'order_num' => 1000}).select[0].id).to eq(1000.to_s)
+        expect(Order.where({:order_num => 1000}).select[0].id).to eq(1000.to_s)
+        expect(Order.where('order_num= 1000 ').select[0].id).to eq(1000.to_s)
       end
 
       xit 'Can create a new order.' do

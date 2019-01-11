@@ -66,7 +66,7 @@ module CoresenseRest
   class Customer < Resource
     extend Searchable
     extend Findable
-    attr_accessor :affiliate_id, :client_id, :currency_rate, :custom_account_manager,
+    attr_accessor :id, :affiliate_id, :client_id, :currency_rate, :custom_account_manager,
                   :custom_attend_a_pop_trunk_show, :custom_box_number, :custom_customer_type,
                   :custom_default_payment_type, :custom_guest_shopper, :custom_host_a_pop_trunk_show,
                   :custom_school_address2, :custom_send_news_and_promotions, :custom_wishlist_temp_order_num,
@@ -112,7 +112,7 @@ module CoresenseRest
   class Order < Resource
     extend Searchable
     extend Findable
-    attr_accessor :affiliate_id, :amazon_customer_id, :amazon_order_id, :amt_paid,
+    attr_accessor :id, :affiliate_id, :amazon_customer_id, :amazon_order_id, :amt_paid,
                   :billing_contact_id, :cancelled, :checked_out, :client_id, :closed,
                   :club_cc_reauthorization_sent, :cogs, :comments, :compliant,
                   :custom_fraudulent, :due_date, :google_financial_status,
