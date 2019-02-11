@@ -8,20 +8,19 @@ coresense servers, expecting only 1 base endpoint to be defined.
 
 ### Initialize a Client Object
 ```ruby
-@host = 'Coresense Url'  
-@user_id = 'USER ID'    
-@key = 'KEY'    
-@client = Client.new(@host, @user_id, @key)
+CoresenseRest::Client.host = 'Coresense Url'  
+CoresenseRest::Client.user_id = 'USER ID'    
+CoresenseRest::Client.key = 'KEY' 
 ```
 ### Resources
 #### Affiliates
 ##### Find an Affiliate
 ```ruby
-@client.affiliates.find(1)
+CoresenseRest::Client.find(1)
 ```
 ##### Search Affiliates 
 ```ruby
-@client.affiliates.select
-@client.affiliates.where({'id' => 1}).select
-@client.affiliates.where('id= 1 ').select
+CoresenseRest::Client.select
+CoresenseRest::Client.where({'id' => 1}).select
+CoresenseRest::Client.where('id= 1 ').select
 ```

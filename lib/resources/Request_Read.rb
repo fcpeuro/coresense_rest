@@ -1,4 +1,3 @@
-require 'byebug'
 module CoresenseRest
   class RequestRead
     include HTTParty

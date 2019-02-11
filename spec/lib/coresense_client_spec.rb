@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'byebug'
 
 module CoresenseRest
   describe 'client' do
@@ -196,8 +197,9 @@ module CoresenseRest
         expect(Contact.where('id= 1 ').select[0].id).to eq(1)
       end
 
-      xit 'Can create a new contact' do
-        fail
+      it 'Can create a new contact' do
+        new_contact = Contact.create({:last_name => 'test', :first_name => 'testy', :customer_id => 1})
+        expect(new_contact).to be_an_instance_of(Contact)
       end
     end
 
@@ -240,12 +242,19 @@ module CoresenseRest
         expect(Customer.where('client_id= 1 ').select[0].id).to eq(1.to_s)
       end
 
-      xit 'Can create a customer' do
-        fail
+      it 'Can create a customer' do
+        new_contact = Customer.create(:default_billing_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1},
+                                      :default_shipping_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1})
+        expect(new_contact).to be_an_instance_of(Customer)
+        expect(new_contact.default_billing_contact).to be_an_instance_of(Contact)
+        expect(new_contact.default_shipping_contact).to be_an_instance_of(Contact)
       end
 
-      xit 'Can list all customer contacts' do
-        fail
+      it 'Can list all customer contacts' do
+        cust = Customer.find(1)
+        contacts = cust.contacts
+        expect(contacts).to be_an_instance_of(Array)
+        expect(contacts[0]).to be_an_instance_of(Contact)
       end
     end
 
@@ -399,12 +408,13 @@ module CoresenseRest
       end
 
       context 'ProductPrice' do
-        it 'list ProductPrices of products' do
-          fail
-        end
-
-        it 'list ProductPrices of products' do
-          fail
+        xit 'get Channel ProductPrice of product' do
+          product = Product.find(1)
+          expect(product).to be_an_instance_of(Product)
+          product_price = product.product_prices(8)
+          expect(product_price).to be_an_instance_of(ProductPrice)
+          expect(product_price.base_price).to eq(63.99)
+          fail 'ticket opened with coresense due to unexpected return value.'
         end
       end
     end

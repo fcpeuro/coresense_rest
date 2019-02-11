@@ -34,6 +34,7 @@ module CoresenseRest
   class Category < Resource
     extend Searchable
     extend Findable
+    extend Creatable
     attr_accessor :active, :category, :custom_breadcrumb_parent, :custom_header_html, :custom_header_title,
                   :custom_position, :custom_thumbnail_image, :default_product_type, :description, :homepage_active,
                   :id, :label, :meta_abstract, :meta_description, :meta_keywords, :meta_title, :page_title,
@@ -51,10 +52,10 @@ module CoresenseRest
   class Contact < Resource
     extend Searchable
     extend Findable
+    extend Creatable
     attr_accessor :active, :address_line_1, :address_line_2, :business_phone, :city, :company, :country_id,
                   :customer_id, :date_of_birth, :email, :fax, :first_name, :id, :label, :last_name, :phone,
-                  :postal_code, :requires_liftgate, :residential_address, :state_id, :verified,
-                  :custom_customer_type, :custom_customer_vehicle, :custom_ups_claim
+                  :postal_code, :requires_liftgate, :residential_address, :state_id, :verified
   end
 
   class Country < Resource
@@ -66,6 +67,7 @@ module CoresenseRest
   class Customer < Resource
     extend Searchable
     extend Findable
+    extend Creatable
     attr_accessor :id, :affiliate_id, :client_id, :currency_rate, :custom_account_manager,
                   :custom_attend_a_pop_trunk_show, :custom_box_number, :custom_customer_type,
                   :custom_default_payment_type, :custom_guest_shopper, :custom_host_a_pop_trunk_show,
@@ -75,6 +77,18 @@ module CoresenseRest
                   :employee_number, :last_key_code, :last_modified, :originating_brand_id,
                   :product_upsell_last_sent, :source_code, :stamp,
                   :custom_blocked, :custom_campaign_opt_in, :custom_channel
+
+    def default_billing_contact
+      Contact.find(default_billing_contact_id)
+    end
+
+    def default_shipping_contact
+      Contact.find(default_shipping_contact_id)
+    end
+
+    def contacts
+      RequestRead.new(Customer.full_path + '/' + id.to_s + '/contact', Contact.headers, Contact).select
+    end
   end
 
   class Help < Resource
@@ -112,6 +126,7 @@ module CoresenseRest
   class Order < Resource
     extend Searchable
     extend Findable
+    extend Creatable
     attr_accessor :id, :affiliate_id, :amazon_customer_id, :amazon_order_id, :amt_paid,
                   :billing_contact_id, :cancelled, :checked_out, :client_id, :closed,
                   :club_cc_reauthorization_sent, :cogs, :comments, :compliant,
@@ -141,10 +156,14 @@ module CoresenseRest
                   :pre_order_deadline, :pre_order_sale_date, :pricing_group_id, :product_class,
                   :production_time, :replaces, :sku_generation, :style_locator, :supports_recurring_orders,
                   :tax_code, :type, :void
+
+    def product_prices(channel_id)
+      byebug
+      RequestRead.new( "#{ProductPrice.full_path}/#{id}/channel/#{channel_id}", Product.headers, ProductPrice).select
+    end
   end
 
   class ProductPrice < Resource
-    extend Findable
     attr_accessor :base_price, :base_price_after_rebate, :minimum_advertised_price, :rebate_amount
   end
 
@@ -157,6 +176,7 @@ module CoresenseRest
   class Receiver < Resource
     extend Searchable
     extend Findable
+    extend Creatable
     attr_accessor :comment, :exported, :id, :master_receiving_document_id, :stamp, :status
   end
 
@@ -219,6 +239,7 @@ module CoresenseRest
   class Transfer < Resource
     extend Searchable
     extend Findable
+    extend Creatable
     attr_accessor :close_date, :destination_sublocation_id, :destination_warehouse_id,
                   :distribution_purchase_order_id ,:id, :issue_date, :medium, :medium_id,
                   :notes, :shipping_method_id, :source_sublocation_id, :source_warehouse_id,
