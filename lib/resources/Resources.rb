@@ -139,6 +139,9 @@ module CoresenseRest
                   :paid_stamp, :payment_invoice_number, :payment_type, :personalization,
                   :refund_total, :salesman, :shipping_cost, :shipping_tax_total, :stamp,
                   :total, :viewed
+    def shipments
+      RequestRead.new( "#{Order.full_path}/#{id}/shipment", Product.headers, ProductPrice).select
+    end
   end
 
   class Product < Resource
@@ -158,7 +161,6 @@ module CoresenseRest
                   :tax_code, :type, :void
 
     def product_prices(channel_id)
-      byebug
       RequestRead.new( "#{ProductPrice.full_path}/#{id}/channel/#{channel_id}", Product.headers, ProductPrice).select
     end
   end

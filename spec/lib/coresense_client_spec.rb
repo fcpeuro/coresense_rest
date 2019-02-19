@@ -375,12 +375,39 @@ module CoresenseRest
         expect(Order.where('order_num= 1000 ').select[0].id).to eq(1000.to_s)
       end
 
-      xit 'Can create a new order.' do
+      it 'Can create a new order.' do
+        ordering_customer = Customer.find(1)
+        ordering_contact = ordering_customer.contacts[0]
+        new_order = Order.create(:customer_id => ordering_customer.id,
+                                 :channel_id => 10,
+                                 :billing_contact_id => ordering_contact.id,
+                                 :items => [
+                                     {
+                                         :product_id => 1,
+                                         :quantity => 2,
+                                         :shipping_method_id => 1,
+                                         :shipping_contact_id => ordering_contact.id,
+                                         :unit_price => 65.99
+                                     },
+                                     {
+                                         :product_id => 534,
+                                         :quantity => 1,
+                                         :shipping_method_id => 1,
+                                         :shipping_contact_id => ordering_contact.id,
+                                         :unit_price => 35.99
+                                     }
+                                 ])
+        expect(new_order).to be_an_instance_of(Order)
+        expect(new_order.total).to eq(167.97)
+      end
+
+      it 'Can add payment to order' do
         fail
       end
 
-      xit 'Retrieve all shipments for an order.' do
-        fail
+      it 'Retrieve all shipments for an order.' do
+        order = Order.find(9000)
+        expect(order.shipments[0].id).to eq(40056)
       end
     end
 
