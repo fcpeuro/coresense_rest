@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name = 'coresense_rest'
+  spec.name = 'coresense_rest.rb'
   spec.version = '0.0.1'
   spec.authors = [
       'wildbillcat'
@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email = 'pat.mcmorran@fcpeuro.com '
   spec.summary = 'Coresense REST client library in Ruby'
   spec.description = 'A ruby implementation of the CREST client api.'
-  spec.homepage = 'https://github.com/fcpeuro/coresense_rest'
+  spec.homepage = 'https://github.com/fcpeuro/coresense_rest.rb'
   spec.license = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0")

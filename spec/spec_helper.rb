@@ -1,5 +1,5 @@
 ENV["RAILS_ENV"] ||= 'test'
-require './lib/coresense_client'
+require_relative '../lib/coresense_rest'
 require 'vcr'
 
 

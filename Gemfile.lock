@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    coresense_rest (0.0.1)
+    coresense_rest.rb (0.0.1)
       httparty
       jwt
 
@@ -56,7 +56,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   byebug
-  coresense_rest!
+  coresense_rest.rb!
   pry
   rake
   rspec

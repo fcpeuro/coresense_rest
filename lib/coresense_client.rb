@@ -18,10 +18,22 @@ require_relative 'resources/Deletable'
 require_relative 'resources/Resource'
 require_relative 'resources/Resources'
 
+
+
 module CoresenseRest
   class Client
 
-    class << self; attr_accessor :host, :user_id, :key end
+    def self.host
+      CoresenseRest::config.host
+    end
+
+    def self.user_id
+      CoresenseRest::config.user_id
+    end
+
+    def self.key
+      CoresenseRest::config.key
+    end
 
     def self.get_token
       header = {

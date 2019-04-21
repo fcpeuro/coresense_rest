@@ -5,9 +5,11 @@ module CoresenseRest
   describe 'client' do
 
     before(:all) do
-      CoresenseRest::Client.host = '<CORESENSE URL>'
-      CoresenseRest::Client.user_id = '<USER ID>'
-      CoresenseRest::Client.key = '<KEY>'
+      CoresenseRest.configure do |config|
+        config.host = '<CORESENSE URL>'
+        config.user_id = '<USER ID>'
+        config.key = '<KEY>'
+      end
     end
 
     context 'Request' do
