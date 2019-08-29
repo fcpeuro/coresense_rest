@@ -123,6 +123,43 @@ module CoresenseRest
     attr_accessor :id, :name, :stamp
   end
 
+  class OrderAdjustment < Resource
+    extend Searchable
+    extend Findable
+    extend Creatable
+    attr_accessor
+  end
+
+  class OrderFulfillment < Resource
+    #action endpoint, use to fulfill orders
+    attr_accessor
+  end
+
+  class OrderItemAdjustment < Resource
+    extend Searchable
+    extend Findable
+    extend Creatable
+    attr_accessor
+  end
+
+  class OrderItemDeal < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor
+  end
+
+  class OrderItem < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor
+  end
+
+  class OrderItemSalesTaxModifierType < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor
+  end
+
   class Order < Resource
     extend Searchable
     extend Findable
@@ -142,6 +179,53 @@ module CoresenseRest
     def shipments
       RequestRead.new( "#{Order.full_path}/#{id}/shipment", Product.headers, ProductPrice).select
     end
+  end
+
+  class OrderShippingDetail < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor :delayed_delivery_date, :estimated_delivery_date, :estimated_shipping_date, :id, :order_num,
+                  :pickup_warehouse_id, :saved_shipping_tax_rate, :shipping_contact_id, :shipping_cost,
+                  :shipping_method_id
+  end
+
+  class Payment < Resource
+    extend Searchable
+    extend Findable
+    extend Creatable
+    attr_accessor :assoc_entity, :assoc_entity_id, :payment, :receivable_type_id, :user, :client_id
+  end
+
+  class ProductConfigurationOption < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor :active, :cost, :id, :is_default, :label, :large_image, :legacy_option_id, :legacy_option_type_id,
+                  :main_image, :position, :price, :product_configuration_option_type_id, :product_id, :stamp,
+                  :swatch_image, :thumbnail_image, :weight
+  end
+
+  class ProductConfigurationOptionType < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor :id, :label, :order_data_field, :web_display_text
+  end
+
+  class ProductInventory < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor :active, :id, :inventory_type_id, :model_id, :quantity, :stamp, :type
+  end
+
+  class ProductInventoryStandard < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor :id, :option_id, :product_inventory_id, :active
+  end
+
+  class ProductInventoryUpgrade < Resource
+    extend Searchable
+    extend Findable
+    attr_accessor :id, :option_id, :product_inventory_id, :active
   end
 
   class Product < Resource

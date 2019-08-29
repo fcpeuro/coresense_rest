@@ -2,13 +2,67 @@ require 'spec_helper'
 require 'byebug'
 
 module CoresenseRest
-  describe 'client' do
+
+  shared_examples "a Resource" do |endpoint|
+    it 'Hits the Correct Endpoint' do
+      expect(described_class.full_path).to eq("#{CoresenseRest::Client.host}/#{endpoint}")
+    end
+  end
+
+  shared_examples "a Findable class" do |input, output|
+    it ".find" do
+      klass_instance = described_class.find(input)
+      expect(klass_instance).to be_an_instance_of(described_class)
+      expect(klass_instance.id).to eq(output)
+    end
+  end
+
+  shared_examples "a Searchable class" do |input, output|
+
+    it '.select (all)' do
+      expect(described_class.select).to be_an_instance_of(Array)
+      expect(described_class.select[0]).to be_an_instance_of(described_class)
+      expect(described_class.select[0].id).to eq(output)
+    end
+
+    case described_class.name
+    when Customer.name
+      it ".select (client_id=#{input})" do
+        expect(described_class.where({'client_id' => input}).select[0].id).to eq(output)
+        expect(described_class.where({:client_id => input}).select[0].id).to eq(output)
+        expect(described_class.where("client_id= #{input} ").select[0].id).to eq(output)
+      end
+    when Order.name
+      it ".select (order_num=#{input})" do
+        expect(described_class.where({'order_num' => input}).select[0].id).to eq(output)
+        expect(described_class.where({:order_num => input}).select[0].id).to eq(output)
+        expect(described_class.where("order_num= #{input} ").select[0].id).to eq(output)
+      end
+    when SkuInventory.name
+      it ".select (sku_id=#{input})" do
+        expect(described_class.where({'sku_id' => input}).select[0].sku_id).to eq(output)
+        expect(described_class.where({:sku_id => input}).select[0].sku_id).to eq(output)
+        expect(described_class.where("sku_id= #{input} ").select[0].sku_id).to eq(output)
+      end
+    else
+      it ".select (id=#{input})" do
+        expect(described_class.where({'id' => input}).select[0].id).to eq(output)
+        expect(described_class.where({:id => input}).select[0].id).to eq(output)
+        expect(described_class.where("id= #{input} ").select[0].id).to eq(output)
+      end
+    end
+  end
+
+
+
+  describe 'CREST API' do
 
     before(:all) do
+      creds = YAML.load(File.read("#{__dir__}/../../credentials.yml"))
       CoresenseRest.configure do |config|
-        config.host = '<CORESENSE URL>'
-        config.user_id = '<USER ID>'
-        config.key = '<KEY>'
+        config.host = creds['endpoint']
+        config.user_id = creds['user_id']
+        config.key = creds['key']
       end
     end
 
@@ -24,691 +78,421 @@ module CoresenseRest
       end
     end
 
-    context 'Affiliate' do
-      it 'Hits the Correct Endpoint' do
-        expect(Affiliate.full_path).to   eq("#{CoresenseRest::Client.host}/affiliate")
-      end
-
-      it "Can find an affiliate" do
-        affiliate = Affiliate.find(1)
-        expect(affiliate).to be_an_instance_of(Affiliate)
-        expect(affiliate.id).to eq(1)
-      end
-
-      it 'Can list all affiliates' do
-        expect(Affiliate.select).to be_an_instance_of(Array)
-        expect(Affiliate.select[0]).to be_an_instance_of(Affiliate)
-        expect(Affiliate.select[0].id).to eq(1)
-      end
-
-      it 'Can search affiliates' do
-        expect(Affiliate.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Affiliate.where({:id => 1}).select[0].id).to eq(1)
-        expect(Affiliate.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'Barcode' do
-      it 'Hits the Correct Endpoint' do
-        expect(Barcode.full_path).to   eq("#{CoresenseRest::Client.host}/barcode")
-      end
-
-      it 'Can find a barcode' do
-        expect(Barcode.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all barcodes' do
-        expect(Barcode.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search barcodes' do
-        expect(Barcode.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Barcode.where({:id => 1}).select[0].id).to eq(1)
-        expect(Barcode.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'BarcodeSKU' do
-      it 'Hits the Correct Endpoint' do
-        expect(BarcodeSKU.full_path).to   eq("#{CoresenseRest::Client.host}/barcodeSku")
-      end
-
-      it 'Can find an barcode_sku' do
-        expect(BarcodeSKU.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all barcode_skus' do
-        expect(BarcodeSKU.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search barcode_skus' do
-        expect(BarcodeSKU.where({'id' => 1}).select[0].id).to eq(1)
-        expect(BarcodeSKU.where({:id => 1}).select[0].id).to eq(1)
-        expect(BarcodeSKU.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'Brand' do
-      it 'Hits the Correct Endpoint' do
-        expect(Brand.full_path).to   eq("#{CoresenseRest::Client.host}/brand")
-      end
-
-      it 'Can find an brand' do
-        expect(Brand.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all brands' do
-        expect(Brand.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search brands' do
-        expect(Brand.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Brand.where({:id => 1}).select[0].id).to eq(1)
-        expect(Brand.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'Category' do
-      it 'Hits the Correct Endpoint' do
-        expect(Category.full_path).to   eq("#{CoresenseRest::Client.host}/category")
-      end
-
-      it 'Can find an category' do
-        expect(Category.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all categories' do
-        expect(Category.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search categories' do
-        expect(Category.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Category.where({:id => 1}).select[0].id).to eq(1)
-        expect(Category.where('id= 1 ').select[0].id).to eq(1)
-      end
-
-      xit 'Can create a new categoy' do
-        fail
-      end
-
-      xit 'Can update a new categoy' do
-        fail
-      end
-
-      xit 'Can delete a new categoy' do
-        fail
-      end
-
-      xit 'Can fetch all categoy products' do
-        fail
-      end
-
-      xit 'Can fetch all featured categoy products' do
-        fail
-      end
-
-      xit 'Can fetch all categoy subcategories' do
-        fail
-      end
-    end
-
-    context 'Channel' do
-      it 'Hits the Correct Endpoint' do
-        expect(Channel.full_path).to   eq("#{CoresenseRest::Client.host}/channel")
-      end
-
-      it 'Can find an channel' do
-        expect(Channel.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all channels' do
-        expect(Channel.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search channels' do
-        expect(Channel.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Channel.where({:id => 1}).select[0].id).to eq(1)
-        expect(Channel.where('id= 1 ').select[0].id).to eq(1)
-      end
-
-      xit 'Retrieve all products in a channel' do
-        fail
-      end
-
-      xit 'Retrieve all shipments in a channel' do
-        fail
-      end
-    end
-
-    context 'Contact' do
-      it 'Hits the Correct Endpoint' do
-        expect(Contact.full_path).to   eq("#{CoresenseRest::Client.host}/contact")
-      end
-
-      it 'Can find an contact' do
-        expect(Contact.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all contacts' do
-        expect(Contact.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search contacts' do
-        expect(Contact.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Contact.where({:id => 1}).select[0].id).to eq(1)
-        expect(Contact.where('id= 1 ').select[0].id).to eq(1)
-      end
-
-      it 'Can create a new contact' do
-        new_contact = Contact.create({:last_name => 'test', :first_name => 'testy', :customer_id => 1})
-        expect(new_contact).to be_an_instance_of(Contact)
-      end
-    end
-
-    context 'Country' do
-      it 'Hits the Correct Endpoint' do
-        expect(Country.full_path).to   eq("#{CoresenseRest::Client.host}/country")
-      end
-
-      it 'Can find an country' do
-        expect(Country.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all countries' do
-        expect(Country.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search countries' do
-        expect(Country.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Country.where({:id => 1}).select[0].id).to eq(1)
-        expect(Country.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'Customer' do
-      it 'Hits the Correct Endpoint' do
-        expect(Customer.full_path).to   eq("#{CoresenseRest::Client.host}/customer")
-      end
-
-      it 'Can find an customer' do
-        expect(Customer.find(1).id).to eq(1.to_s)
-      end
-
-      it 'Can list all customers' do
-        expect(Customer.select[0].id).to eq(1.to_s)
-      end
-
-      it 'Can search customers' do
-        expect(Customer.where({'client_id' => 1}).select[0].id).to eq(1.to_s)
-        expect(Customer.where({:client_id => 1}).select[0].id).to eq(1.to_s)
-        expect(Customer.where('client_id= 1 ').select[0].id).to eq(1.to_s)
-      end
-
-      it 'Can create a customer' do
-        new_contact = Customer.create(:default_billing_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1},
-                                      :default_shipping_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1})
-        expect(new_contact).to be_an_instance_of(Customer)
-        expect(new_contact.default_billing_contact).to be_an_instance_of(Contact)
-        expect(new_contact.default_shipping_contact).to be_an_instance_of(Contact)
-      end
-
-      it 'Can list all customer contacts' do
-        cust = Customer.find(1)
-        contacts = cust.contacts
-        expect(contacts).to be_an_instance_of(Array)
-        expect(contacts[0]).to be_an_instance_of(Contact)
-      end
-    end
-
-    context 'Help' do
-      xit 'Hits the Correct Endpoint' do
-        expect(Affiliate.full_path).to   eq("#{CoresenseRest::Client.host}/help")
-      end
-
-      xit 'Retrieves all error codes.' do
-        fail
-      end
-
-      xit 'Pings the API to verify status. Can to used to check authentication credentials.' do
-        fail
-      end
-
-      xit 'Retrieves all currently available API routes.' do
-        fail
-      end
-    end
-
-    context 'Inventory' do
-      it 'Hits the Correct Endpoint' do
-        expect(Inventory.full_path).to   eq("#{CoresenseRest::Client.host}/inventory")
-      end
-
-      it 'Can find an inventory_unit' do
-        expect(Inventory.find(2).id).to eq(2)#not_to be_nil
-      end
-
-      it 'Can list all inventory_units' do
-        expect(Inventory.select[0].id).to eq(2)#not_to be_empty
-      end
-
-      it 'Can search inventory_units' do
-        expect(Inventory.where({'id' => 2}).select[0].id).to eq(2)
-        expect(Inventory.where({:id => 2}).select[0].id).to eq(2)
-        expect(Inventory.where('id= 2 ').select[0].id).to eq(2)
-      end
-    end
-
-    context 'Location' do
-      it 'Hits the Correct Endpoint' do
-        expect(Location.full_path).to   eq("#{CoresenseRest::Client.host}/location")
-      end
+    describe "Resources:" do
 
-      it 'Can find an location' do
-        expect(Location.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all inventory_units' do
-        expect(Location.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search inventory_units' do
-        expect(Location.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Location.where({:id => 1}).select[0].id).to eq(1)
-        expect(Location.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'LocationType' do
-      it 'Hits the Correct Endpoint' do
-        expect(LocationType.full_path).to   eq("#{CoresenseRest::Client.host}/locationType")
-      end
-
-      it 'Can find an location_type' do
-        expect(LocationType.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all location_types' do
-        expect(LocationType.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search location_types' do
-        expect(LocationType.where({'id' => 1}).select[0].id).to eq(1)
-        expect(LocationType.where({:id => 1}).select[0].id).to eq(1)
-        expect(LocationType.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'Manufacturer' do
-      it 'Hits the Correct Endpoint' do
-        expect(Manufacturer.full_path).to   eq("#{CoresenseRest::Client.host}/manufacturer")
-      end
-
-      it 'Can find an manufacturer' do
-        expect(Manufacturer.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all manufacturers' do
-        expect(Manufacturer.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search manufacturers' do
-        expect(Manufacturer.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Manufacturer.where({:id => 1}).select[0].id).to eq(1)
-        expect(Manufacturer.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
-
-    context 'Order' do
-      it 'Hits the Correct Endpoint' do
-        expect(Order.full_path).to   eq("#{CoresenseRest::Client.host}/order")
-      end
-
-      it 'Can find an order' do
-        expect(Order.find(1000).id).to eq(1000.to_s)
-      end
-
-      it 'Can list all orders' do
-        expect(Order.select[0].id).to eq(1000.to_s)
-      end
-
-      it 'Can search orders' do
-        expect(Order.where({'order_num' => 1000}).select[0].id).to eq(1000.to_s)
-        expect(Order.where({:order_num => 1000}).select[0].id).to eq(1000.to_s)
-        expect(Order.where('order_num= 1000 ').select[0].id).to eq(1000.to_s)
-      end
-
-      it 'Can create a new order.' do
-        ordering_customer = Customer.find(1)
-        ordering_contact = ordering_customer.contacts[0]
-        new_order = Order.create(:customer_id => ordering_customer.id,
-                                 :channel_id => 10,
-                                 :billing_contact_id => ordering_contact.id,
-                                 :items => [
-                                     {
-                                         :product_id => 1,
-                                         :quantity => 2,
-                                         :shipping_method_id => 1,
-                                         :shipping_contact_id => ordering_contact.id,
-                                         :unit_price => 65.99
-                                     },
-                                     {
-                                         :product_id => 534,
-                                         :quantity => 1,
-                                         :shipping_method_id => 1,
-                                         :shipping_contact_id => ordering_contact.id,
-                                         :unit_price => 35.99
-                                     }
-                                 ])
-        expect(new_order).to be_an_instance_of(Order)
-        expect(new_order.total).to eq(167.97)
-      end
-
-      it 'Can add payment to order' do
-        fail
-      end
-
-      it 'Retrieve all shipments for an order.' do
-        order = Order.find(9000)
-        expect(order.shipments[0].id).to eq(40056)
-      end
-    end
-
-    context 'Product' do
-      it 'Hits the Correct Endpoint' do
-        expect(Product.full_path).to   eq("#{CoresenseRest::Client.host}/product")
-      end
-
-      it 'Can find an product' do
-        expect(Product.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all products' do
-        expect(Product.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search products' do
-        expect(Product.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Product.where({:id => 1}).select[0].id).to eq(1)
-        expect(Product.where('id= 1 ').select[0].id).to eq(1)
-      end
-
-      xit 'Retrieves all product locations.' do
-        fail
-      end
-
-      context 'ProductPrice' do
-        xit 'get Channel ProductPrice of product' do
-          product = Product.find(1)
-          expect(product).to be_an_instance_of(Product)
-          product_price = product.product_prices(8)
-          expect(product_price).to be_an_instance_of(ProductPrice)
-          expect(product_price.base_price).to eq(63.99)
-          fail 'ticket opened with coresense due to unexpected return value.'
-        end
-      end
-    end
-
-    context 'ReceivableType' do
-      it 'Hits the Correct Endpoint' do
-        expect(ReceivableType.full_path).to   eq("#{CoresenseRest::Client.host}/receivableType")
-      end
-
-      it 'Can find an ReceivableType' do
-        expect(ReceivableType.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all ReceivableType' do
-        expect(ReceivableType.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search ReceivableType' do
-        expect(ReceivableType.where({'id' => 1}).select[0].id).to eq(1)
-        expect(ReceivableType.where({:id => 1}).select[0].id).to eq(1)
-        expect(ReceivableType.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
+      context Affiliate do
 
-    context 'Receiver' do
-      it 'Hits the Correct Endpoint' do
-        expect(Receiver.full_path).to   eq("#{CoresenseRest::Client.host}/receiver")
-      end
-
-      it 'Can find an Receiver' do
-        expect(Receiver.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all Receiver' do
-        expect(Receiver.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search Receiver' do
-        expect(Receiver.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Receiver.where({:id => 1}).select[0].id).to eq(1)
-        expect(Receiver.where('id= 1 ').select[0].id).to eq(1)
-      end
-
-      xit 'Create a new Receiver.' do
-        fail
-      end
-
-      xit 'Update a specific Receiver.' do
-        fail
-      end
-    end
-
-    context 'Shipment' do
-      it 'Hits the Correct Endpoint' do
-        expect(Shipment.full_path).to   eq("#{CoresenseRest::Client.host}/shipment")
-      end
-
-      it 'Can find an shipment' do
-        expect(Shipment.find(142).id).to eq(142)#not_to be_nil
-      end
-
-      it 'Can list all shipments' do
-        expect(Shipment.select[0].id).to eq(142)#not_to be_empty
-      end
-
-      it 'Can search shipments' do
-        expect(Shipment.where({'id' => 142}).select[0].id).to eq(142)
-        expect(Shipment.where({:id => 142}).select[0].id).to eq(142)
-        expect(Shipment.where('id= 142 ').select[0].id).to eq(142)
-      end
-
-      xit 'Update a specific shipment.' do
-        fail
-      end
-
-      xit 'Retrieve all boxes for a shipment.' do
-        fail
-      end
-    end
-
-    context 'ShipmentBox' do
-      it 'Hits the Correct Endpoint' do
-        expect(ShipmentBox.full_path).to   eq("#{CoresenseRest::Client.host}/shipmentBox")
-      end
-
-      it 'Can find an shipment_box' do
-        expect(ShipmentBox.find(145).id).to eq(145)#not_to be_nil
-      end
-
-      it 'Can list all shipment_boxes' do
-        expect(ShipmentBox.select[0].id).to eq(145)#not_to be_empty
-      end
-
-      it 'Can search shipment_boxes' do
-        expect(ShipmentBox.where({'id' => 145}).select[0].id).to eq(145)
-        expect(ShipmentBox.where({:id => 145}).select[0].id).to eq(145)
-        expect(ShipmentBox.where('id= 145 ').select[0].id).to eq(145)
-      end
-
-      xit 'Retrieves all inventory for a shipment box.' do
-        fail
-      end
-    end
-
-    context 'ShippingMethod' do
-      it 'Hits the Correct Endpoint' do
-        expect(ShippingMethod.full_path).to   eq("#{CoresenseRest::Client.host}/shippingMethod")
-      end
+        it_should_behave_like "a Resource", "affiliate"
 
-      it 'Can find an shipping_method' do
-        expect(ShippingMethod.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all shipping_methods' do
-        expect(ShippingMethod.select[0].id).to eq(1)#not_to be_empty
-      end
+        it_should_behave_like "a Findable class", 1, 1
 
-      it 'Can search shipping_methods' do
-        expect(ShippingMethod.where({'id' => 1}).select[0].id).to eq(1)
-        expect(ShippingMethod.where({:id => 1}).select[0].id).to eq(1)
-        expect(ShippingMethod.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
+        it_should_behave_like "a Searchable class", 1, 1
 
-    context 'SKU' do
-      it 'Hits the Correct Endpoint' do
-        expect(Sku.full_path).to   eq("#{CoresenseRest::Client.host}/sku")
       end
 
-      it 'Can find an sku' do
-        expect(Sku.find(1).id).to eq(1)#not_to be_nil
-      end
+      context Barcode do
 
-      it 'Can list all skus' do
-        expect(Sku.select[0].id).to eq(1)#not_to be_empty
-      end
+        it_should_behave_like "a Resource", "barcode"
 
-      it 'Can search skus' do
-        expect(Sku.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Sku.where({:id => 1}).select[0].id).to eq(1)
-        expect(Sku.where('id= 1 ').select[0].id).to eq(1)
-      end
+        it_should_behave_like "a Findable class", 1, 1
 
-      xit 'Retrieve all inventory for a SKU.' do
-        fail
-      end
-    end
+        it_should_behave_like "a Searchable class", 1, 1
 
-    context 'SKU Inventory' do
-      it 'Hits the Correct Endpoint' do
-        expect(SkuInventory.full_path).to   eq("#{CoresenseRest::Client.host}/skuInventory")
       end
 
-      it 'Can list all sku_inventory' do
-        expect(SkuInventory.select[0].sku_id).to eq(0)#not_to be_empty
-      end
+      context BarcodeSKU do
 
-      it 'Can search sku_inventory' do
-        expect(SkuInventory.where({'sku_id' => 1}).select[0].sku_id).to eq(1)
-        expect(SkuInventory.where({:sku_id => 1}).select[0].sku_id).to eq(1)
-        expect(SkuInventory.where('sku_id= 1 ').select[0].sku_id).to eq(1)
-      end
-    end
+        it_should_behave_like "a Resource", "barcodeSku"
 
-    context 'SKU Vendor' do
-      it 'Hits the Correct Endpoint' do
-        expect(SkuVendor.full_path).to   eq("#{CoresenseRest::Client.host}/skuVendor")
-      end
+        it_should_behave_like "a Findable class", 1, 1
 
-      it 'Can list all sku_vendors' do
-        expect(SkuVendor.select[0].id).to eq(15575)#not_to be_empty
-      end
+        it_should_behave_like "a Searchable class", 1, 1
 
-      it 'Can search sku_vendors' do
-        expect(SkuVendor.where({'id' => 15575}).select[0].id).to eq(15575)
-        expect(SkuVendor.where({:id => 15575}).select[0].id).to eq(15575)
-        expect(SkuVendor.where('id= 15575 ').select[0].id).to eq(15575)
       end
-    end
 
-    context 'State' do
-      it 'Hits the Correct Endpoint' do
-        expect(State.full_path).to   eq("#{CoresenseRest::Client.host}/state")
-      end
+      context Brand do
 
-      it 'Can find an state' do
-        expect(State.find(1).id).to eq(1)#not_to be_nil
-      end
+        it_should_behave_like "a Resource", "brand"
 
-      it 'Can list all states' do
-        expect(State.select[0].id).to eq(1)#not_to be_empty
-      end
+        it_should_behave_like "a Findable class", 1, 1
 
-      it 'Can search states' do
-        expect(State.where({'id' => 1}).select[0].id).to eq(1)
-        expect(State.where({:id => 1}).select[0].id).to eq(1)
-        expect(State.where('id= 1 ').select[0].id).to eq(1)
-      end
-    end
+        it_should_behave_like "a Searchable class", 1, 1
 
-    context 'Transfer' do
-      it 'Hits the Correct Endpoint' do
-        expect(Transfer.full_path).to   eq("#{CoresenseRest::Client.host}/transfer")
       end
 
-      it 'Can find an transfer' do
-        expect(Transfer.find(1).id).to eq(1)#not_to be_nil
-      end
+      context Category do
 
-      it 'Can list all transfers' do
-        expect(Transfer.select[0].id).to eq(1)#not_to be_empty
-      end
+        it_should_behave_like "a Resource", "category"
 
-      it 'Can search transfers' do
-        expect(Transfer.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Transfer.where({:id => 1}).select[0].id).to eq(1)
-        expect(Transfer.where('id= 1 ').select[0].id).to eq(1)
-      end
+        it_should_behave_like "a Findable class", 1, 1
 
-      xit 'Create a new transfer.' do
-        fail
-      end
+        it_should_behave_like "a Searchable class", 1, 1
 
-      xit 'Update a specific transfer.' do
-        fail
-      end
 
-      context 'Transfer Recievers' do
-        xit 'Creates a receiver for a transfer.' do
+        xit 'Can create a new categoy' do
           fail
         end
 
-        xit 'Retrieves all receivers for a transfer.' do
+        xit 'Can update a new categoy' do
+          fail
+        end
+
+        xit 'Can delete a new categoy' do
+          fail
+        end
+
+        xit 'Can fetch all categoy products' do
+          fail
+        end
+
+        xit 'Can fetch all featured categoy products' do
+          fail
+        end
+
+        xit 'Can fetch all categoy subcategories' do
           fail
         end
       end
 
-      xit 'Retrieves all inventory for a transfer.' do
-        fail
+      context Channel do
+
+        it_should_behave_like "a Resource", "channel"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        xit 'Retrieve all products in a channel' do
+          fail
+        end
+
+        xit 'Retrieve all shipments in a channel' do
+          fail
+        end
+      end
+
+      context Contact do
+
+        it_should_behave_like "a Resource", "contact"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        it 'Can create a new contact' do
+          new_contact = Contact.create({:last_name => 'test', :first_name => 'testy', :customer_id => 1})
+          expect(new_contact).to be_an_instance_of(Contact)
+        end
+      end
+
+      context Country do
+
+        it_should_behave_like "a Resource", "country"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context Customer do
+
+        it_should_behave_like "a Resource", "customer"
+
+        it_should_behave_like "a Findable class", 1, 1.to_s
+
+        it_should_behave_like "a Searchable class", 1, 1.to_s
+
+        it 'Can create a customer' do
+          new_contact = Customer.create(:default_billing_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1},
+                                        :default_shipping_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1})
+          expect(new_contact).to be_an_instance_of(Customer)
+          expect(new_contact.default_billing_contact).to be_an_instance_of(Contact)
+          expect(new_contact.default_shipping_contact).to be_an_instance_of(Contact)
+        end
+
+        it 'Can list all customer contacts' do
+          cust = Customer.find(1)
+          contacts = cust.contacts
+          expect(contacts).to be_an_instance_of(Array)
+          expect(contacts[0]).to be_an_instance_of(Contact)
+        end
+      end
+
+      context 'Help' do
+
+        xit 'Hits the Correct Endpoint' do
+          expect(Affiliate.full_path).to   eq("#{CoresenseRest::Client.host}/help")
+        end
+
+        xit 'Retrieves all error codes.' do
+          fail
+        end
+
+        xit 'Pings the API to verify status. Can to used to check authentication credentials.' do
+          fail
+        end
+
+        xit 'Retrieves all currently available API routes.' do
+          fail
+        end
+      end
+
+      context Inventory do
+
+        it_should_behave_like "a Resource", "inventory"
+
+        it_should_behave_like "a Findable class", 2, 2
+
+        it_should_behave_like "a Searchable class", 2, 2
+
+      end
+
+      context Location do
+
+        it_should_behave_like "a Resource", "location"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context LocationType do
+
+        it_should_behave_like "a Resource", "locationType"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context Manufacturer do
+
+        it_should_behave_like "a Resource", "manufacturer"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context Order do
+
+        it_should_behave_like "a Resource", "order"
+
+        it_should_behave_like "a Findable class", 1000, 1000.to_s
+
+        it_should_behave_like "a Searchable class", 1000, 1000.to_s
+
+        it 'Can create a new order.' do
+          ordering_customer = Customer.find(1)
+          ordering_contact = ordering_customer.contacts[0]
+          new_order = Order.create(:customer_id => ordering_customer.id,
+                                   :channel_id => 10,
+                                   :billing_contact_id => ordering_contact.id,
+                                   :items => [
+                                       {
+                                           :product_id => 1,
+                                           :quantity => 2,
+                                           :shipping_method_id => 1,
+                                           :shipping_contact_id => ordering_contact.id,
+                                           :unit_price => 65.99
+                                       },
+                                       {
+                                           :product_id => 534,
+                                           :quantity => 1,
+                                           :shipping_method_id => 1,
+                                           :shipping_contact_id => ordering_contact.id,
+                                           :unit_price => 35.99
+                                       }
+                                   ])
+          expect(new_order).to be_an_instance_of(Order)
+          expect(new_order.total).to eq(167.97)
+        end
+
+        it 'Can add payment to order' do
+          fail
+        end
+
+        it 'Retrieve all shipments for an order.' do
+          order = Order.find(9000)
+          expect(order.shipments[0].id).to eq(40056)
+        end
+      end
+
+      context Product do
+
+        it_should_behave_like "a Resource", "product"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        xit 'Retrieves all product locations.' do
+          fail
+        end
+
+        context ProductPrice do
+          xit 'get Channel ProductPrice of product' do
+            product = Product.find(1)
+            expect(product).to be_an_instance_of(Product)
+            product_price = product.product_prices(8)
+            expect(product_price).to be_an_instance_of(ProductPrice)
+            expect(product_price.base_price).to eq(63.99)
+            fail 'ticket opened with coresense due to unexpected return value.'
+          end
+        end
+      end
+
+      context ReceivableType do
+
+        it_should_behave_like "a Resource", "receivableType"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context Receiver do
+
+        it_should_behave_like "a Resource", "receiver"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        xit 'Create a new Receiver.' do
+          fail
+        end
+
+        xit 'Update a specific Receiver.' do
+          fail
+        end
+      end
+
+      context Shipment do
+
+        it_should_behave_like "a Resource", "shipment"
+
+        it_should_behave_like "a Findable class", 142, 142
+
+        it_should_behave_like "a Searchable class", 142, 142
+
+        xit 'Update a specific shipment.' do
+          fail
+        end
+
+        xit 'Retrieve all boxes for a shipment.' do
+          fail
+        end
+      end
+
+      context ShipmentBox do
+
+        it_should_behave_like "a Resource", "shipmentBox"
+
+        it_should_behave_like "a Searchable class", 145, 145
+
+        xit 'Retrieves all inventory for a shipment box.' do
+          fail
+        end
+      end
+
+      context ShippingMethod do
+
+        it_should_behave_like "a Resource", "shippingMethod"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context Sku do
+
+        it_should_behave_like "a Resource", "sku"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        xit 'Retrieve all inventory for a SKU.' do
+          fail
+        end
+      end
+
+      context SkuInventory do
+
+        it_should_behave_like "a Resource", "skuInventory"
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context SkuVendor do
+
+        it_should_behave_like "a Resource", "skuVendor"
+
+        it_should_behave_like "a Searchable class", 15575, 15575
+
+      end
+
+      context State do
+
+        it_should_behave_like "a Resource", "state"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+      end
+
+      context Transfer do
+
+        it_should_behave_like "a Resource", "transfer"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        xit 'Create a new transfer.' do
+          fail
+        end
+
+        xit 'Update a specific transfer.' do
+          fail
+        end
+
+        context 'Transfer Recievers' do
+          xit 'Creates a receiver for a transfer.' do
+            fail
+          end
+
+          xit 'Retrieves all receivers for a transfer.' do
+            fail
+          end
+        end
+
+        xit 'Retrieves all inventory for a transfer.' do
+          fail
+        end
+      end
+
+      context Warehouse do
+
+        it_should_behave_like "a Resource", "warehouse"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+
+        xit 'Can pull on locations in warehouse' do
+          fail
+        end
       end
     end
-
-    context 'Warehouse' do
-      it 'Hits the Correct Endpoint' do
-        expect(Warehouse.full_path).to   eq("#{CoresenseRest::Client.host}/warehouse")
-      end
-
-      it 'Can find an Warehouse' do
-        expect(Warehouse.find(1).id).to eq(1)#not_to be_nil
-      end
-
-      it 'Can list all Warehouse' do
-        expect(Warehouse.select[0].id).to eq(1)#not_to be_empty
-      end
-
-      it 'Can search Warehouse' do
-        expect(Warehouse.where({'id' => 1}).select[0].id).to eq(1)
-        expect(Warehouse.where({:id => 1}).select[0].id).to eq(1)
-        expect(Warehouse.where('id= 1 ').select[0].id).to eq(1)
-      end
-
-      xit 'Can pull on locations in warehouse' do
-        fail
-      end
-    end
-
   end
 end
