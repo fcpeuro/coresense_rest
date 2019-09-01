@@ -22,7 +22,6 @@ module CoresenseRest
     it '.select (all)' do
       expect(described_class.select).to be_an_instance_of(Array)
       expect(described_class.select[0]).to be_an_instance_of(described_class)
-      expect(described_class.select[0].id).to eq(output)
     end
 
     case described_class.name
@@ -53,12 +52,16 @@ module CoresenseRest
     end
   end
 
-
+  shared_examples "a Creatable class" do |creation_hash|
+    it ".create" do
+      expect(described_class.create(creation_hash)).to be_an_instance_of(described_class)
+    end
+  end
 
   describe 'CREST API' do
 
     before(:all) do
-      creds = YAML.load(File.read("#{__dir__}/../../credentials.yml"))
+      creds = YAML.load(File.read("#{__dir__}/../../../credentials.yml"))
       CoresenseRest.configure do |config|
         config.host = creds['endpoint']
         config.user_id = creds['user_id']
@@ -179,10 +182,9 @@ module CoresenseRest
 
         it_should_behave_like "a Searchable class", 1, 1
 
-        it 'Can create a new contact' do
-          new_contact = Contact.create({:last_name => 'test', :first_name => 'testy', :customer_id => 1})
-          expect(new_contact).to be_an_instance_of(Contact)
-        end
+        it_should_behave_like "a Creatable class", {
+            :last_name => 'test', :first_name => 'testy', :customer_id => 1
+        }
       end
 
       context Country do
@@ -203,13 +205,10 @@ module CoresenseRest
 
         it_should_behave_like "a Searchable class", 1, 1.to_s
 
-        it 'Can create a customer' do
-          new_contact = Customer.create(:default_billing_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1},
-                                        :default_shipping_contact => {:last_name => 'test', :first_name => 'testy', :customer_id => 1})
-          expect(new_contact).to be_an_instance_of(Customer)
-          expect(new_contact.default_billing_contact).to be_an_instance_of(Contact)
-          expect(new_contact.default_shipping_contact).to be_an_instance_of(Contact)
-        end
+        it_should_behave_like "a Creatable class", {
+            :default_billing_contact => {:last_name => 'test', :first_name => 'testy', :email => "account@email.com"},
+            :default_shipping_contact => {:last_name => 'test', :first_name => 'testy', :email => "account@email.com"}
+        }
 
         it 'Can list all customer contacts' do
           cust = Customer.find(1)
@@ -286,31 +285,27 @@ module CoresenseRest
 
         it_should_behave_like "a Searchable class", 1000, 1000.to_s
 
-        it 'Can create a new order.' do
-          ordering_customer = Customer.find(1)
-          ordering_contact = ordering_customer.contacts[0]
-          new_order = Order.create(:customer_id => ordering_customer.id,
-                                   :channel_id => 10,
-                                   :billing_contact_id => ordering_contact.id,
-                                   :items => [
-                                       {
-                                           :product_id => 1,
-                                           :quantity => 2,
-                                           :shipping_method_id => 1,
-                                           :shipping_contact_id => ordering_contact.id,
-                                           :unit_price => 65.99
-                                       },
-                                       {
-                                           :product_id => 534,
-                                           :quantity => 1,
-                                           :shipping_method_id => 1,
-                                           :shipping_contact_id => ordering_contact.id,
-                                           :unit_price => 35.99
-                                       }
-                                   ])
-          expect(new_order).to be_an_instance_of(Order)
-          expect(new_order.total).to eq(167.97)
-        end
+        it_should_behave_like "a Creatable class", {
+            :customer_id => 1,
+            :channel_id => 10,
+            :billing_contact_id => 1,
+            :items => [
+                {
+                    :product_id => 1,
+                    :quantity => 2,
+                    :shipping_method_id => 1,
+                    :shipping_contact_id => 1,
+                    :unit_price => 65.99
+                },
+                {
+                    :product_id => 534,
+                    :quantity => 1,
+                    :shipping_method_id => 1,
+                    :shipping_contact_id => 1,
+                    :unit_price => 35.99
+                }
+            ]
+        }
 
         it 'Can add payment to order' do
           fail
@@ -320,6 +315,21 @@ module CoresenseRest
           order = Order.find(9000)
           expect(order.shipments[0].id).to eq(40056)
         end
+      end
+
+      context Payment do
+        it_should_behave_like "a Resource", "payment"
+
+        it_should_behave_like "a Findable class", 1000, 1000
+
+        it_should_behave_like "a Searchable class", 1000, 1000
+
+        it_should_behave_like "a Creatable class", {
+            assoc_entity: "order",
+            assoc_entity_id: 1000,
+            payment: 0.01,
+            receivable_type_id: 12
+        }
       end
 
       context Product do
@@ -428,7 +438,7 @@ module CoresenseRest
 
         it_should_behave_like "a Resource", "skuInventory"
 
-        it_should_behave_like "a Searchable class", 1, 1
+        it_should_behave_like "a Searchable class", 0, 0
 
       end
 
