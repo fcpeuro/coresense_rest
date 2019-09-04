@@ -293,6 +293,67 @@ module CoresenseRest
 
       end
 
+      context OrderAdjustment do
+
+        it_should_behave_like "a Resource", "orderAdjustment"
+
+        it_should_behave_like "a Findable class", 2, 2
+
+        it_should_behave_like "a Searchable class", 2, 2
+
+        it_should_behave_like "a Creatable class", {}
+      end
+
+      context OrderFulfillment do
+
+        it 'should be designed out' do
+          fail "endpoint has not yet been designed against"
+        end
+        #it_should_behave_like "a Resource", "productConfigurationOption"
+
+       #it_should_behave_like "a Findable class", 1, 1
+
+        #it_should_behave_like "a Searchable class", 1, 1
+      end
+
+      context OrderItemAdjustment do
+
+        it_should_behave_like "a Resource", "orderItemAdjustment"
+
+        it_should_behave_like "a Findable class", 1, 1 #Order Item Adjustments have never been made
+
+        it_should_behave_like "a Searchable class", 1, 1 #Order Item Adjustments have never been made
+
+        it_should_behave_like "a Creatable class", {}
+      end
+
+      context OrderItemDeal do
+
+        it_should_behave_like "a Resource", "orderItemDeal"
+
+        it_should_behave_like "a Findable class", 1, 1 #Order Item Deals have never been made
+
+        it_should_behave_like "a Searchable class", 1, 1 #Order Item Deals have never been made
+      end
+
+      context OrderItem do
+
+        it_should_behave_like "a Resource", "orderItem"
+
+        it_should_behave_like "a Findable class", 67, 67
+
+        it_should_behave_like "a Searchable class", 67, 67
+      end
+
+      context OrderItemSalesTaxModifierType do
+
+        it_should_behave_like "a Resource", "orderItemSalesTaxModifierType"
+
+        it_should_behave_like "a Findable class", 1, 1 #Order orderItemSalesTaxModifierType have never been made
+
+        it_should_behave_like "a Searchable class", 1, 1 #Order orderItemSalesTaxModifierType have never been made
+      end
+
       context Order do
 
         it_should_behave_like "a Resource", "order"
@@ -333,6 +394,14 @@ module CoresenseRest
         end
       end
 
+      context OrderShippingDetail do
+        it_should_behave_like "a Resource", "orderShippingDetail"
+
+        it_should_behave_like "a Findable class", 1000, 1000
+
+        it_should_behave_like "a Searchable class", 1000, 1000
+      end
+
       context Payment do
         it_should_behave_like "a Resource", "payment"
 
@@ -346,6 +415,51 @@ module CoresenseRest
             payment: 0.01,
             receivable_type_id: 12
         }
+      end
+
+      context ProductConfigurationOption do
+
+        it_should_behave_like "a Resource", "productConfigurationOption"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+      end
+
+      context ProductConfigurationOptionType do
+
+        it_should_behave_like "a Resource", "productConfigurationOptionType"
+
+        it_should_behave_like "a Findable class", 1, 1 # productConfigurationOptionType have never been made
+
+        it_should_behave_like "a Searchable class", 1, 1 # productConfigurationOptionType have never been made
+      end
+
+      context ProductInventory do
+
+        it_should_behave_like "a Resource", "productInventory"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
+      end
+
+      context ProductInventoryStandard do
+
+        it_should_behave_like "a Resource", "productInventoryStandard"
+
+        it_should_behave_like "a Findable class", 5, 5
+
+        it_should_behave_like "a Searchable class", 5, 5
+      end
+
+      context ProductInventoryUpgrade do
+
+        it_should_behave_like "a Resource", "productInventoryUpgrade"
+
+        it_should_behave_like "a Findable class", 1, 1
+
+        it_should_behave_like "a Searchable class", 1, 1
       end
 
       context Product do
