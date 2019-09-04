@@ -177,7 +177,7 @@ module CoresenseRest
                   :refund_total, :salesman, :shipping_cost, :shipping_tax_total, :stamp,
                   :total, :viewed
     def shipments
-      RequestRead.new( "#{Order.full_path}/#{id}/shipment", Product.headers, ProductPrice).select
+      RequestRead.new( "#{Order.full_path}/#{id}/shipment", Product.headers, Shipment).select
     end
   end
 
