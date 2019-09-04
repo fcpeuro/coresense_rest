@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require_relative '../lib/coresense_rest'
 require 'vcr'
+require 'webmock/rspec'
 
 
 RSpec.configure do |config|

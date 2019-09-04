@@ -11,50 +11,64 @@ module CoresenseRest
 
   shared_examples "a Findable class" do |input, output|
     it ".find" do
-      klass_instance = described_class.find(input)
-      expect(klass_instance).to be_an_instance_of(described_class)
-      expect(klass_instance.id).to eq(output)
+      VCR.use_cassette("#{described_class.name.split('::').last}/find_#{input}") do
+        klass_instance = described_class.find(input)
+        expect(klass_instance).to be_an_instance_of(described_class)
+        expect(klass_instance.id).to eq(output)
+      end
     end
   end
 
   shared_examples "a Searchable class" do |input, output|
 
     it '.select (all)' do
-      expect(described_class.select).to be_an_instance_of(Array)
-      expect(described_class.select[0]).to be_an_instance_of(described_class)
+      VCR.use_cassette("#{described_class.name.split('::').last}/select_all") do
+        expect(described_class.select).to be_an_instance_of(Array)
+        expect(described_class.select[0]).to be_an_instance_of(described_class)
+      end
     end
 
     case described_class.name
     when Customer.name
       it ".select (client_id=#{input})" do
-        expect(described_class.where({'client_id' => input}).select[0].id).to eq(output)
-        expect(described_class.where({:client_id => input}).select[0].id).to eq(output)
-        expect(described_class.where("client_id= #{input} ").select[0].id).to eq(output)
+        VCR.use_cassette("#{described_class.name.split('::').last}/select_client_id=#{input}") do
+          expect(described_class.where({'client_id' => input}).select[0].id).to eq(output)
+          expect(described_class.where({:client_id => input}).select[0].id).to eq(output)
+          expect(described_class.where("client_id= #{input} ").select[0].id).to eq(output)
+        end
       end
     when Order.name
       it ".select (order_num=#{input})" do
-        expect(described_class.where({'order_num' => input}).select[0].id).to eq(output)
-        expect(described_class.where({:order_num => input}).select[0].id).to eq(output)
-        expect(described_class.where("order_num= #{input} ").select[0].id).to eq(output)
+        VCR.use_cassette("#{described_class.name.split('::').last}/select_order_num=#{input}") do
+          expect(described_class.where({'order_num' => input}).select[0].id).to eq(output)
+          expect(described_class.where({:order_num => input}).select[0].id).to eq(output)
+          expect(described_class.where("order_num= #{input} ").select[0].id).to eq(output)
+        end
       end
     when SkuInventory.name
       it ".select (sku_id=#{input})" do
-        expect(described_class.where({'sku_id' => input}).select[0].sku_id).to eq(output)
-        expect(described_class.where({:sku_id => input}).select[0].sku_id).to eq(output)
-        expect(described_class.where("sku_id= #{input} ").select[0].sku_id).to eq(output)
+        VCR.use_cassette("#{described_class.name.split('::').last}/select_sku_id=#{input}") do
+          expect(described_class.where({'sku_id' => input}).select[0].sku_id).to eq(output)
+          expect(described_class.where({:sku_id => input}).select[0].sku_id).to eq(output)
+          expect(described_class.where("sku_id= #{input} ").select[0].sku_id).to eq(output)
+        end
       end
     else
       it ".select (id=#{input})" do
-        expect(described_class.where({'id' => input}).select[0].id).to eq(output)
-        expect(described_class.where({:id => input}).select[0].id).to eq(output)
-        expect(described_class.where("id= #{input} ").select[0].id).to eq(output)
+        VCR.use_cassette("#{described_class.name.split('::').last}/select_id=#{input}") do
+          expect(described_class.where({'id' => input}).select[0].id).to eq(output)
+          expect(described_class.where({:id => input}).select[0].id).to eq(output)
+          expect(described_class.where("id= #{input} ").select[0].id).to eq(output)
+        end
       end
     end
   end
 
   shared_examples "a Creatable class" do |creation_hash|
     it ".create" do
-      expect(described_class.create(creation_hash)).to be_an_instance_of(described_class)
+      VCR.use_cassette("#{described_class.name.split('::').last}/create") do
+        expect(described_class.create(creation_hash)).to be_an_instance_of(described_class)
+      end
     end
   end
 
