@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'jwt'
   spec.add_runtime_dependency 'httparty'
+  spec.add_runtime_dependency 'ostruct'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
