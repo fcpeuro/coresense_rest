@@ -1,5 +1,6 @@
 #Configuration
 require_relative 'resources/configuration'
+require_relative 'coresense_client'
 
 module CoresenseRest
   class << self

@@ -10,7 +10,7 @@ coresense servers, expecting only 1 base endpoint to be defined.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'coresense_rest', github: 'coresense_rest'
+gem 'coresense_rest', github: 'fcpeuro/coresense_rest'
 ```
 
 
