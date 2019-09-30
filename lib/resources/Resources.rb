@@ -56,6 +56,10 @@ module CoresenseRest
     attr_accessor :active, :address_line_1, :address_line_2, :business_phone, :city, :company, :country_id,
                   :customer_id, :date_of_birth, :email, :fax, :first_name, :id, :label, :last_name, :phone,
                   :postal_code, :requires_liftgate, :residential_address, :state_id, :verified
+
+    def customer
+      Customer.find(customer_id)
+    end
   end
 
   class Country < Resource

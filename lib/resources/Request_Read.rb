@@ -11,6 +11,15 @@ module CoresenseRest
 
     def select
       response = HTTParty.get(current_path, :headers => @headers, format: :json)
+      if response.code == 404
+        # ? implies a where clause was used, so user was searching for a list of items
+        if current_path.match(/\?/)
+          return []
+        else
+          #lack of ? implies find, so return a singular nil
+          return nil
+        end
+      end
       raise response.body unless response.code == 200
       @request_class.parse_self response.body
     end
