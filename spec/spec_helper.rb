@@ -1,8 +1,9 @@
-ENV["RAILS_ENV"] ||= 'test'
+# frozen_string_literal: true
+
+ENV['RAILS_ENV'] ||= 'test'
 require_relative '../lib/coresense_rest'
 require 'vcr'
 require 'webmock/rspec'
-
 
 RSpec.configure do |config|
   config.color = true
@@ -13,7 +14,6 @@ RSpec.configure do |config|
   # Use the specified formatter
   config.formatter = :documentation # :progress, :html,
 
-
   config.backtrace_exclusion_patterns << /gems/
   config.backtrace_exclusion_patterns << /<main>/
 
@@ -22,10 +22,9 @@ RSpec.configure do |config|
   config.example_status_persistence_file_path = 'spec/results.txt'
 end
 
-
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/vcr_cassettes"
-  config.default_cassette_options = { :record => :new_episodes}
+  config.cassette_library_dir = 'spec/vcr_cassettes'
+  config.default_cassette_options = { record: :new_episodes }
 
   config.hook_into :webmock
   config.allow_http_connections_when_no_cassette = true

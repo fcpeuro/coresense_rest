@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class String
   def uncapitalize
     self[0, 1].downcase + self[1..-1]
@@ -21,17 +23,15 @@ module CoresenseRest
     end
 
     def self.headers
-      {"X-Auth-Token" => Client.get_token}
+      { 'X-Auth-Token' => Client.get_token }
     end
 
-    def self.parse_self json_string
+    def self.parse_self(json_string)
       JSON.parse(json_string, object_class: self)
     end
 
-    def []= name, value
-      send("#{name}=",value)
+    def []=(name, value)
+      send("#{name}=", value)
     end
-
   end
-
 end

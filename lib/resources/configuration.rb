@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CoresenseRest
   class Configuration
     attr_accessor :host, :user_id, :key
@@ -7,6 +9,5 @@ module CoresenseRest
       @user_id = nil
       @key = nil
     end
-
   end
 end

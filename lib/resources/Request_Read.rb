@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CoresenseRest
   class RequestRead
     include HTTParty
@@ -10,22 +12,23 @@ module CoresenseRest
     end
 
     def select
-      response = HTTParty.get(current_path, :headers => @headers, format: :json)
+      response = HTTParty.get(current_path, headers: @headers, format: :json)
       if response.code == 404
         # ? implies a where clause was used, so user was searching for a list of items
         if current_path.match(/\?/)
           return []
         else
-          #lack of ? implies find, so return a singular nil
+          # lack of ? implies find, so return a singular nil
           return nil
         end
       end
       raise response.body unless response.code == 200
+
       @request_class.parse_self response.body
     end
 
     def where(clause)
-      #No support for OR in chain
+      # No support for OR in chain
       query_string = parse_query(clause)
       self.class.new(@root, @headers, @request_class, "#{@query}&#{query_string}")
     end
@@ -48,32 +51,33 @@ module CoresenseRest
 
     def current_path
       return @root if nil_or_empty? @query
+
       @root + '?' + @query
     end
 
     private
 
-    def nil_or_empty? value
-      value.nil? or value.empty?
+    def nil_or_empty?(value)
+      value.nil? || value.empty?
     end
 
     def parse_query(clause)
       if clause.is_a? String
         if clause =~ / or /i
-          raise "OR operators are not supported by the API as this time."
+          raise 'OR operators are not supported by the API as this time.'
         end
-        clause.split(/ and /i).map{|clauses| "q[]=#{clauses}"}.flatten.join("&")
+
+        clause.split(/ and /i).map { |clauses| "q[]=#{clauses}" }.flatten.join('&')
       elsif clause.is_a? Hash
-        clause.map{ |key, value| "q[]=#{key}=#{value}" }.join("&")
+        clause.map { |key, value| "q[]=#{key}=#{value}" }.join('&')
       else
-        raise "Invalid Where Clause Provided"
+        raise 'Invalid Where Clause Provided'
       end
     end
-
   end
 end
 
-#Params:
+# Params:
 # page_size, Max 100
 # page, integer
 #

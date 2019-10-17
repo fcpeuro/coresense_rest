@@ -1,12 +1,13 @@
-module CoresenseRest
+# frozen_string_literal: true
 
+module CoresenseRest
   class Affiliate < Resource
     extend Findable
     extend Searchable
-    attr_accessor :active,:address1,:address2,:city,:commission_rate_id,:company_name,
-                  :contact_first_name,:contact_last_name,:country_id,:email,:fax,:id,
-                  :password,:payment_notification_template_id,:phone,:sale_notification,
-                  :sale_notification_template_id, :state_id, :url,:username, :zip
+    attr_accessor :active, :address1, :address2, :city, :commission_rate_id, :company_name,
+                  :contact_first_name, :contact_last_name, :country_id, :email, :fax, :id,
+                  :password, :payment_notification_template_id, :phone, :sale_notification,
+                  :sale_notification_template_id, :state_id, :url, :username, :zip
   end
 
   class Barcode < Resource
@@ -102,9 +103,9 @@ module CoresenseRest
     extend Searchable
     extend Findable
     attr_accessor :assoc_entity, :assoc_entity_id, :build_type, :cogs,
-        :description, :id, :inventory_id, :inventory_location_id, :manufacturer_id,
-        :pos_order_num, :shipping_depth, :shipping_height, :shipping_weight, :shipping_width,
-        :stamp, :status, :vendor_id, :warehouse_id
+                  :description, :id, :inventory_id, :inventory_location_id, :manufacturer_id,
+                  :pos_order_num, :shipping_depth, :shipping_height, :shipping_weight, :shipping_width,
+                  :stamp, :status, :vendor_id, :warehouse_id
   end
 
   class Location < Resource
@@ -135,7 +136,7 @@ module CoresenseRest
   end
 
   class OrderFulfillment < Resource
-    #action endpoint, use to fulfill orders
+    # action endpoint, use to fulfill orders
     attr_accessor
   end
 
@@ -181,7 +182,7 @@ module CoresenseRest
                   :refund_total, :salesman, :shipping_cost, :shipping_tax_total, :stamp,
                   :total, :viewed
     def shipments
-      RequestRead.new( "#{Order.full_path}/#{id}/shipment", Product.headers, Shipment).select
+      RequestRead.new("#{Order.full_path}/#{id}/shipment", Product.headers, Shipment).select
     end
   end
 
@@ -249,7 +250,7 @@ module CoresenseRest
                   :tax_code, :type, :void
 
     def product_prices(channel_id)
-      RequestRead.new( "#{ProductPrice.full_path}/#{id}/channel/#{channel_id}", Product.headers, ProductPrice).select
+      RequestRead.new("#{ProductPrice.full_path}/#{id}/channel/#{channel_id}", Product.headers, ProductPrice).select
     end
   end
 
@@ -309,13 +310,13 @@ module CoresenseRest
 
   class SkuInventory < Resource
     extend Searchable
-    #extend Findable #Since the id driven get returns a list and not the id of the resource, this does not have parity with AR's find function, opting to not implement
+    # extend Findable #Since the id driven get returns a list and not the id of the resource, this does not have parity with AR's find function, opting to not implement
     attr_accessor :location_id, :quantity, :sku_id, :status, :warehouse_id
   end
 
   class SkuVendor < Resource
     extend Searchable
-    #extend Findable #Since the id driven get returns a list and not the id of the resource, this does not have parity with AR's find function, opting to not implement
+    # extend Findable #Since the id driven get returns a list and not the id of the resource, this does not have parity with AR's find function, opting to not implement
     attr_accessor :default_cost, :discount_percent, :drop_ship_cost, :id, :replenishment_cost,
                   :sku_id, :stamp, :status, :stock_qty, :stock_type, :vendor_id, :vendor_sku
   end
@@ -331,7 +332,7 @@ module CoresenseRest
     extend Findable
     extend Creatable
     attr_accessor :close_date, :destination_sublocation_id, :destination_warehouse_id,
-                  :distribution_purchase_order_id ,:id, :issue_date, :medium, :medium_id,
+                  :distribution_purchase_order_id, :id, :issue_date, :medium, :medium_id,
                   :notes, :shipping_method_id, :source_sublocation_id, :source_warehouse_id,
                   :status, :transfer_reason_code_id, :verified
   end

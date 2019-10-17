@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CoresenseRest
   class RequestWrite
     include HTTParty
@@ -9,25 +11,26 @@ module CoresenseRest
       @data = data
     end
 
-
     def create
-      response = HTTParty.post(@root, :body => @data.to_json, :headers => @headers, format: :json)
-      raise "#{response.parsed_response.to_s} code: #{response.code}" unless (response.code >= 200 && response.code < 300)
+      response = HTTParty.post(@root, body: @data.to_json, headers: @headers, format: :json)
+      raise "#{response.parsed_response} code: #{response.code}" unless response.code >= 200 && response.code < 300
+
       @request_class.find(response.parsed_response['id'])
-      #RequestRead.new(response.parsed_response['uri'], @headers, @request_class).select
+      # RequestRead.new(response.parsed_response['uri'], @headers, @request_class).select
     end
 
     def update
-      response = HTTParty.put(@root, :body => @data.to_json, :headers => @headers, format: :json)
-      raise "#{response.parsed_response.to_s} code: #{response.code}" unless response.code == 200
+      response = HTTParty.put(@root, body: @data.to_json, headers: @headers, format: :json)
+      raise "#{response.parsed_response} code: #{response.code}" unless response.code == 200
+
       JSON.parse(response.parsed_response)
     end
 
     def delete
-      response = HTTParty.delete(@root, :body => @data.to_json, :headers => @headers, format: :json)
-      raise "#{response.parsed_response.to_s} code: #{response.code}" unless response.code == 200
+      response = HTTParty.delete(@root, body: @data.to_json, headers: @headers, format: :json)
+      raise "#{response.parsed_response} code: #{response.code}" unless response.code == 200
+
       JSON.parse(response.parsed_response)
     end
-
   end
 end

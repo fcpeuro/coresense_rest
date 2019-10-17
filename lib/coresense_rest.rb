@@ -1,4 +1,6 @@
-#Configuration
+# frozen_string_literal: true
+
+# Configuration
 require_relative 'resources/configuration'
 require_relative 'coresense_client'
 

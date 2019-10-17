@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module CoresenseRest
   module Searchable
-
     def select
       RequestRead.new(full_path, headers, self, @query).select
     end
@@ -24,6 +25,5 @@ module CoresenseRest
     def limit(max_result_count)
       RequestRead.new(full_path, headers, self, @query).limit max_result_count
     end
-
   end
 end
