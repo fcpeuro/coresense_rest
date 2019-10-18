@@ -336,27 +336,30 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 1000, 1000.to_s
 
         it_should_behave_like 'a Creatable class',
-                              customer_id: 712_158,
+                              customer_id: 712158,
                               channel_id: 8,
-                              billing_contact_id: 712_133,
+                              billing_contact_id: 712133,
                               items: [
                                 {
                                   product_id: 1,
                                   quantity: 2,
                                   shipping_method_id: 1,
-                                  shipping_contact_id: 712_133,
-                                  unit_price: 65.99
+                                  shipping_contact_id: 7121133,
+                                  unit_price: 65.99,
+                                  sales_tax_rate: 0.0635
                                 },
                                 {
                                   product_id: 534,
                                   quantity: 1,
                                   shipping_method_id: 1,
-                                  shipping_contact_id: 712_133,
-                                  unit_price: 35.99
+                                  shipping_contact_id: 7121133,
+                                  unit_price: 35.99,
+                                  sales_tax_rate: 0.0635
                                 }
                               ],
-                              shipping_cost: 10,
-                              shipping_tax_total: 1
+                              shipping_price: 10
+#                              shipping_tax_rate: 0.635 # Awaiting support for param in crest api
+
 
         it 'Retrieve all shipments for an order.' do
           VCR.use_cassette("#{described_class.name.split('::').last}/list_shipments") do
