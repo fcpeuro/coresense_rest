@@ -175,6 +175,17 @@ module CoresenseRest
         end
       end
 
+      context Comment do
+        it_should_behave_like 'a Resource', 'comment'
+
+        it_should_behave_like 'a Findable class', 1662535, 1662535
+
+        it_should_behave_like 'a Searchable class', 1662535, 1662535
+
+        it_should_behave_like 'a Creatable class',
+                              message: 'test message', rep: 'coresense_user', type: 'Other', assoc_entity: 'order', assoc_entity_id: 1001, privacy: 'private'
+      end
+
       context Contact do
         it_should_behave_like 'a Resource', 'contact'
 
@@ -273,10 +284,7 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 2, 2
 
         it_should_behave_like 'a Creatable class',
-                              order_num: 1000,
-                              amount: 2.31,
-                              type: 3,
-                              description: 'test'
+                              amount: 2, description: 'coupon', order_num: 1001, type: 3
       end
 
       context OrderFulfillment do
@@ -358,8 +366,7 @@ module CoresenseRest
                                 }
                               ],
                               shipping_price: 10
-#                              shipping_tax_rate: 0.635 # Awaiting support for param in crest api
-
+        #                              shipping_tax_rate: 0.635 # Awaiting support for param in crest api
 
         it 'Retrieve all shipments for an order.' do
           VCR.use_cassette("#{described_class.name.split('::').last}/list_shipments") do

@@ -50,6 +50,14 @@ module CoresenseRest
                   :shippo_account_id
   end
 
+  class Comment < Resource
+    extend Searchable
+    extend Findable
+    extend Creatable
+    attr_accessor :message, :rep, :stamp, :type, :assoc_entity, :assoc_entity_id, :privacy,
+                  :code
+  end
+
   class Contact < Resource
     extend Searchable
     extend Findable

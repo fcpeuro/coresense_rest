@@ -63,9 +63,7 @@ module CoresenseRest
 
     def parse_query(clause)
       if clause.is_a? String
-        if clause =~ / or /i
-          raise 'OR operators are not supported by the API as this time.'
-        end
+        raise 'OR operators are not supported by the API as this time.' if clause =~ / or /i
 
         clause.split(/ and /i).map { |clauses| "q[]=#{clauses}" }.flatten.join('&')
       elsif clause.is_a? Hash
