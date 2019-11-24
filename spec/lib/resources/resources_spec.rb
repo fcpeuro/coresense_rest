@@ -72,6 +72,16 @@ module CoresenseRest
     end
   end
 
+  shared_examples 'an Updatable class' do |id, update_hash|
+    it '.update' do
+      VCR.use_cassette("#{described_class.name.split('::').last}/update") do
+        klass_instance = described_class.find(id)
+        expect(klass_instance).to be_an_instance_of(described_class)
+        expect(klass_instance.update(update_hash)).to be_an_instance_of(described_class)
+      end
+    end
+  end
+
   describe 'CREST API' do
     before(:all) do
       creds = YAML.safe_load(File.read("#{__dir__}/../../../credentials.yml"))
@@ -365,8 +375,9 @@ module CoresenseRest
                                   sales_tax_rate: 0.0635
                                 }
                               ],
-                              shipping_price: 10
-        #                              shipping_tax_rate: 0.635 # Awaiting support for param in crest api
+                              shipping_price: 10,
+                              shipping_tax_rate: 6.35
+                              #shipping_tax
 
         it 'Retrieve all shipments for an order.' do
           VCR.use_cassette("#{described_class.name.split('::').last}/list_shipments") do
