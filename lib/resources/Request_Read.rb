@@ -12,7 +12,7 @@ module CoresenseRest
     end
 
     def select
-      response = HTTParty.get(current_path, headers: @headers, format: :json)
+      response = HTTParty.get(current_path.strip, headers: @headers, format: :json)
       if response.code == 404
         # ? implies a where clause was used, so user was searching for a list of items
         if current_path.match(/\?/)
