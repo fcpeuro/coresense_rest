@@ -357,8 +357,8 @@ module CoresenseRest
                               customer_id: 712158,
                               channel_id: 8,
                               billing_contact_id: 712133,
-                              #order_status:1,
-                              #comments: "Comments",
+                              order_status:1,
+                              comments: "Comments",
                               items: [
                                 {
                                   product_id: 1,
@@ -377,7 +377,7 @@ module CoresenseRest
                                   sales_tax_rate: 0.0635
                                 }
                               ],
-                              #due_date: Time.now.strftime("%Y-%m-%d %H:%M:%S"),
+                              due_date: Time.now.strftime("%Y-%m-%d %H:%M:%S"),
                               shipping_price: 10,
                               shipping_tax_rate: 6.35
                               #shipping_tax
