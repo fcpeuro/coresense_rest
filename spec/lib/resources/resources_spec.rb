@@ -354,25 +354,25 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 1000, 1000.to_s
 
         it_should_behave_like 'a Creatable class',
-                              customer_id: 712158,
+                              customer_id: 712681,
                               channel_id: 8,
-                              billing_contact_id: 712133,
+                              billing_contact_id: 1245270,
                               order_status:1,
                               comments: "Comments",
                               items: [
                                 {
                                   product_id: 1,
                                   quantity: 2,
-                                  shipping_method_id: 1,
-                                  shipping_contact_id: 7121133,
+                                  shipping_method_id: 32,
+                                  shipping_contact_id: 1245270,
                                   unit_price: 65.99,
                                   sales_tax_rate: 0.0635
                                 },
                                 {
                                   product_id: 534,
                                   quantity: 1,
-                                  shipping_method_id: 1,
-                                  shipping_contact_id: 7121133,
+                                  shipping_method_id: 32,
+                                  shipping_contact_id: 1245270,
                                   unit_price: 35.99,
                                   sales_tax_rate: 0.0635
                                 }
