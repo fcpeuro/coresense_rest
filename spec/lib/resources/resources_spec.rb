@@ -193,7 +193,7 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 1662535, 1662535
 
         it_should_behave_like 'a Creatable class',
-                              message: 'test message', rep: 'coresense_user', type: 'Other', assoc_entity: 'order', assoc_entity_id: 1001, privacy: 'private'
+                              message: 'test message', rep: 'website', type: 'Other', assoc_entity: 'order', assoc_entity_id: 1728371, privacy: 'private'
       end
 
       context Contact do
