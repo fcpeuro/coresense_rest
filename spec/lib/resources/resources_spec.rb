@@ -98,8 +98,8 @@ module CoresenseRest
       it 'Creates requests correctly' do
         expect(request.current_path).to   eq("#{CoresenseRest::Client.host}/resource")
         expect(request.order('field').current_path).to eq("#{CoresenseRest::Client.host}/resource?&order=field")
-        expect(request.where('field1=15').current_path).to eq("#{CoresenseRest::Client.host}/resource?&q[]=field1=15")
-        expect(request.where('field1=15 AND field2=5').current_path).to eq("#{CoresenseRest::Client.host}/resource?&q[]=field1=15&q[]=field2=5")
+        expect(request.where('field1=15').current_path).to eq("#{CoresenseRest::Client.host}/resource?&q[]=field1%3D15")
+        expect(request.where('field1=15 AND field2=5').current_path).to eq("#{CoresenseRest::Client.host}/resource?&q[]=field1%3D15&q[]=field2%3D5")
         expect(request.where('field1' => 15, 'field2' => 5).current_path).to eq("#{CoresenseRest::Client.host}/resource?&q[]=field1=15&q[]=field2=5")
       end
     end
