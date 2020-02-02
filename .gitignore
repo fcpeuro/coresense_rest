@@ -53,7 +53,7 @@ build-iPhoneSimulator/
 .byebug_history
 
 #local test env files
-sample.php
+*.php
 sample.rb
 
 #credentials file is user specific. Copy template to make your own.

@@ -65,9 +65,9 @@ module CoresenseRest
       if clause.is_a? String
         raise 'OR operators are not supported by the API as this time.' if clause =~ / or /i
 
-        clause.split(/ and /i).map { |clauses| "q[]=#{clauses}" }.flatten.join('&')
+        clause.split(/ and /i).map { |clauses| "q[]=#{CGI.escape(clauses.to_s)}" }.flatten.join('&')
       elsif clause.is_a? Hash
-        clause.map { |key, value| "q[]=#{key}=#{value}" }.join('&')
+        clause.map { |key, value| "q[]=#{key}=#{CGI.escape(value.to_s)}" }.join('&')
       else
         raise 'Invalid Where Clause Provided'
       end
