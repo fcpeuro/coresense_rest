@@ -294,7 +294,9 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 2, 2
 
         it_should_behave_like 'a Creatable class',
-                              amount: 2, description: 'coupon', order_num: 1001, type: 3
+                              amount: 2, description: 'coupon', order_num: 1001, type: 3, recalculate_tax: 0
+        # recalculate_tax => 0, do not recalculate sales tax
+        # recalculate_tax => 1, recalculate sales tax
       end
 
       context OrderFulfillment do
@@ -354,33 +356,21 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 1000, 1000.to_s
 
         it_should_behave_like 'a Creatable class',
-                              customer_id: 712681,
+                              customer_id: 513674,
                               channel_id: 8,
-                              billing_contact_id: 1245270,
-                              order_status:1,
-                              comments: "Comments",
-                              items: [
-                                {
-                                  product_id: 1,
-                                  quantity: 2,
-                                  shipping_method_id: 32,
-                                  shipping_contact_id: 1245270,
-                                  unit_price: 65.99,
-                                  sales_tax_rate: 0.0635
-                                },
-                                {
-                                  product_id: 534,
-                                  quantity: 1,
-                                  shipping_method_id: 32,
-                                  shipping_contact_id: 1245270,
-                                  unit_price: 35.99,
-                                  sales_tax_rate: 0.0635
-                                }
-                              ],
-                              due_date: Time.now.strftime("%Y-%m-%d %H:%M:%S"),
-                              shipping_price: 10,
-                              shipping_tax_rate: 6.35
-                              #shipping_tax
+                              billing_contact_id: 1508077,
+                              order_status: 1,comments: 'Payment identifier: R907928159-JJ5F5T4R  Delivery between 01/31 - 02/03',
+                              items: [{product_id: 184846,quantity: 2,shipping_method_id: 1,shipping_contact_id: 1508077,unit_price: '148.0',
+                                       sales_tax_rate: '0.06808'
+                                      },{product_id: 423873,quantity: 1,shipping_method_id: 1,shipping_contact_id: 1508077,unit_price: '279.95',
+                                         sales_tax_rate: '0.06808'
+                                      },{product_id: 210444,quantity: 1,shipping_method_id: 1,shipping_contact_id: 1508077,unit_price: '157.21',
+                                         sales_tax_rate: '0.06808'
+                                      }],
+                              shipping_price: '7.99',
+                              due_date: '2020-04-29 12:49:11',
+                              shipping_tax_rate: '0.07009'
+
 
         it 'Retrieve all shipments for an order.' do
           VCR.use_cassette("#{described_class.name.split('::').last}/list_shipments") do
