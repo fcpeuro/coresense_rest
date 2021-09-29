@@ -13,6 +13,8 @@ module CoresenseRest
 
     def create
       response = HTTParty.post(@root, body: @data.to_json, headers: @headers, format: :json, timeout: 240)
+      Rollbar.info(params: @data, body: response.body, status: response.code)
+
       raise "#{response.parsed_response} code: #{response.code} \n payload: #{@data.to_json}" unless response.code >= 200 && response.code < 300
 
       @request_class.find(response.parsed_response['id'])
