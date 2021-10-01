@@ -13,7 +13,6 @@ Add this line to your application's Gemfile:
 gem 'coresense_rest', github: 'fcpeuro/coresense_rest'
 ```
 
-
 ##Examples:
 
 ### Configure the Coresense Connection
@@ -25,6 +24,11 @@ CoresenseRest.configure do |config|
 end
 ```
 ### Resources
+
+#### Coresense API
+
+* https://api-fcpuat.coresense.com/
+
 #### Affiliates
 ##### Find an Affiliate
 ```ruby

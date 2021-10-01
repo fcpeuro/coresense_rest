@@ -121,7 +121,7 @@ module CoresenseRest
         it_should_behave_like 'a Searchable class', 1, 1
       end
 
-      context BarcodeSKU do
+      context BarcodeSku do
         it_should_behave_like 'a Resource', 'barcodeSku'
 
         it_should_behave_like 'a Findable class', 1, 1

@@ -8,17 +8,17 @@ require 'jwt'
 require 'httparty'
 require 'ostruct'
 # Base Class
-require_relative 'resources/Request_Read'
-require_relative 'resources/Request_Write'
+require_relative 'resources/request_read'
+require_relative 'resources/request_write'
 # Functional Modules
-require_relative 'resources/Findable'
-require_relative 'resources/Searchable'
-require_relative 'resources/Creatable'
-require_relative 'resources/Updatable'
-require_relative 'resources/Deletable'
+require_relative 'resources/findable'
+require_relative 'resources/searchable'
+require_relative 'resources/creatable'
+require_relative 'resources/updatable'
+require_relative 'resources/deletable'
 # Resource Definitions
-require_relative 'resources/Resource'
-require_relative 'resources/Resources'
+require_relative 'resources/resource'
+require_relative 'resources/resources'
 
 module CoresenseRest
   class Client

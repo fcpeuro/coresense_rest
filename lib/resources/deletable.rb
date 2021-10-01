@@ -3,7 +3,7 @@
 module CoresenseRest
   module Deletable
     def delete(_id)
-      raise 'Not Yet Implemented'
+      raise ArgumentError, 'Not Yet Implemented'
     end
   end
 end

@@ -3,16 +3,17 @@
 module CoresenseRest
   module Creatable
     def create(param)
-      if param.is_a? Hash
+      case param
+      when Hash
         RequestWrite.new(full_path, headers, self, param).create
-      elsif Array
-        raise 'Invalid Params' unless param.all { |i| i.is_a? Hash }
+      when Array
+        raise ArgumentError, 'Expected all items of array to be a Hash.' unless param.all { |i| i.is_a? Hash }
 
         param.each do |item|
           RequestWrite.new(full_path, headers, self, item.to_h).create
         end
       else
-        raise 'Invalid param'
+        raise ArgumentError, "Excepted Array or Hash, got: #{param.class.name}"
       end
     end
   end

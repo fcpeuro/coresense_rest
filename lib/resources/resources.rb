@@ -16,10 +16,9 @@ module CoresenseRest
     attr_accessor :barcode, :id, :product_id, :stamp
   end
 
-  class BarcodeSKU < Resource
+  class BarcodeSku < Resource
     extend Searchable
     extend Findable
-    self.endpoint_override = 'barcodeSku'
     attr_accessor :barcode_id, :id, :quantity, :sku_id
   end
 
