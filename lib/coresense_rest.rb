@@ -18,12 +18,8 @@ module CoresenseRest
   end
 
   class JSONParseError < HttpError
-    attr_writer :original_exception
-
-    def self.new(msg, original_exception=nil, response = nil)
-      @response = response
-      @json = json
-      super msg
+    def original_exception
+      cause
     end
   end
 

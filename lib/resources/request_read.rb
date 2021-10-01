@@ -26,7 +26,7 @@ module CoresenseRest
 
       @request_class.parse_self response.body
     rescue JSON::UnparserError => e
-      raise JSONParseError.new(e.message, e, response)
+      raise JSONParseError.new(e.message, response)
     end
 
     def where(clause)

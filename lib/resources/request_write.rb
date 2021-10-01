@@ -25,7 +25,7 @@ module CoresenseRest
 
       JSON.parse(response.parsed_response)
     rescue JSON::UnparserError => e
-      raise JSONParseError.new(e.message, e, response)
+      raise JSONParseError.new(e.message, response)
     end
 
     def delete
@@ -34,7 +34,7 @@ module CoresenseRest
 
       JSON.parse(response.parsed_response)
     rescue JSON::UnparserError => e
-      raise JSONParseError.new(e.message, e, response)
+      raise JSONParseError.new(e.message, response)
     end
 
     private
