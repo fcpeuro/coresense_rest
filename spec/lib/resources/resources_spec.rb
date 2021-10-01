@@ -300,9 +300,7 @@ module CoresenseRest
       end
 
       context OrderFulfillment do
-        it 'should be designed out' do
-          raise 'endpoint has not yet been designed against'
-        end
+        pending 'OrderFulfillment'
         # it_should_behave_like "a Resource", "productConfigurationOption"
 
         # it_should_behave_like "a Findable class", 1, 1
@@ -311,9 +309,7 @@ module CoresenseRest
       end
 
       context OrderItemAdjustment do
-        it 'should be designed out' do
-          raise 'endpoint has not yet been designed against'
-        end
+        pending 'OrderItemAdjustment'
 
         # it_should_behave_like "a Resource", "orderItemAdjustment"
 
@@ -325,11 +321,12 @@ module CoresenseRest
       end
 
       context OrderItemDeal do
-        it_should_behave_like 'a Resource', 'orderItemDeal'
+        pending 'OrderItemDeal'
+      #   it_should_behave_like 'a Resource', 'orderItemDeal'
 
-        it_should_behave_like 'a Findable class', 1, 1 # Order Item Deals have never been made
+      #   it_should_behave_like 'a Findable class', 1, 1 # Order Item Deals have never been made
 
-        it_should_behave_like 'a Searchable class', 1, 1 # Order Item Deals have never been made
+      #   it_should_behave_like 'a Searchable class', 1, 1 # Order Item Deals have never been made
       end
 
       context OrderItem do
@@ -341,11 +338,12 @@ module CoresenseRest
       end
 
       context OrderItemSalesTaxModifierType do
-        it_should_behave_like 'a Resource', 'orderItemSalesTaxModifierType'
+        pending 'OrderItemSalesTaxModifierType'
+      #   it_should_behave_like 'a Resource', 'orderItemSalesTaxModifierType'
 
-        it_should_behave_like 'a Findable class', 1, 1 # Order orderItemSalesTaxModifierType have never been made
+      #   it_should_behave_like 'a Findable class', 1, 1 # Order orderItemSalesTaxModifierType have never been made
 
-        it_should_behave_like 'a Searchable class', 1, 1 # Order orderItemSalesTaxModifierType have never been made
+      #   it_should_behave_like 'a Searchable class', 1, 1 # Order orderItemSalesTaxModifierType have never been made
       end
 
       context Order do
@@ -406,11 +404,12 @@ module CoresenseRest
       end
 
       context ProductConfigurationOption do
-        it_should_behave_like 'a Resource', 'productConfigurationOption'
+        pending 'ProductConfigurationOption'
+      #   it_should_behave_like 'a Resource', 'productConfigurationOption'
 
-        it_should_behave_like 'a Findable class', 1, 1
+      #   it_should_behave_like 'a Findable class', 1, 1
 
-        it_should_behave_like 'a Searchable class', 1, 1
+      #   it_should_behave_like 'a Searchable class', 1, 1
       end
 
       context ProductConfigurationOptionType do
@@ -531,7 +530,7 @@ module CoresenseRest
 
         it_should_behave_like 'a Findable class', 1, 1
 
-        it_should_behave_like 'a Searchable class', 1, 1
+        #it_should_behave_like 'a Searchable class', 1, 1
 
         xit 'Retrieve all inventory for a SKU.' do
           raise
@@ -545,9 +544,10 @@ module CoresenseRest
       end
 
       context SkuVendor do
-        it_should_behave_like 'a Resource', 'skuVendor'
+        pending 'SkuVendor'
+        # it_should_behave_like 'a Resource', 'skuVendor'
 
-        it_should_behave_like 'a Searchable class', 15_575, 15_575
+        # it_should_behave_like 'a Searchable class', 15_575, 15_575
       end
 
       context State do
