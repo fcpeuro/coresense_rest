@@ -14,9 +14,9 @@ module CoresenseRest
     def create
       response = HTTParty.post(@root, body: @data.to_json, headers: @headers, format: :json, timeout: 240)
       raise response_error(response) unless response.code >= 200 && response.code < 300
+      raise HttpError.new('No id returned, object creation failed', response) if response.parsed_response['id'].nil?
 
       @request_class.find(response.parsed_response['id'])
-      # RequestRead.new(response.parsed_response['uri'], @headers, @request_class).select
     end
 
     def update
