@@ -22,9 +22,11 @@ module CoresenseRest
           return nil
         end
       end
-      raise response.body unless response.code == 200
+      raise HttpError.new(response.body, response) unless response.code == 200
 
       @request_class.parse_self response.body
+    rescue JSON::UnparserError => e
+      raise JSONParseError.new(e.message, response)
     end
 
     def where(clause)
@@ -63,13 +65,13 @@ module CoresenseRest
 
     def parse_query(clause)
       if clause.is_a? String
-        raise 'OR operators are not supported by the API as this time.' if clause =~ / or /i
+        raise ArgumentError, 'OR operators are not supported by the API as this time.' if clause =~ / or /i
 
         clause.split(/ and /i).map { |clauses| "q[]=#{CGI.escape(clauses.to_s)}" }.flatten.join('&')
       elsif clause.is_a? Hash
         clause.map { |key, value| "q[]=#{key}=#{CGI.escape(value.to_s)}" }.join('&')
       else
-        raise 'Invalid Where Clause Provided'
+        raise ArgumentError, 'Invalid Where Clause Provided'
       end
     end
   end

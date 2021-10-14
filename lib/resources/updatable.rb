@@ -7,7 +7,7 @@ module CoresenseRest
         body[:id] = self.id
         RequestWrite.new(full_path, headers, self, body).update
       else
-        raise 'Invalid param'
+        raise ArgumentError, "Expected Hash, got #{body.class.name}"
       end
     end
 

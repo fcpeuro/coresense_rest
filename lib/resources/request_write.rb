@@ -13,24 +13,35 @@ module CoresenseRest
 
     def create
       response = HTTParty.post(@root, body: @data.to_json, headers: @headers, format: :json, timeout: 240)
-      raise "#{response.parsed_response} code: #{response.code} \n payload: #{@data.to_json}" unless response.code >= 200 && response.code < 300
+      raise response_error(response) unless response.code >= 200 && response.code < 300
+      raise HttpError.new('No id returned, object creation failed', response) if response.parsed_response['id'].nil?
 
       @request_class.find(response.parsed_response['id'])
-      # RequestRead.new(response.parsed_response['uri'], @headers, @request_class).select
     end
 
     def update
       response = HTTParty.put(@root, body: @data.to_json, headers: @headers, format: :json)
-      raise "#{response.parsed_response} code: #{response.code}" unless response.code == 200
+      raise response_error(response) unless response.code == 200
 
       JSON.parse(response.parsed_response)
+    rescue JSON::UnparserError => e
+      raise JSONParseError.new(e.message, response)
     end
 
     def delete
       response = HTTParty.delete(@root, body: @data.to_json, headers: @headers, format: :json)
-      raise "#{response.parsed_response} code: #{response.code}" unless response.code == 200
+      raise response_error(response) unless response.code == 200
 
       JSON.parse(response.parsed_response)
+    rescue JSON::UnparserError => e
+      raise JSONParseError.new(e.message, response)
+    end
+
+    private
+
+    def response_error(response)
+      msg = "#{response.parsed_response} code: #{response.code}"
+      HttpError.new(msg, response)
     end
   end
 end
