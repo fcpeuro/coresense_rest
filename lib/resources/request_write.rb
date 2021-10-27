@@ -17,6 +17,8 @@ module CoresenseRest
       raise HttpError.new('No id returned, object creation failed', response) if response.parsed_response['id'].nil?
 
       @request_class.find(response.parsed_response['id'])
+    rescue JSONParseError::Rescuable => e
+      raise JSONParseError.from(e, response)
     end
 
     def update
@@ -24,7 +26,7 @@ module CoresenseRest
       raise response_error(response) unless response.code == 200
 
       JSON.parse(response.parsed_response)
-    rescue JSON::UnparserError => e
+    rescue JSONParseError::Rescuable => e
       raise JSONParseError.new(e.message, response)
     end
 
@@ -33,7 +35,7 @@ module CoresenseRest
       raise response_error(response) unless response.code == 200
 
       JSON.parse(response.parsed_response)
-    rescue JSON::UnparserError => e
+    rescue JSONParseError::Rescuable => e
       raise JSONParseError.new(e.message, response)
     end
 
