@@ -25,8 +25,8 @@ module CoresenseRest
       raise HttpError.new(response.body, response) unless response.code == 200
 
       @request_class.parse_self response.body
-    rescue JSON::UnparserError => e
-      raise JSONParseError.new(e.message, response)
+    rescue JSONParseError::Rescuable => e
+      raise JSONParseError.from(e, response)
     end
 
     def where(clause)
