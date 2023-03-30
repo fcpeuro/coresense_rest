@@ -11,7 +11,7 @@ module CoresenseRest
   class HttpError < Error
     attr_reader :response
 
-    def self.new(msg, response = nil)
+    def initialize(msg, response = nil)
       @response = response
       super msg
     end

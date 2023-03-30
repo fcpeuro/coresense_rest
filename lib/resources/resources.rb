@@ -191,6 +191,10 @@ module CoresenseRest
     def shipments
       RequestRead.new("#{Order.full_path}/#{id}/shipment", Product.headers, Shipment).select
     end
+
+    def void
+      RequestWrite.new("#{Order.full_path}Void/#{id}", Order.headers, self, nil).update
+    end
   end
 
   class OrderShippingDetail < Resource

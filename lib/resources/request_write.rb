@@ -25,7 +25,7 @@ module CoresenseRest
       response = HTTParty.put(@root, body: @data.to_json, headers: @headers, format: :json)
       raise response_error(response) unless response.code == 200
 
-      JSON.parse(response.parsed_response)
+      response.parsed_response
     rescue JSONParseError::Rescuable => e
       raise JSONParseError.new(e.message, response)
     end
