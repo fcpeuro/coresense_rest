@@ -378,6 +378,17 @@ module CoresenseRest
             expect(shipments[0]).to be_an_instance_of(Shipment)
           end
         end
+
+        it 'Voids an order.' do
+          VCR.use_cassette("#{described_class.name.split('::').last}/void") do
+            order = Order.find(9000)
+            
+            result = order.void
+            
+            result_hash = JSON.parse(result.body)
+            expect(result_hash["message"]).to eq 'Order has been voided successfully.'
+          end
+        end
       end
 
       context OrderShippingDetail do
