@@ -4,8 +4,7 @@ module CoresenseRest
   module Updatable
     def update(body)
       if body.is_a? Hash
-        body[:id] = self.id
-        RequestWrite.new(full_path, headers, self, body).update
+        RequestWrite.new("#{full_path}/#{body[:id]}", headers, self, body).update
       else
         raise ArgumentError, "Expected Hash, got #{body.class.name}"
       end
