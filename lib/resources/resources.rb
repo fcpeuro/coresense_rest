@@ -285,6 +285,8 @@ module CoresenseRest
   class Shipment < Resource
     extend Searchable
     extend Findable
+    extend Updatable
+
     attr_accessor :arrival_date, :assoc_entity, :assoc_entity_id, :carrier_account_id,
                   :cod_tracking_num, :cost, :destination, :destination_id, :exported, :id,
                   :method_id, :needs_recalculation, :picked_up_date, :ship_date,
