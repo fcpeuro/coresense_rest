@@ -176,6 +176,8 @@ module CoresenseRest
     extend Searchable
     extend Findable
     extend Creatable
+    extend Updatable
+    
     attr_accessor :id, :affiliate_id, :amazon_customer_id, :amazon_order_id, :amt_paid,
                   :billing_contact_id, :cancelled, :checked_out, :client_id, :closed,
                   :club_cc_reauthorization_sent, :cogs, :comments, :compliant,
