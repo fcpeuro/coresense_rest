@@ -1,26 +1,44 @@
 # frozen_string_literal: true
 
-ENV['RAILS_ENV'] ||= 'test'
-require_relative '../lib/coresense_rest'
-require 'vcr'
-require 'webmock/rspec'
+require "coresense_rest"
+require "webmock/rspec"
+
+Dir[File.join(__dir__, "support", "**", "*.rb")].sort.each { |f| require f }
 
 RSpec.configure do |config|
-  config.color = true
+  config.expect_with(:rspec) { |c| c.syntax = :expect }
+  config.disable_monkey_patching!
+  config.order = :random
 
-  # Use color not only in STDOUT but also in pagers and files
-  config.tty = true
+  # Integration specs hit the live CREST API. They are excluded from the normal
+  # (hermetic, WebMock-stubbed) suite unless explicitly opted into.
+  unless ENV["CORESENSE_RUN_INTEGRATION"]
+    config.filter_run_excluding(:integration)
+  end
 
-  # Use the specified formatter
-  config.formatter = :documentation # :progress, :html,
+  # Write specs mutate the live UAT environment. They require a SECOND opt-in
+  # on top of :integration, so a normal integration run stays read-only.
+  unless ENV["CORESENSE_RUN_WRITE"]
+    config.filter_run_excluding(:write)
+  end
 
-  config.backtrace_exclusion_patterns << /gems/
-  config.backtrace_exclusion_patterns << /<main>/
+  # Hermetic examples: stub everything, inject a fake token. Null out any real
+  # CORESENSE_* credentials in the environment so the suite is hermetic
+  # regardless of the developer's shell (e.g. a sourced .env).
+  config.before do |example|
+    next if example.metadata[:integration]
 
-  config.mock_with :rspec
+    allow(ENV).to receive(:[]).and_call_original
+    %w[CORESENSE_USER_ID CORESENSE_SIGN_KEY CORESENSE_TOKEN].each do |key|
+      allow(ENV).to receive(:[]).with(key).and_return(nil)
+    end
 
-  config.example_status_persistence_file_path = 'spec/results.txt'
-end
+    CoresenseRest.reset_configuration!
+    CoresenseRest.configure do |c|
+      c.site  = "https://api-fcpuat.coresense.com"
+      c.token = "test-jwt-token"
+    end
+  end
 
 VCR.configure do |config|
   # In CI, replay committed cassettes only: never record, never touch the
