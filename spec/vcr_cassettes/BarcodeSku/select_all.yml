@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/barcodeSku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:12:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '583'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"barcode_id":1556,"id":3438,"quantity":1,"sku_id":157660},{"barcode_id":1557,"id":3439,"quantity":1,"sku_id":24304},{"barcode_id":1558,"id":3440,"quantity":1,"sku_id":83236},{"barcode_id":1559,"id":3441,"quantity":1,"sku_id":88336},{"barcode_id":1560,"id":3442,"quantity":1,"sku_id":88347},{"barcode_id":1561,"id":3443,"quantity":1,"sku_id":88349},{"barcode_id":1562,"id":3444,"quantity":1,"sku_id":88350},{"barcode_id":1563,"id":3445,"quantity":1,"sku_id":88352},{"barcode_id":1566,"id":3448,"quantity":1,"sku_id":154060},{"barcode_id":1567,"id":3449,"quantity":1,"sku_id":83314}]'
+  recorded_at: Thu, 25 Jun 2026 12:12:27 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/barcodeSku
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:12:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '583'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"barcode_id":1556,"id":3438,"quantity":1,"sku_id":157660},{"barcode_id":1557,"id":3439,"quantity":1,"sku_id":24304},{"barcode_id":1558,"id":3440,"quantity":1,"sku_id":83236},{"barcode_id":1559,"id":3441,"quantity":1,"sku_id":88336},{"barcode_id":1560,"id":3442,"quantity":1,"sku_id":88347},{"barcode_id":1561,"id":3443,"quantity":1,"sku_id":88349},{"barcode_id":1562,"id":3444,"quantity":1,"sku_id":88350},{"barcode_id":1563,"id":3445,"quantity":1,"sku_id":88352},{"barcode_id":1566,"id":3448,"quantity":1,"sku_id":154060},{"barcode_id":1567,"id":3449,"quantity":1,"sku_id":83314}]'
+  recorded_at: Thu, 25 Jun 2026 12:12:31 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,115 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/contact
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":false,"address_line_1":"125 high rock ave","address_line_2":"","business_phone":"","city":"saratoga","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"dcouchman@coresense.com","fax":"","first_name":"dave","id":1,"label":"default","last_name":"couchman","phone":"518-330-9363","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":false,"address_line_1":"388
+        Cosey Beach Ave","address_line_2":"","business_phone":"ML350 4JGBB8GB3AA569750","city":"East
+        Haven","company":"","country_id":1,"created_stamp":"0000-00-00 00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":3,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"scottd@fcpeuro.com","fax":"","first_name":"Scott","id":2,"label":"default","last_name":"Drozd","phone":"877-634-0063","postal_code":"06417","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":true,"address_line_1":"78
+        Scenic View Drive","address_line_2":"","business_phone":"","city":"Deep River","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"1","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":4,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"1","fax":"","first_name":"1","id":3,"label":"default","last_name":"1","phone":"860-301-1434","postal_code":"06417","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":true,"address_line_1":"125
+        High Rock Ave","address_line_2":"","business_phone":"","city":"Saratoga Springs","company":"CORESense","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":5,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"mbouchard@coresense.com","fax":"","first_name":"Mark","id":4,"label":"default","last_name":"Bouchard","phone":"518-306-3043","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":true,"address_line_1":"18
+        Jefferson Street","address_line_2":"Suite 5","business_phone":"","city":"Taunton","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":6,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"andrew@emerysmith.com","fax":"","first_name":"Andrew","id":5,"label":"default","last_name":"Smith","phone":"7742546986","postal_code":"02780","requires_liftgate":true,"residential_address":false,"state_id":33,"verified":false},{"active":true,"address_line_1":"125
+        High Rock Ave","address_line_2":"","business_phone":"","city":"Saratoga Springs","company":"CORESENSE,
+        INC","country_id":1,"created_stamp":"0000-00-00 00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":7,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"jdepaula@coresense.com","fax":"","first_name":"Jared","id":6,"label":"default","last_name":"DePaula","phone":"5183063043","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":true,"address_line_1":"143
+        Cherry Hill Road","address_line_2":"","business_phone":"","city":"Hamden","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"1","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":8,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"cpe@fcpgroton.com","fax":"","first_name":"Chad","id":7,"label":"default","last_name":"Ealden","phone":"860-6620476","postal_code":"06514","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":false,"address_line_1":"155
+        Hill Street","address_line_2":"","business_phone":"","city":"MIlford","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"Volvo
+        850","customer_id":9,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"Nick@fcpeuro.com","fax":"","first_name":"Nick","id":8,"label":"default","last_name":"Bauer","phone":"8602278079","postal_code":"06460","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":true,"address_line_1":"43
+        Main street","address_line_2":"","business_phone":"","city":"Madison","company":"Paint
+        Brush, LLC","country_id":1,"created_stamp":"0000-00-00 00:00:00","custom_customer_type":"1","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":10,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"","fax":"","first_name":"Bob","id":9,"label":"default","last_name":"Smith","phone":"877-634-0063","postal_code":"45011","requires_liftgate":true,"residential_address":false,"state_id":74,"verified":false},{"active":true,"address_line_1":"5-11-23-204
+        Skyhill-Saginuma","address_line_2":"MIyamae-ku Arima","business_phone":"","city":"Kawasaki","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":11,"date_of_birth":"2026-06-25T08:26:52-04:00","email":"y_kawaguchi@bea.hi-ho.ne.jp","fax":"81448616337","first_name":"Yoshifumi","id":10,"label":"default","last_name":"Kawaguchi","phone":"81-44-861-6337","postal_code":"00216-0003","requires_liftgate":true,"residential_address":false,"state_id":0,"verified":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:52 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/contact
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":false,"address_line_1":"125 high rock ave","address_line_2":"","business_phone":"","city":"saratoga","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"dcouchman@coresense.com","fax":"","first_name":"dave","id":1,"label":"default","last_name":"couchman","phone":"518-330-9363","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":false,"address_line_1":"388
+        Cosey Beach Ave","address_line_2":"","business_phone":"ML350 4JGBB8GB3AA569750","city":"East
+        Haven","company":"","country_id":1,"created_stamp":"0000-00-00 00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":3,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"scottd@fcpeuro.com","fax":"","first_name":"Scott","id":2,"label":"default","last_name":"Drozd","phone":"877-634-0063","postal_code":"06417","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":true,"address_line_1":"78
+        Scenic View Drive","address_line_2":"","business_phone":"","city":"Deep River","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"1","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":4,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"1","fax":"","first_name":"1","id":3,"label":"default","last_name":"1","phone":"860-301-1434","postal_code":"06417","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":true,"address_line_1":"125
+        High Rock Ave","address_line_2":"","business_phone":"","city":"Saratoga Springs","company":"CORESense","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":5,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"mbouchard@coresense.com","fax":"","first_name":"Mark","id":4,"label":"default","last_name":"Bouchard","phone":"518-306-3043","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":true,"address_line_1":"18
+        Jefferson Street","address_line_2":"Suite 5","business_phone":"","city":"Taunton","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":6,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"andrew@emerysmith.com","fax":"","first_name":"Andrew","id":5,"label":"default","last_name":"Smith","phone":"7742546986","postal_code":"02780","requires_liftgate":true,"residential_address":false,"state_id":33,"verified":false},{"active":true,"address_line_1":"125
+        High Rock Ave","address_line_2":"","business_phone":"","city":"Saratoga Springs","company":"CORESENSE,
+        INC","country_id":1,"created_stamp":"0000-00-00 00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":7,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"jdepaula@coresense.com","fax":"","first_name":"Jared","id":6,"label":"default","last_name":"DePaula","phone":"5183063043","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":true,"address_line_1":"143
+        Cherry Hill Road","address_line_2":"","business_phone":"","city":"Hamden","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"1","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":8,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"cpe@fcpgroton.com","fax":"","first_name":"Chad","id":7,"label":"default","last_name":"Ealden","phone":"860-6620476","postal_code":"06514","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":false,"address_line_1":"155
+        Hill Street","address_line_2":"","business_phone":"","city":"MIlford","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"Volvo
+        850","customer_id":9,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"Nick@fcpeuro.com","fax":"","first_name":"Nick","id":8,"label":"default","last_name":"Bauer","phone":"8602278079","postal_code":"06460","requires_liftgate":true,"residential_address":false,"state_id":14,"verified":false},{"active":true,"address_line_1":"43
+        Main street","address_line_2":"","business_phone":"","city":"Madison","company":"Paint
+        Brush, LLC","country_id":1,"created_stamp":"0000-00-00 00:00:00","custom_customer_type":"1","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":10,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"","fax":"","first_name":"Bob","id":9,"label":"default","last_name":"Smith","phone":"877-634-0063","postal_code":"45011","requires_liftgate":true,"residential_address":false,"state_id":74,"verified":false},{"active":true,"address_line_1":"5-11-23-204
+        Skyhill-Saginuma","address_line_2":"MIyamae-ku Arima","business_phone":"","city":"Kawasaki","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":11,"date_of_birth":"2026-06-25T08:26:53-04:00","email":"y_kawaguchi@bea.hi-ho.ne.jp","fax":"81448616337","first_name":"Yoshifumi","id":10,"label":"default","last_name":"Kawaguchi","phone":"81-44-861-6337","postal_code":"00216-0003","requires_liftgate":true,"residential_address":false,"state_id":0,"verified":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:53 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/state
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:18 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '441'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"state":"Alabama","state_code":"AL"},{"id":2,"state":"Alaska","state_code":"AK"},{"id":3,"state":"Alberta","state_code":"AB"},{"id":4,"state":"American
+        Samoa","state_code":"AS"},{"id":5,"state":"APO","state_code":"APO"},{"id":6,"state":"Arizona","state_code":"AZ"},{"id":7,"state":"Arkansas","state_code":"AR"},{"id":8,"state":"AA","state_code":"AA"},{"id":9,"state":"AE","state_code":"AE"},{"id":10,"state":"AP","state_code":"AP"}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:18 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/state
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '441'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"state":"Alabama","state_code":"AL"},{"id":2,"state":"Alaska","state_code":"AK"},{"id":3,"state":"Alberta","state_code":"AB"},{"id":4,"state":"American
+        Samoa","state_code":"AS"},{"id":5,"state":"APO","state_code":"APO"},{"id":6,"state":"Arizona","state_code":"AZ"},{"id":7,"state":"Arkansas","state_code":"AR"},{"id":8,"state":"AA","state_code":"AA"},{"id":9,"state":"AE","state_code":"AE"},{"id":10,"state":"AP","state_code":"AP"}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:19 GMT
+recorded_with: VCR 6.4.0

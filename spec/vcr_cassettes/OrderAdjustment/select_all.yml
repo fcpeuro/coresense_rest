@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderAdjustment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"amount":-30,"description":"","id":2,"loyalty_points":0,"order_num":1097,"reward_id":0,"stamp":"2008-03-19T08:39:44-04:00","type":0,"user":"sdrozd"},{"amount":-12,"description":"","id":3,"loyalty_points":0,"order_num":1473,"reward_id":0,"stamp":"2008-03-24T12:38:06-04:00","type":2,"user":"nbauer"},{"amount":-36,"description":"","id":4,"loyalty_points":0,"order_num":1529,"reward_id":0,"stamp":"2008-03-24T14:45:22-04:00","type":2,"user":"sdrozd"},{"amount":72,"description":"","id":5,"loyalty_points":0,"order_num":1529,"reward_id":0,"stamp":"2008-03-24T14:45:43-04:00","type":2,"user":"sdrozd"},{"amount":-12.5,"description":"","id":6,"loyalty_points":0,"order_num":1574,"reward_id":0,"stamp":"2008-03-24T18:29:24-04:00","type":1,"user":"nbauer"},{"amount":-50,"description":"","id":7,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:12:36-04:00","type":2,"user":"cealden"},{"amount":50,"description":"","id":8,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:14:49-04:00","type":2,"user":"cealden"},{"amount":50,"description":"","id":9,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:15:06-04:00","type":2,"user":"cealden"},{"amount":-50,"description":"","id":10,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:15:44-04:00","type":2,"user":"cealden"},{"amount":-3,"description":"","id":11,"loyalty_points":0,"order_num":1633,"reward_id":0,"stamp":"2008-03-25T10:05:15-04:00","type":2,"user":"sdrozd"}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:45 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderAdjustment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"amount":-30,"description":"","id":2,"loyalty_points":0,"order_num":1097,"reward_id":0,"stamp":"2008-03-19T08:39:44-04:00","type":0,"user":"sdrozd"},{"amount":-12,"description":"","id":3,"loyalty_points":0,"order_num":1473,"reward_id":0,"stamp":"2008-03-24T12:38:06-04:00","type":2,"user":"nbauer"},{"amount":-36,"description":"","id":4,"loyalty_points":0,"order_num":1529,"reward_id":0,"stamp":"2008-03-24T14:45:22-04:00","type":2,"user":"sdrozd"},{"amount":72,"description":"","id":5,"loyalty_points":0,"order_num":1529,"reward_id":0,"stamp":"2008-03-24T14:45:43-04:00","type":2,"user":"sdrozd"},{"amount":-12.5,"description":"","id":6,"loyalty_points":0,"order_num":1574,"reward_id":0,"stamp":"2008-03-24T18:29:24-04:00","type":1,"user":"nbauer"},{"amount":-50,"description":"","id":7,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:12:36-04:00","type":2,"user":"cealden"},{"amount":50,"description":"","id":8,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:14:49-04:00","type":2,"user":"cealden"},{"amount":50,"description":"","id":9,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:15:06-04:00","type":2,"user":"cealden"},{"amount":-50,"description":"","id":10,"loyalty_points":0,"order_num":1453,"reward_id":0,"stamp":"2008-03-25T08:15:44-04:00","type":2,"user":"cealden"},{"amount":-3,"description":"","id":11,"loyalty_points":0,"order_num":1633,"reward_id":0,"stamp":"2008-03-25T10:05:15-04:00","type":2,"user":"sdrozd"}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:46 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/sku/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '794'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"base_uom_id":null,"build_type":"JIT","custom_hazmat_storage":"0","custom_minimum_order_quantity_jit":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"2","custom_vehicle_make":"","default_product_id":1,"default_shipping_method_id":1,"default_vendor_id":286,"description":"Manual
+        Antenna","discontinued":true,"ean":"","freight_class":"500","generation":"manual","id":1,"internal_sku":"(X)1398429","inventory_avg":19.52,"inventory_total_cost_of_on_hand":"0","isbn":"","label":"VOL-1384773","manufacturer_id":32,"mpn":"","needs_own_box":false,"shipping_delivery_signature_type_id":1,"shipping_depth":25,"shipping_height":0.5,"shipping_liftgate_delivery_required":false,"shipping_weight":0.4,"shipping_width":2,"stamp":"2025-08-21T12:00:21-04:00","upc":"1384773"}'
+  recorded_at: Thu, 25 Jun 2026 12:35:14 GMT
+recorded_with: VCR 6.4.0

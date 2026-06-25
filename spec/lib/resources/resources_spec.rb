@@ -116,17 +116,17 @@ module CoresenseRest
       context Barcode do
         it_should_behave_like 'a Resource', 'barcode'
 
-        it_should_behave_like 'a Findable class', 1, 1
+        it_should_behave_like 'a Findable class', 1556, 1556
 
-        it_should_behave_like 'a Searchable class', 1, 1
+        it_should_behave_like 'a Searchable class', 1556, 1556
       end
 
       context BarcodeSku do
         it_should_behave_like 'a Resource', 'barcodeSku'
 
-        it_should_behave_like 'a Findable class', 1, 1
+        it_should_behave_like 'a Findable class', 3438, 3438
 
-        it_should_behave_like 'a Searchable class', 1, 1
+        it_should_behave_like 'a Searchable class', 3438, 3438
       end
 
       context Brand do
@@ -273,9 +273,9 @@ module CoresenseRest
       context LocationType do
         it_should_behave_like 'a Resource', 'locationType'
 
-        it_should_behave_like 'a Findable class', 1, 1
+        it_should_behave_like 'a Findable class', 93, 93
 
-        it_should_behave_like 'a Searchable class', 1, 1
+        it_should_behave_like 'a Searchable class', 93, 93
       end
 
       context Manufacturer do
@@ -381,7 +381,7 @@ module CoresenseRest
 
         it 'Voids an order.' do
           VCR.use_cassette("#{described_class.name.split('::').last}/void") do
-            order = Order.find(9000)
+            order = Order.find(9372858)
             
             result = order.void
             

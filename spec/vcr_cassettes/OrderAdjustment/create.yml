@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-fcpuat.coresense.com/v1/orderAdjustment
+    body:
+      encoding: UTF-8
+      string: '{"amount":2,"description":"coupon","order_num":1001,"type":3,"recalculate_tax":0}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:49 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"id":"656610"}'
+  recorded_at: Thu, 25 Jun 2026 12:33:49 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderAdjustment/656610
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '152'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"amount":2,"description":"coupon","id":656610,"loyalty_points":0,"order_num":1001,"reward_id":0,"stamp":"2026-06-25T08:33:48-04:00","type":3,"user":""}'
+  recorded_at: Thu, 25 Jun 2026 12:33:50 GMT
+recorded_with: VCR 6.4.0

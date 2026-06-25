@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order/9000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:17 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"affiliate_id":0,"amazon_customer_id":0,"amazon_order_id":"","amt_paid":538.65,"billing_contact_id":1378661,"cancelled":false,"checked_out":true,"client_id":7167,"closed":false,"club_cc_reauthorization_sent":false,"cogs":296.81,"comments":"","compliant":false,"custom_exception_reason_code":"0","custom_fraudulent":false,"custom_insight_export":"no","custom_prepicked":"no","custom_prepicked_location":"","custom_shipping_insurance":null,"due_date":"2008-05-20T09:48:51-04:00","google_financial_status":"REVIEWING","google_fulfillment_status":"NEW","google_order_num":null,"grand_total":538.65,"id":"9000","ip_address":"","key_code":"","layaway_expiration_date":null,"layaway_policy_id":0,"layaway_status":null,"locked":true,"mail_code":"","order_exported":false,"order_status":7,"originating_brand_id":1,"originating_channel_id":4,"originating_club_delivery_id":0,"originating_club_membership_id":0,"paid_stamp":"","payment_invoice_number":null,"payment_type":1,"personalization":false,"refund_total":0,"salesman":"ebay","shipping_cost":62.5,"shipping_tax_total":0,"stamp":"2008-05-20T09:48:48-04:00","total":476.15,"viewed":"sdrozd"}'
+  recorded_at: Thu, 25 Jun 2026 12:34:17 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order/9000/shipment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:18 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '755'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"arrival_date":"","assoc_entity":"order","assoc_entity_id":9000,"carrier_account_id":0,"cod_tracking_num":"","cost":97.06,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":40056,"method_id":31,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:34:18-04:00","ship_date":"2008-05-22T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"EV983916772US","transit_time":0,"validated":false,"workflow_state_id":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:18 GMT
+recorded_with: VCR 6.4.0

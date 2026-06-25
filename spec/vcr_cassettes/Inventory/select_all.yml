@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/inventory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:31:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"assoc_entity":null,"assoc_entity_id":0,"build_type":"INV","cogs":1.54,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":1,"inventory_location_id":1432676,"manufacturer_id":48,"pos_order_num":0,"shipping_depth":20,"shipping_height":3,"shipping_weight":11,"shipping_width":6,"sku_id":"655","stamp":"2020-03-06T16:31:17-05:00","status":"damaged","vendor_id":41,"warehouse_id":11},{"assoc_entity":null,"assoc_entity_id":0,"build_type":"INV","cogs":1.54,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":2,"inventory_location_id":1432676,"manufacturer_id":48,"pos_order_num":0,"shipping_depth":20,"shipping_height":3,"shipping_weight":11,"shipping_width":6,"sku_id":"655","stamp":"2020-03-06T16:31:17-05:00","status":"damaged","vendor_id":41,"warehouse_id":11},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":232,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":233,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":234,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":235,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":236,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":8997,"build_type":"INV","cogs":9.5,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":242,"inventory_location_id":0,"manufacturer_id":3,"pos_order_num":0,"shipping_depth":5,"shipping_height":3,"shipping_weight":1.23,"shipping_width":3,"sku_id":"1718","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":8997,"build_type":"INV","cogs":9.5,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":243,"inventory_location_id":0,"manufacturer_id":3,"pos_order_num":0,"shipping_depth":5,"shipping_height":3,"shipping_weight":1.23,"shipping_width":3,"sku_id":"1718","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":9124,"build_type":"INV","cogs":9.5,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":244,"inventory_location_id":0,"manufacturer_id":3,"pos_order_num":0,"shipping_depth":5,"shipping_height":3,"shipping_weight":1.23,"shipping_width":3,"sku_id":"1718","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1}]'
+  recorded_at: Thu, 25 Jun 2026 12:31:25 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/inventory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:31:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"assoc_entity":null,"assoc_entity_id":0,"build_type":"INV","cogs":1.54,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":1,"inventory_location_id":1432676,"manufacturer_id":48,"pos_order_num":0,"shipping_depth":20,"shipping_height":3,"shipping_weight":11,"shipping_width":6,"sku_id":"655","stamp":"2020-03-06T16:31:17-05:00","status":"damaged","vendor_id":41,"warehouse_id":11},{"assoc_entity":null,"assoc_entity_id":0,"build_type":"INV","cogs":1.54,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":2,"inventory_location_id":1432676,"manufacturer_id":48,"pos_order_num":0,"shipping_depth":20,"shipping_height":3,"shipping_weight":11,"shipping_width":6,"sku_id":"655","stamp":"2020-03-06T16:31:17-05:00","status":"damaged","vendor_id":41,"warehouse_id":11},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":232,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":233,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":234,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":235,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":4225,"build_type":"INV","cogs":66,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":236,"inventory_location_id":0,"manufacturer_id":15,"pos_order_num":0,"shipping_depth":5,"shipping_height":4,"shipping_weight":0.68,"shipping_width":3,"sku_id":"10","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":8997,"build_type":"INV","cogs":9.5,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":242,"inventory_location_id":0,"manufacturer_id":3,"pos_order_num":0,"shipping_depth":5,"shipping_height":3,"shipping_weight":1.23,"shipping_width":3,"sku_id":"1718","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":8997,"build_type":"INV","cogs":9.5,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":243,"inventory_location_id":0,"manufacturer_id":3,"pos_order_num":0,"shipping_depth":5,"shipping_height":3,"shipping_weight":1.23,"shipping_width":3,"sku_id":"1718","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1},{"assoc_entity":"ordered
+        item","assoc_entity_id":9124,"build_type":"INV","cogs":9.5,"custom_hazmat_storage":"0","custom_minimum_order_quantity_stock":"0","custom_pick_location_stock_up_qty":"0","description":"","id":244,"inventory_location_id":0,"manufacturer_id":3,"pos_order_num":0,"shipping_depth":5,"shipping_height":3,"shipping_weight":1.23,"shipping_width":3,"sku_id":"1718","stamp":"2008-03-13T15:31:51-04:00","status":"assigned","vendor_id":18,"warehouse_id":1}]'
+  recorded_at: Thu, 25 Jun 2026 12:31:25 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderItem?q%5B%5D=id=67
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '414'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"amazon_order_item_id":"","base_price":324.99,"channel_id":1,"closed":false,"cogs":"0.00000","delivery_date":"2026-06-25T08:34:16-04:00","delivery_timing":"future
+        shipment","id":67,"iha_product_overridden":false,"model_id":15940,"order_num":1000,"quantity":1,"return_price":"324.99","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:16 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderItem?q%5B%5D=id=67
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '414'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"amazon_order_item_id":"","base_price":324.99,"channel_id":1,"closed":false,"cogs":"0.00000","delivery_date":"2026-06-25T08:34:16-04:00","delivery_timing":"future
+        shipment","id":67,"iha_product_overridden":false,"model_id":15940,"order_num":1000,"quantity":1,"return_price":"324.99","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:16 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderItem?q%5B%5D=id=%2067%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '414'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"amazon_order_item_id":"","base_price":324.99,"channel_id":1,"closed":false,"cogs":"0.00000","delivery_date":"2026-06-25T08:34:17-04:00","delivery_timing":"future
+        shipment","id":67,"iha_product_overridden":false,"model_id":15940,"order_num":1000,"quantity":1,"return_price":"324.99","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:17 GMT
+recorded_with: VCR 6.4.0

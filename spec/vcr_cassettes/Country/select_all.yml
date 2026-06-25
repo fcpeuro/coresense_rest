@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/country
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:27:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"code_iso_alpha_2":"US","code_iso_alpha_3":"USA","code_un_numeric":"840","country":"United
+        States","custom_tariff":"1.0000","custom_tariff_2":"1.0000","id":1},{"code_iso_alpha_2":"CA","code_iso_alpha_3":"CAN","code_un_numeric":"124","country":"Canada","custom_tariff":"1.3500","custom_tariff_2":"1.1000","id":2},{"code_iso_alpha_2":"AL","code_iso_alpha_3":"ALB","code_un_numeric":"008","country":"Albania","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":3},{"code_iso_alpha_2":"DZ","code_iso_alpha_3":"DZA","code_un_numeric":"012","country":"Algeria","custom_tariff":"1.0000","custom_tariff_2":"1.3000","id":4},{"code_iso_alpha_2":"AS","code_iso_alpha_3":"ASM","code_un_numeric":"016","country":"American
+        Samoa","custom_tariff":"1.0000","custom_tariff_2":"1.0000","id":5},{"code_iso_alpha_2":"AD","code_iso_alpha_3":"AND","code_un_numeric":"020","country":"Andorra","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":6},{"code_iso_alpha_2":"AI","code_iso_alpha_3":"AIA","code_un_numeric":"660","country":"Anguilla","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":7},{"code_iso_alpha_2":"AG","code_iso_alpha_3":"ATG","code_un_numeric":"028","country":"Antigua
+        Barbuda","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":8},{"code_iso_alpha_2":"AR","code_iso_alpha_3":"ARG","code_un_numeric":"032","country":"Argentina","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":9},{"code_iso_alpha_2":"AW","code_iso_alpha_3":"ABW","code_un_numeric":"533","country":"Aruba","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":10}]'
+  recorded_at: Thu, 25 Jun 2026 12:27:13 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/country
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:27:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"code_iso_alpha_2":"US","code_iso_alpha_3":"USA","code_un_numeric":"840","country":"United
+        States","custom_tariff":"1.0000","custom_tariff_2":"1.0000","id":1},{"code_iso_alpha_2":"CA","code_iso_alpha_3":"CAN","code_un_numeric":"124","country":"Canada","custom_tariff":"1.3500","custom_tariff_2":"1.1000","id":2},{"code_iso_alpha_2":"AL","code_iso_alpha_3":"ALB","code_un_numeric":"008","country":"Albania","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":3},{"code_iso_alpha_2":"DZ","code_iso_alpha_3":"DZA","code_un_numeric":"012","country":"Algeria","custom_tariff":"1.0000","custom_tariff_2":"1.3000","id":4},{"code_iso_alpha_2":"AS","code_iso_alpha_3":"ASM","code_un_numeric":"016","country":"American
+        Samoa","custom_tariff":"1.0000","custom_tariff_2":"1.0000","id":5},{"code_iso_alpha_2":"AD","code_iso_alpha_3":"AND","code_un_numeric":"020","country":"Andorra","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":6},{"code_iso_alpha_2":"AI","code_iso_alpha_3":"AIA","code_un_numeric":"660","country":"Anguilla","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":7},{"code_iso_alpha_2":"AG","code_iso_alpha_3":"ATG","code_un_numeric":"028","country":"Antigua
+        Barbuda","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":8},{"code_iso_alpha_2":"AR","code_iso_alpha_3":"ARG","code_un_numeric":"032","country":"Argentina","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":9},{"code_iso_alpha_2":"AW","code_iso_alpha_3":"ABW","code_un_numeric":"533","country":"Aruba","custom_tariff":"1.0000","custom_tariff_2":"1.1000","id":10}]'
+  recorded_at: Thu, 25 Jun 2026 12:27:14 GMT
+recorded_with: VCR 6.4.0

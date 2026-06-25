@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/payment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"assoc_entity":"order","assoc_entity_id":1001,"category":"Order Payment","check_num":"0","client_id":17,"id":28,"memo":"Payment
+        for Order #1001","payee":"","payment":"38.25","payment_gateway_response":"","payment_process_auth_code":"018924","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1769485928","payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T12:00:02-04:00","user":"api","void":false},{"assoc_entity":"order","assoc_entity_id":1002,"category":"Order
+        Payment","check_num":"0","client_id":21,"id":29,"memo":"Payment for Order
+        #1002","payee":"","payment":"200.50","payment_gateway_response":"","payment_process_auth_code":"100052","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1769610375","payment_processor_id":1,"pos_id":0,"receivable_type_id":1,"stamp":"2008-03-18T12:00:04-04:00","user":"api","void":false},{"assoc_entity":"order","assoc_entity_id":1003,"category":"Order
+        Payment","check_num":"0","client_id":23,"id":30,"memo":"Payment for Order
+        #1003","payee":"FCP Groton, LLC","payment":"100.81","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:12:31-04:00","user":"sdrozd","void":false},{"assoc_entity":"order","assoc_entity_id":1004,"category":"Order
+        Payment","check_num":"0","client_id":24,"id":31,"memo":"Payment for Order
+        #1004","payee":"FCP Groton, LLC","payment":"11.50","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T07:15:59-04:00","user":"nbauer","void":false},{"assoc_entity":"order","assoc_entity_id":1005,"category":"Order
+        Payment","check_num":"0","client_id":26,"id":32,"memo":"Payment for Order
+        #1005","payee":"","payment":"148.72","payment_gateway_response":"","payment_process_auth_code":"01563Z","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1769634351","payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T12:00:05-04:00","user":"api","void":false},{"assoc_entity":"order","assoc_entity_id":1006,"category":"Order
+        Payment","check_num":"0","client_id":25,"id":33,"memo":"Payment for Order
+        #1006","payee":"FCP Groton, LLC","payment":"123.48","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T07:19:19-04:00","user":"cealden","void":false},{"assoc_entity":"order","assoc_entity_id":1007,"category":"Order
+        Payment","check_num":"0","client_id":28,"id":34,"memo":"Payment for Order
+        #1007","payee":"FCP Groton, LLC","payment":"84.25","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:21:20-04:00","user":"nbauer","void":false},{"assoc_entity":"order","assoc_entity_id":1008,"category":"Order
+        Payment","check_num":"0","client_id":27,"id":35,"memo":"Payment for Order
+        #1008","payee":"FCP Groton, LLC","payment":"25.60","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:21:57-04:00","user":"sdrozd","void":false},{"assoc_entity":"order","assoc_entity_id":1009,"category":"Order
+        Payment","check_num":"0","client_id":29,"id":36,"memo":"Payment for Order
+        #1009","payee":"FCP Groton, LLC","payment":"17.10","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T07:23:31-04:00","user":"cealden","void":false},{"assoc_entity":"order","assoc_entity_id":1010,"category":"Order
+        Payment","check_num":"0","client_id":30,"id":37,"memo":"Payment for Order
+        #1010","payee":"FCP Groton, LLC","payment":"59.95","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:27:34-04:00","user":"nbauer","void":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:32 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/payment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"assoc_entity":"order","assoc_entity_id":1001,"category":"Order Payment","check_num":"0","client_id":17,"id":28,"memo":"Payment
+        for Order #1001","payee":"","payment":"38.25","payment_gateway_response":"","payment_process_auth_code":"018924","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1769485928","payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T12:00:02-04:00","user":"api","void":false},{"assoc_entity":"order","assoc_entity_id":1002,"category":"Order
+        Payment","check_num":"0","client_id":21,"id":29,"memo":"Payment for Order
+        #1002","payee":"","payment":"200.50","payment_gateway_response":"","payment_process_auth_code":"100052","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1769610375","payment_processor_id":1,"pos_id":0,"receivable_type_id":1,"stamp":"2008-03-18T12:00:04-04:00","user":"api","void":false},{"assoc_entity":"order","assoc_entity_id":1003,"category":"Order
+        Payment","check_num":"0","client_id":23,"id":30,"memo":"Payment for Order
+        #1003","payee":"FCP Groton, LLC","payment":"100.81","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:12:31-04:00","user":"sdrozd","void":false},{"assoc_entity":"order","assoc_entity_id":1004,"category":"Order
+        Payment","check_num":"0","client_id":24,"id":31,"memo":"Payment for Order
+        #1004","payee":"FCP Groton, LLC","payment":"11.50","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T07:15:59-04:00","user":"nbauer","void":false},{"assoc_entity":"order","assoc_entity_id":1005,"category":"Order
+        Payment","check_num":"0","client_id":26,"id":32,"memo":"Payment for Order
+        #1005","payee":"","payment":"148.72","payment_gateway_response":"","payment_process_auth_code":"01563Z","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1769634351","payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T12:00:05-04:00","user":"api","void":false},{"assoc_entity":"order","assoc_entity_id":1006,"category":"Order
+        Payment","check_num":"0","client_id":25,"id":33,"memo":"Payment for Order
+        #1006","payee":"FCP Groton, LLC","payment":"123.48","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T07:19:19-04:00","user":"cealden","void":false},{"assoc_entity":"order","assoc_entity_id":1007,"category":"Order
+        Payment","check_num":"0","client_id":28,"id":34,"memo":"Payment for Order
+        #1007","payee":"FCP Groton, LLC","payment":"84.25","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:21:20-04:00","user":"nbauer","void":false},{"assoc_entity":"order","assoc_entity_id":1008,"category":"Order
+        Payment","check_num":"0","client_id":27,"id":35,"memo":"Payment for Order
+        #1008","payee":"FCP Groton, LLC","payment":"25.60","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:21:57-04:00","user":"sdrozd","void":false},{"assoc_entity":"order","assoc_entity_id":1009,"category":"Order
+        Payment","check_num":"0","client_id":29,"id":36,"memo":"Payment for Order
+        #1009","payee":"FCP Groton, LLC","payment":"17.10","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":3,"stamp":"2008-03-18T07:23:31-04:00","user":"cealden","void":false},{"assoc_entity":"order","assoc_entity_id":1010,"category":"Order
+        Payment","check_num":"0","client_id":30,"id":37,"memo":"Payment for Order
+        #1010","payee":"FCP Groton, LLC","payment":"59.95","payment_gateway_response":"","payment_process_auth_code":"","payment_process_message":"","payment_process_message_type":"message","payment_process_status":"n\/a","payment_process_transaction_id":null,"payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-18T07:27:34-04:00","user":"nbauer","void":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:32 GMT
+recorded_with: VCR 6.4.0

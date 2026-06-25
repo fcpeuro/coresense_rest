@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/transfer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"close_date":"2008-04-15T10:09:25-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":1,"issue_date":"2008-04-15T10:03:16-04:00","medium":"email","medium_id":5397,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:09:15-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":2,"issue_date":"2008-04-15T10:03:51-04:00","medium":"email","medium_id":5398,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:05:03-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":3,"issue_date":"2008-04-15T10:04:29-04:00","medium":"email","medium_id":5399,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:09:09-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":4,"issue_date":"2008-04-15T10:06:49-04:00","medium":"email","medium_id":5400,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:09:01-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":5,"issue_date":"2008-04-15T10:07:22-04:00","medium":"email","medium_id":5402,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:08:54-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":6,"issue_date":"2008-04-15T10:08:26-04:00","medium":"email","medium_id":5403,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:54-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":7,"issue_date":"2008-04-15T10:10:50-04:00","medium":"email","medium_id":5405,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:47-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":8,"issue_date":"2008-04-15T10:11:19-04:00","medium":"email","medium_id":5406,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:40-04:00","destination_sublocation_id":0,"destination_warehouse_id":1,"distribution_purchase_order_id":0,"id":9,"issue_date":"2008-04-15T10:12:19-04:00","medium":"email","medium_id":5408,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:34-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":10,"issue_date":"2008-04-15T10:12:57-04:00","medium":"email","medium_id":5409,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:22 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/transfer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"close_date":"2008-04-15T10:09:25-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":1,"issue_date":"2008-04-15T10:03:16-04:00","medium":"email","medium_id":5397,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:09:15-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":2,"issue_date":"2008-04-15T10:03:51-04:00","medium":"email","medium_id":5398,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:05:03-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":3,"issue_date":"2008-04-15T10:04:29-04:00","medium":"email","medium_id":5399,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:09:09-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":4,"issue_date":"2008-04-15T10:06:49-04:00","medium":"email","medium_id":5400,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:09:01-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":5,"issue_date":"2008-04-15T10:07:22-04:00","medium":"email","medium_id":5402,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:08:54-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":6,"issue_date":"2008-04-15T10:08:26-04:00","medium":"email","medium_id":5403,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:54-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":7,"issue_date":"2008-04-15T10:10:50-04:00","medium":"email","medium_id":5405,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:47-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":8,"issue_date":"2008-04-15T10:11:19-04:00","medium":"email","medium_id":5406,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:40-04:00","destination_sublocation_id":0,"destination_warehouse_id":1,"distribution_purchase_order_id":0,"id":9,"issue_date":"2008-04-15T10:12:19-04:00","medium":"email","medium_id":5408,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false},{"close_date":"2008-04-15T10:13:34-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":10,"issue_date":"2008-04-15T10:12:57-04:00","medium":"email","medium_id":5409,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:23 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderItem
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"amazon_order_item_id":"","base_price":324.99,"channel_id":1,"closed":false,"cogs":"0.00000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":67,"iha_product_overridden":false,"model_id":15940,"order_num":1000,"quantity":1,"return_price":"324.99","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99},{"amazon_order_item_id":"","base_price":15.5,"channel_id":1,"closed":false,"cogs":"19.80000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":68,"iha_product_overridden":false,"model_id":14247,"order_num":1001,"quantity":2,"return_price":"17.50","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T01:11:58-04:00","total":31},{"amazon_order_item_id":"","base_price":169,"channel_id":1,"closed":false,"cogs":"147.33000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":69,"iha_product_overridden":false,"model_id":5377,"order_num":1002,"quantity":1,"return_price":"169.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":169},{"amazon_order_item_id":"","base_price":0.75,"channel_id":1,"closed":false,"cogs":"1.92000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":70,"iha_product_overridden":false,"model_id":5384,"order_num":1002,"quantity":2,"return_price":"0.75","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":1.5},{"amazon_order_item_id":"","base_price":20,"channel_id":1,"closed":false,"cogs":"10.35000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":71,"iha_product_overridden":false,"model_id":852,"order_num":1002,"quantity":1,"return_price":"20.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":20},{"amazon_order_item_id":"","base_price":10,"channel_id":1,"closed":false,"cogs":"2.76000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":72,"iha_product_overridden":false,"model_id":832,"order_num":1002,"quantity":1,"return_price":"10.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":10},{"amazon_order_item_id":"","base_price":29,"channel_id":1,"closed":false,"cogs":"20.90000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":73,"iha_product_overridden":false,"model_id":3273,"order_num":1003,"quantity":1,"return_price":"29.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":19,"stamp":"2008-03-18T07:09:48-04:00","total":29},{"amazon_order_item_id":"","base_price":14.5,"channel_id":1,"closed":false,"cogs":"13.35000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":74,"iha_product_overridden":false,"model_id":3294,"order_num":1003,"quantity":1,"return_price":"14.50","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":19,"stamp":"2008-03-18T07:09:55-04:00","total":14.5},{"amazon_order_item_id":"","base_price":49,"channel_id":1,"closed":false,"cogs":"33.03000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":75,"iha_product_overridden":false,"model_id":9349,"order_num":1003,"quantity":1,"return_price":"49.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":19,"stamp":"2008-03-18T07:10:34-04:00","total":49},{"amazon_order_item_id":"","base_price":1,"channel_id":1,"closed":false,"cogs":"0.50000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":76,"iha_product_overridden":false,"model_id":4672,"order_num":1004,"quantity":2,"return_price":"1.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":17,"stamp":"2008-03-18T07:14:42-04:00","total":2}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:15 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderItem
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"amazon_order_item_id":"","base_price":324.99,"channel_id":1,"closed":false,"cogs":"0.00000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":67,"iha_product_overridden":false,"model_id":15940,"order_num":1000,"quantity":1,"return_price":"324.99","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99},{"amazon_order_item_id":"","base_price":15.5,"channel_id":1,"closed":false,"cogs":"19.80000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":68,"iha_product_overridden":false,"model_id":14247,"order_num":1001,"quantity":2,"return_price":"17.50","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T01:11:58-04:00","total":31},{"amazon_order_item_id":"","base_price":169,"channel_id":1,"closed":false,"cogs":"147.33000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":69,"iha_product_overridden":false,"model_id":5377,"order_num":1002,"quantity":1,"return_price":"169.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":169},{"amazon_order_item_id":"","base_price":0.75,"channel_id":1,"closed":false,"cogs":"1.92000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":70,"iha_product_overridden":false,"model_id":5384,"order_num":1002,"quantity":2,"return_price":"0.75","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":1.5},{"amazon_order_item_id":"","base_price":20,"channel_id":1,"closed":false,"cogs":"10.35000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":71,"iha_product_overridden":false,"model_id":852,"order_num":1002,"quantity":1,"return_price":"20.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":20},{"amazon_order_item_id":"","base_price":10,"channel_id":1,"closed":false,"cogs":"2.76000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":72,"iha_product_overridden":false,"model_id":832,"order_num":1002,"quantity":1,"return_price":"10.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":0,"stamp":"2008-03-18T06:05:51-04:00","total":10},{"amazon_order_item_id":"","base_price":29,"channel_id":1,"closed":false,"cogs":"20.90000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":73,"iha_product_overridden":false,"model_id":3273,"order_num":1003,"quantity":1,"return_price":"29.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":19,"stamp":"2008-03-18T07:09:48-04:00","total":29},{"amazon_order_item_id":"","base_price":14.5,"channel_id":1,"closed":false,"cogs":"13.35000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":74,"iha_product_overridden":false,"model_id":3294,"order_num":1003,"quantity":1,"return_price":"14.50","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":19,"stamp":"2008-03-18T07:09:55-04:00","total":14.5},{"amazon_order_item_id":"","base_price":49,"channel_id":1,"closed":false,"cogs":"33.03000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":75,"iha_product_overridden":false,"model_id":9349,"order_num":1003,"quantity":1,"return_price":"49.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":19,"stamp":"2008-03-18T07:10:34-04:00","total":49},{"amazon_order_item_id":"","base_price":1,"channel_id":1,"closed":false,"cogs":"0.50000","delivery_date":"2026-06-25T08:34:15-04:00","delivery_timing":"future
+        shipment","id":76,"iha_product_overridden":false,"model_id":4672,"order_num":1004,"quantity":2,"return_price":"1.00","returned":false,"sales_tax":"0.000","sales_tax_total":"0.0000","salesman":17,"stamp":"2008-03-18T07:14:42-04:00","total":2}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:15 GMT
+recorded_with: VCR 6.4.0

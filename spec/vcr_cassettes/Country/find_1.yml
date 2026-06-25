@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/country/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:27:10 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '159'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"code_iso_alpha_2":"US","code_iso_alpha_3":"USA","code_un_numeric":"840","country":"United
+        States","custom_tariff":"1.0000","custom_tariff_2":"1.0000","id":1}'
+  recorded_at: Thu, 25 Jun 2026 12:27:10 GMT
+recorded_with: VCR 6.4.0

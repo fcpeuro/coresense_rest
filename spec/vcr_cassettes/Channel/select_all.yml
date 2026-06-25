@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/channel
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"access_level":0,"active":"1","brand_id":1,"channel_type":"web","data_table":"web_data","default_payment_processor_id":1,"icon_location":"images\/www_icon.gif","id":1,"label":"FCP
+        Groton","module_location":"channels\/web_site\/web_site_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":2,"label":"Employee","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3\u00a0\u00a0\u00a0\u00a0\u00a0","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":4,"label":"Retail","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":1,"active":"1","brand_id":1,"channel_type":"soi","data_table":"custom_groton_store_soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":5,"label":"Groton
+        Store","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":8,"label":"FCP
+        Euro","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":9,"label":"Garage","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":10,"label":"Wholesale","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif\u00a0\u00a0\u00a0\u00a0\u00a0","id":11,"label":"Marketing
+        Expense","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3\u00a0\u00a0\u00a0\u00a0\u00a0","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":0,"icon_location":"images\/soi_icon.gif","id":12,"label":"FCP
+        Replacements","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":13,"label":"UPS
+        Capital","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:20 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/channel
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"access_level":0,"active":"1","brand_id":1,"channel_type":"web","data_table":"web_data","default_payment_processor_id":1,"icon_location":"images\/www_icon.gif","id":1,"label":"FCP
+        Groton","module_location":"channels\/web_site\/web_site_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":2,"label":"Employee","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3\u00a0\u00a0\u00a0\u00a0\u00a0","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":4,"label":"Retail","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":1,"active":"1","brand_id":1,"channel_type":"soi","data_table":"custom_groton_store_soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":5,"label":"Groton
+        Store","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":8,"label":"FCP
+        Euro","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":9,"label":"Garage","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":10,"label":"Wholesale","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif\u00a0\u00a0\u00a0\u00a0\u00a0","id":11,"label":"Marketing
+        Expense","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3\u00a0\u00a0\u00a0\u00a0\u00a0","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":0,"icon_location":"images\/soi_icon.gif","id":12,"label":"FCP
+        Replacements","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false},{"access_level":0,"active":"1","brand_id":1,"channel_type":"soi","data_table":"soi_data","default_payment_processor_id":1,"icon_location":"images\/soi_icon.gif","id":13,"label":"UPS
+        Capital","module_location":"channels\/sales_order_interface\/sales_order_interface_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:20 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderShippingDetail?q%5B%5D=id=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '264'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":1000,"order_num":1999,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1179833,"shipping_cost":"7.90","shipping_method_id":32}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:29 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderShippingDetail?q%5B%5D=id=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:30 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '264'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":1000,"order_num":1999,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1179833,"shipping_cost":"7.90","shipping_method_id":32}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:30 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderShippingDetail?q%5B%5D=id=%201000%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '264'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":1000,"order_num":1999,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1179833,"shipping_cost":"7.90","shipping_method_id":32}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:31 GMT
+recorded_with: VCR 6.4.0

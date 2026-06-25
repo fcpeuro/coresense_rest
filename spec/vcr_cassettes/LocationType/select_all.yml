@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/locationType
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"add_to_labels":"yes","depth":0,"description":"Warranty Bins","height":0,"id":93,"label":"Warranty
+        Bins","warehouse_id":3,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":94,"label":"Vendor
+        Bin","warehouse_id":3,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":108,"label":"Pallet","warehouse_id":7,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":109,"label":"Pallet","warehouse_id":7,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":166,"label":"","warehouse_id":3,"width":0},{"add_to_labels":"no","depth":0,"description":"","height":0,"id":213,"label":"Warranty
+        Locations","warehouse_id":12,"width":0},{"add_to_labels":"no","depth":0,"description":"","height":0,"id":214,"label":"Bin","warehouse_id":12,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":261,"label":"3PL-NJ","warehouse_id":15,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":262,"label":"3PL-SLC","warehouse_id":16,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":263,"label":"3PL-TX","warehouse_id":17,"width":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:04 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/locationType
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"add_to_labels":"yes","depth":0,"description":"Warranty Bins","height":0,"id":93,"label":"Warranty
+        Bins","warehouse_id":3,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":94,"label":"Vendor
+        Bin","warehouse_id":3,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":108,"label":"Pallet","warehouse_id":7,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":109,"label":"Pallet","warehouse_id":7,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":166,"label":"","warehouse_id":3,"width":0},{"add_to_labels":"no","depth":0,"description":"","height":0,"id":213,"label":"Warranty
+        Locations","warehouse_id":12,"width":0},{"add_to_labels":"no","depth":0,"description":"","height":0,"id":214,"label":"Bin","warehouse_id":12,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":261,"label":"3PL-NJ","warehouse_id":15,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":262,"label":"3PL-SLC","warehouse_id":16,"width":0},{"add_to_labels":"yes","depth":0,"description":"","height":0,"id":263,"label":"3PL-TX","warehouse_id":17,"width":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:06 GMT
+recorded_with: VCR 6.4.0

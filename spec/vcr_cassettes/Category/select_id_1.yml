@@ -1,0 +1,183 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/category?q%5B%5D=id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"category":"Accessories & Manuals","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Accessories | Car Repair\r\nManuals<\/span><br><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; FCP Groton knows\r\nthat when it comes to your vehicle it''s not always
+        just about\r\nreplacement parts that enhance the quality performance. True
+        automotive\r\nenthusiasts want all the right accessories to add the right
+        finishing\r\ntouch to their automobile. With an ever growing selection of
+        OEM and\r\naftermarket accessories including comprehensive and informative
+        repair\r\nmanuals, FCP Groton will effectively help you to enhance the \"bells
+        and\r\nwhistles\" on your vehicle while simultaneously helping the\r\ndo-it-your-self
+        technician to perform more effective maintenance that\r\nwill bolster the
+        confidence of their work. With quality accessories for\r\nVolvo, Mercedes,
+        BMW, and Mercedes just to name a few, FCP Groton is\r\nthe best choice for
+        the DIY looking to upgrade the functionality, look\r\n, and effectiveness
+        of your vehicle.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        Accessories, BMW Accessories, Audi Accessories, VW Accessories, Mercedes Accessories,
+        Repair Manuals","custom_position":1,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":1,"label":"","meta_abstract":"","meta_description":"Accessories  and
+        Car Repair Manuals are easy to find in our huge online catalog. Find European
+        Car Parts online and save yourself a trip to the store!","meta_keywords":"Volvo
+        Accessories, Volvo Repair Manual, Haynes Repair Manual, BMW Repair Manual","meta_title":"Accessories
+        | Car Repair Manuals","page_title":"Volvo Accessories, BMW Accessories, Audi
+        Accessories, VW Accessories, Mercedes Accessories","powerreviews_active":true,"root":false,"website_display_name":"Accessories
+        | Car Repair Manuals"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:05 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/category?q%5B%5D=id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"category":"Accessories & Manuals","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Accessories | Car Repair\r\nManuals<\/span><br><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; FCP Groton knows\r\nthat when it comes to your vehicle it''s not always
+        just about\r\nreplacement parts that enhance the quality performance. True
+        automotive\r\nenthusiasts want all the right accessories to add the right
+        finishing\r\ntouch to their automobile. With an ever growing selection of
+        OEM and\r\naftermarket accessories including comprehensive and informative
+        repair\r\nmanuals, FCP Groton will effectively help you to enhance the \"bells
+        and\r\nwhistles\" on your vehicle while simultaneously helping the\r\ndo-it-your-self
+        technician to perform more effective maintenance that\r\nwill bolster the
+        confidence of their work. With quality accessories for\r\nVolvo, Mercedes,
+        BMW, and Mercedes just to name a few, FCP Groton is\r\nthe best choice for
+        the DIY looking to upgrade the functionality, look\r\n, and effectiveness
+        of your vehicle.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        Accessories, BMW Accessories, Audi Accessories, VW Accessories, Mercedes Accessories,
+        Repair Manuals","custom_position":1,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":1,"label":"","meta_abstract":"","meta_description":"Accessories  and
+        Car Repair Manuals are easy to find in our huge online catalog. Find European
+        Car Parts online and save yourself a trip to the store!","meta_keywords":"Volvo
+        Accessories, Volvo Repair Manual, Haynes Repair Manual, BMW Repair Manual","meta_title":"Accessories
+        | Car Repair Manuals","page_title":"Volvo Accessories, BMW Accessories, Audi
+        Accessories, VW Accessories, Mercedes Accessories","powerreviews_active":true,"root":false,"website_display_name":"Accessories
+        | Car Repair Manuals"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:06 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/category?q%5B%5D=id=%201%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"category":"Accessories & Manuals","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Accessories | Car Repair\r\nManuals<\/span><br><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; FCP Groton knows\r\nthat when it comes to your vehicle it''s not always
+        just about\r\nreplacement parts that enhance the quality performance. True
+        automotive\r\nenthusiasts want all the right accessories to add the right
+        finishing\r\ntouch to their automobile. With an ever growing selection of
+        OEM and\r\naftermarket accessories including comprehensive and informative
+        repair\r\nmanuals, FCP Groton will effectively help you to enhance the \"bells
+        and\r\nwhistles\" on your vehicle while simultaneously helping the\r\ndo-it-your-self
+        technician to perform more effective maintenance that\r\nwill bolster the
+        confidence of their work. With quality accessories for\r\nVolvo, Mercedes,
+        BMW, and Mercedes just to name a few, FCP Groton is\r\nthe best choice for
+        the DIY looking to upgrade the functionality, look\r\n, and effectiveness
+        of your vehicle.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        Accessories, BMW Accessories, Audi Accessories, VW Accessories, Mercedes Accessories,
+        Repair Manuals","custom_position":1,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":1,"label":"","meta_abstract":"","meta_description":"Accessories  and
+        Car Repair Manuals are easy to find in our huge online catalog. Find European
+        Car Parts online and save yourself a trip to the store!","meta_keywords":"Volvo
+        Accessories, Volvo Repair Manual, Haynes Repair Manual, BMW Repair Manual","meta_title":"Accessories
+        | Car Repair Manuals","page_title":"Volvo Accessories, BMW Accessories, Audi
+        Accessories, VW Accessories, Mercedes Accessories","powerreviews_active":true,"root":false,"website_display_name":"Accessories
+        | Car Repair Manuals"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:06 GMT
+recorded_with: VCR 6.4.0

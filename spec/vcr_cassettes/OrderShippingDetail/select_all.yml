@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderShippingDetail
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":1,"order_num":1000,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1,"shipping_cost":"0.00","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":2,"order_num":1001,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":16,"shipping_cost":"7.25","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":3,"order_num":1002,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376236,"shipping_cost":"0.00","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":4,"order_num":1003,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376237,"shipping_cost":"8.31","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":5,"order_num":1004,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376238,"shipping_cost":"7.50","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":6,"order_num":1005,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376239,"shipping_cost":"9.72","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":7,"order_num":1006,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":24,"shipping_cost":"8.48","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":8,"order_num":1007,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376240,"shipping_cost":"11.25","shipping_method_id":32},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":9,"order_num":1008,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376241,"shipping_cost":"7.60","shipping_method_id":32},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":10,"order_num":1009,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376242,"shipping_cost":"7.60","shipping_method_id":32}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:28 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/orderShippingDetail
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":1,"order_num":1000,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1,"shipping_cost":"0.00","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":2,"order_num":1001,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":16,"shipping_cost":"7.25","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":3,"order_num":1002,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376236,"shipping_cost":"0.00","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":4,"order_num":1003,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376237,"shipping_cost":"8.31","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":5,"order_num":1004,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376238,"shipping_cost":"7.50","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":6,"order_num":1005,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376239,"shipping_cost":"9.72","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":7,"order_num":1006,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":24,"shipping_cost":"8.48","shipping_method_id":1},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":8,"order_num":1007,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376240,"shipping_cost":"11.25","shipping_method_id":32},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":9,"order_num":1008,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376241,"shipping_cost":"7.60","shipping_method_id":32},{"delayed_delivery_date":"0000-00-00","estimated_delivery_date":null,"estimated_shipping_date":null,"id":10,"order_num":1009,"pickup_warehouse_id":0,"saved_shipping_tax_rate":"0.000","shipping_contact_id":1376242,"shipping_cost":"7.60","shipping_method_id":32}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:29 GMT
+recorded_with: VCR 6.4.0

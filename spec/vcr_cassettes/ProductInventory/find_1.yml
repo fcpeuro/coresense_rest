@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/productInventory/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '123'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"active":true,"id":1,"inventory_type_id":1,"model_id":1,"quantity":1,"stamp":"2008-03-05T18:09:11-05:00","type":"general"}'
+  recorded_at: Thu, 25 Jun 2026 12:34:40 GMT
+recorded_with: VCR 6.4.0

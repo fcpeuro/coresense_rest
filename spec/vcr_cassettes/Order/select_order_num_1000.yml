@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order?q%5B%5D=order_num=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"affiliate_id":0,"amazon_customer_id":0,"amazon_order_id":"","amt_paid":0.21,"billing_contact_id":1,"cancelled":true,"checked_out":true,"client_id":1,"closed":false,"club_cc_reauthorization_sent":false,"cogs":0,"comments":"First
+        live test order","compliant":false,"custom_exception_reason_code":"0","custom_fraudulent":false,"custom_insight_export":"no","custom_prepicked":"no","custom_prepicked_location":"","custom_shipping_insurance":null,"due_date":"2015-08-28T11:14:22-04:00","google_financial_status":"REVIEWING","google_fulfillment_status":"NEW","google_order_num":null,"grand_total":324.99,"id":"1000","ip_address":"","key_code":"","layaway_expiration_date":null,"layaway_policy_id":0,"layaway_status":null,"locked":false,"mail_code":"","order_exported":false,"order_status":8,"originating_brand_id":1,"originating_channel_id":1,"originating_club_delivery_id":0,"originating_club_membership_id":0,"paid_stamp":"2023-04-03T15:01:34-04:00","payment_invoice_number":null,"payment_type":2,"personalization":false,"refund_total":0,"salesman":"","shipping_cost":0,"shipping_tax_total":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99,"viewed":"KevinM"}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:22 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order?q%5B%5D=order_num=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"affiliate_id":0,"amazon_customer_id":0,"amazon_order_id":"","amt_paid":0.21,"billing_contact_id":1,"cancelled":true,"checked_out":true,"client_id":1,"closed":false,"club_cc_reauthorization_sent":false,"cogs":0,"comments":"First
+        live test order","compliant":false,"custom_exception_reason_code":"0","custom_fraudulent":false,"custom_insight_export":"no","custom_prepicked":"no","custom_prepicked_location":"","custom_shipping_insurance":null,"due_date":"2015-08-28T11:14:22-04:00","google_financial_status":"REVIEWING","google_fulfillment_status":"NEW","google_order_num":null,"grand_total":324.99,"id":"1000","ip_address":"","key_code":"","layaway_expiration_date":null,"layaway_policy_id":0,"layaway_status":null,"locked":false,"mail_code":"","order_exported":false,"order_status":8,"originating_brand_id":1,"originating_channel_id":1,"originating_club_delivery_id":0,"originating_club_membership_id":0,"paid_stamp":"2023-04-03T15:01:34-04:00","payment_invoice_number":null,"payment_type":2,"personalization":false,"refund_total":0,"salesman":"","shipping_cost":0,"shipping_tax_total":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99,"viewed":"KevinM"}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:23 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order?q%5B%5D=order_num=%201000%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"affiliate_id":0,"amazon_customer_id":0,"amazon_order_id":"","amt_paid":0.21,"billing_contact_id":1,"cancelled":true,"checked_out":true,"client_id":1,"closed":false,"club_cc_reauthorization_sent":false,"cogs":0,"comments":"First
+        live test order","compliant":false,"custom_exception_reason_code":"0","custom_fraudulent":false,"custom_insight_export":"no","custom_prepicked":"no","custom_prepicked_location":"","custom_shipping_insurance":null,"due_date":"2015-08-28T11:14:22-04:00","google_financial_status":"REVIEWING","google_fulfillment_status":"NEW","google_order_num":null,"grand_total":324.99,"id":"1000","ip_address":"","key_code":"","layaway_expiration_date":null,"layaway_policy_id":0,"layaway_status":null,"locked":false,"mail_code":"","order_exported":false,"order_status":8,"originating_brand_id":1,"originating_channel_id":1,"originating_club_delivery_id":0,"originating_club_membership_id":0,"paid_stamp":"2023-04-03T15:01:34-04:00","payment_invoice_number":null,"payment_type":2,"personalization":false,"refund_total":0,"salesman":"","shipping_cost":0,"shipping_tax_total":0,"stamp":"2008-03-18T00:50:00-04:00","total":324.99,"viewed":"KevinM"}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:23 GMT
+recorded_with: VCR 6.4.0

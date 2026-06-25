@@ -1,0 +1,205 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/category
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"category":"Accessories & Manuals","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Accessories | Car Repair\r\nManuals<\/span><br><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; FCP Groton knows\r\nthat when it comes to your vehicle it''s not always
+        just about\r\nreplacement parts that enhance the quality performance. True
+        automotive\r\nenthusiasts want all the right accessories to add the right
+        finishing\r\ntouch to their automobile. With an ever growing selection of
+        OEM and\r\naftermarket accessories including comprehensive and informative
+        repair\r\nmanuals, FCP Groton will effectively help you to enhance the \"bells
+        and\r\nwhistles\" on your vehicle while simultaneously helping the\r\ndo-it-your-self
+        technician to perform more effective maintenance that\r\nwill bolster the
+        confidence of their work. With quality accessories for\r\nVolvo, Mercedes,
+        BMW, and Mercedes just to name a few, FCP Groton is\r\nthe best choice for
+        the DIY looking to upgrade the functionality, look\r\n, and effectiveness
+        of your vehicle.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        Accessories, BMW Accessories, Audi Accessories, VW Accessories, Mercedes Accessories,
+        Repair Manuals","custom_position":1,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":1,"label":"","meta_abstract":"","meta_description":"Accessories  and
+        Car Repair Manuals are easy to find in our huge online catalog. Find European
+        Car Parts online and save yourself a trip to the store!","meta_keywords":"Volvo
+        Accessories, Volvo Repair Manual, Haynes Repair Manual, BMW Repair Manual","meta_title":"Accessories
+        | Car Repair Manuals","page_title":"Volvo Accessories, BMW Accessories, Audi
+        Accessories, VW Accessories, Mercedes Accessories","powerreviews_active":true,"root":false,"website_display_name":"Accessories
+        | Car Repair Manuals"},{"active":true,"category":"Antenna Parts","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":2,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":2,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Antenna
+        Parts"},{"active":true,"category":"CD\/ DVD Rom Repair Manual","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":4,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":3,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"CD\/
+        DVD Rom Repair Manual"},{"active":true,"category":"Exterior Chrome Products","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":6,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":4,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Exterior
+        Chrome Products"},{"active":true,"category":"Floor Mats","custom_breadcrumb_parent":0,"custom_header_html":"<br>\r\nYour
+        floor mats protect the investment that you made in your car from the dirt
+        and debris that you track in every time you enter your vehicle. If your floor
+        mats are showing their age or winter is coming you may want to replace them
+        with high quality new mats or with a set of rubber winter mats. New floor
+        mats are an easy and cheap way to make your car look newer and keep it cleaner.
+        If you need replacement floor mats come to FCPGroton.com for a great selection
+        of quality mats at low prices.","custom_header_title":"Floor Mats","custom_position":8,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":5,"label":null,"meta_abstract":"","meta_description":"Buy
+        top of the line floor mats for your automobile from FCPGroton! FREE SHIPPING
+        on orders over $150!","meta_keywords":"auto floor mat, car floor mat, replacement
+        floor mat","meta_title":"Floor Mats- Auto Accessories- Buy Car Parts","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Floor
+        Mats"},{"active":true,"category":"Interior Wood Products","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":10,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":6,"label":null,"meta_abstract":"","meta_description":"test","meta_keywords":"test","meta_title":"test","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Interior
+        Wood Products"},{"active":true,"category":"Key Blanks","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":12,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":7,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Key
+        Blanks"},{"active":true,"category":"Paper Repair Manual","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":18,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":8,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Paper
+        Repair Manual"},{"active":true,"category":"Service Reset Tool","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":20,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":9,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Service
+        Reset Tool"},{"active":true,"category":"Air Intake Parts","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Air Intake Parts, EGR\r\nParts, Air Pump Parts<\/span><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; <br>\r\n&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; FCP\r\nGroton brings
+        you all the air intake parts you need to help the\r\ncontinued quality perfromance
+        of your vehicle. Remember that internal\r\ncombustion engines rely on this
+        system to regulate the temperature of\r\nthe air going into your engine. FCP
+        Groton has an ever-gerowing\r\nselection of air intake parts ranging from
+        breather syetem parts to EGR\r\nsystem parts all of which assist the longevity
+        of your vehicle while\r\nproviding other benefits such as lowering emissions.
+        FCP Groton is\r\ndedicated to providing you with high quality OEM and aftermarket
+        air\r\nintake system parts that will effectively and consistently improve
+        the\r\nfunctionality of your vehicle. With air intake parts for Mercedes,
+        BMW,\r\nAudi, and VW just to name a few, FCP Groton will help you to maximize\r\nthe
+        life and longevity of your automobile.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        PCV, BMW Air Intake, VW Air Intake, Audi Air Intake, Mercedes Air Pump","custom_position":2,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":10,"label":"","meta_abstract":"","meta_description":"Air
+        Intake Parts, EGR Parts, Air Pump Parts are easy to find in our huge online
+        catalog. Find European Car Parts online and save yourself a trip to the store!","meta_keywords":"Air
+        Intake Parts, EGR Parts, Air Pump Parts","meta_title":".Air Intake Parts,
+        EGR Parts, Air Pump Parts","page_title":"Air Intake Parts, EGR Parts, Air
+        Pump Parts","powerreviews_active":true,"root":false,"website_display_name":"Air
+        Intake Parts, EGR Parts, Air Pump Parts"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:04 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/category
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"category":"Accessories & Manuals","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Accessories | Car Repair\r\nManuals<\/span><br><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; FCP Groton knows\r\nthat when it comes to your vehicle it''s not always
+        just about\r\nreplacement parts that enhance the quality performance. True
+        automotive\r\nenthusiasts want all the right accessories to add the right
+        finishing\r\ntouch to their automobile. With an ever growing selection of
+        OEM and\r\naftermarket accessories including comprehensive and informative
+        repair\r\nmanuals, FCP Groton will effectively help you to enhance the \"bells
+        and\r\nwhistles\" on your vehicle while simultaneously helping the\r\ndo-it-your-self
+        technician to perform more effective maintenance that\r\nwill bolster the
+        confidence of their work. With quality accessories for\r\nVolvo, Mercedes,
+        BMW, and Mercedes just to name a few, FCP Groton is\r\nthe best choice for
+        the DIY looking to upgrade the functionality, look\r\n, and effectiveness
+        of your vehicle.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        Accessories, BMW Accessories, Audi Accessories, VW Accessories, Mercedes Accessories,
+        Repair Manuals","custom_position":1,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":1,"label":"","meta_abstract":"","meta_description":"Accessories  and
+        Car Repair Manuals are easy to find in our huge online catalog. Find European
+        Car Parts online and save yourself a trip to the store!","meta_keywords":"Volvo
+        Accessories, Volvo Repair Manual, Haynes Repair Manual, BMW Repair Manual","meta_title":"Accessories
+        | Car Repair Manuals","page_title":"Volvo Accessories, BMW Accessories, Audi
+        Accessories, VW Accessories, Mercedes Accessories","powerreviews_active":true,"root":false,"website_display_name":"Accessories
+        | Car Repair Manuals"},{"active":true,"category":"Antenna Parts","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":2,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":2,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Antenna
+        Parts"},{"active":true,"category":"CD\/ DVD Rom Repair Manual","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":4,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":3,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"CD\/
+        DVD Rom Repair Manual"},{"active":true,"category":"Exterior Chrome Products","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":6,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":4,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Exterior
+        Chrome Products"},{"active":true,"category":"Floor Mats","custom_breadcrumb_parent":0,"custom_header_html":"<br>\r\nYour
+        floor mats protect the investment that you made in your car from the dirt
+        and debris that you track in every time you enter your vehicle. If your floor
+        mats are showing their age or winter is coming you may want to replace them
+        with high quality new mats or with a set of rubber winter mats. New floor
+        mats are an easy and cheap way to make your car look newer and keep it cleaner.
+        If you need replacement floor mats come to FCPGroton.com for a great selection
+        of quality mats at low prices.","custom_header_title":"Floor Mats","custom_position":8,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":5,"label":null,"meta_abstract":"","meta_description":"Buy
+        top of the line floor mats for your automobile from FCPGroton! FREE SHIPPING
+        on orders over $150!","meta_keywords":"auto floor mat, car floor mat, replacement
+        floor mat","meta_title":"Floor Mats- Auto Accessories- Buy Car Parts","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Floor
+        Mats"},{"active":true,"category":"Interior Wood Products","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":10,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":6,"label":null,"meta_abstract":"","meta_description":"test","meta_keywords":"test","meta_title":"test","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Interior
+        Wood Products"},{"active":true,"category":"Key Blanks","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":12,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":7,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Key
+        Blanks"},{"active":true,"category":"Paper Repair Manual","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":18,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":8,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Paper
+        Repair Manual"},{"active":true,"category":"Service Reset Tool","custom_breadcrumb_parent":0,"custom_header_html":"","custom_header_title":"","custom_position":20,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":9,"label":null,"meta_abstract":"","meta_description":".","meta_keywords":".","meta_title":".","page_title":"","powerreviews_active":true,"root":false,"website_display_name":"Service
+        Reset Tool"},{"active":true,"category":"Air Intake Parts","custom_breadcrumb_parent":0,"custom_header_html":"<!DOCTYPE
+        html PUBLIC \"-\/\/W3C\/\/DTD HTML 4.01\/\/EN\" \"http:\/\/www.w3.org\/TR\/html4\/strict.dtd\">\r\n<html>\r\n<head>\r\n<\/head>\r\n<body>\r\n<div
+        style=\"text-align: center; font-family: Arial;\"><br>\r\n<span style=\"font-weight:
+        bold;\">Air Intake Parts, EGR\r\nParts, Air Pump Parts<\/span><br>\r\n<\/div>\r\n<span
+        style=\"font-family: Arial;\">&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp; <br>\r\n&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; FCP\r\nGroton brings
+        you all the air intake parts you need to help the\r\ncontinued quality perfromance
+        of your vehicle. Remember that internal\r\ncombustion engines rely on this
+        system to regulate the temperature of\r\nthe air going into your engine. FCP
+        Groton has an ever-gerowing\r\nselection of air intake parts ranging from
+        breather syetem parts to EGR\r\nsystem parts all of which assist the longevity
+        of your vehicle while\r\nproviding other benefits such as lowering emissions.
+        FCP Groton is\r\ndedicated to providing you with high quality OEM and aftermarket
+        air\r\nintake system parts that will effectively and consistently improve
+        the\r\nfunctionality of your vehicle. With air intake parts for Mercedes,
+        BMW,\r\nAudi, and VW just to name a few, FCP Groton will help you to maximize\r\nthe
+        life and longevity of your automobile.\r\n<\/span>\r\n<\/body>\r\n<\/html>\r\n","custom_header_title":"Volvo
+        PCV, BMW Air Intake, VW Air Intake, Audi Air Intake, Mercedes Air Pump","custom_position":2,"custom_thumbnail_image":"","default_product_type":0,"description":"","homepage_active":"0","id":10,"label":"","meta_abstract":"","meta_description":"Air
+        Intake Parts, EGR Parts, Air Pump Parts are easy to find in our huge online
+        catalog. Find European Car Parts online and save yourself a trip to the store!","meta_keywords":"Air
+        Intake Parts, EGR Parts, Air Pump Parts","meta_title":".Air Intake Parts,
+        EGR Parts, Air Pump Parts","page_title":"Air Intake Parts, EGR Parts, Air
+        Pump Parts","powerreviews_active":true,"root":false,"website_display_name":"Air
+        Intake Parts, EGR Parts, Air Pump Parts"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:04 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/shippingMethod
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"carrier_method_id":3,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":1,"label":"Ground
+        Shipping","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP3D","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":8,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":2,"label":"Next
+        Day Air","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP1DE","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":2,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":3,"label":"2
+        Day Air","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP2DE","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":9,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":5,"label":"USPS
+        Priority Mail","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"USPSPRIORITYONLY","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":5,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":8,"label":"UPS
+        Worldwide Expedited","malvern_method":false,"one_rate":"0","pickup":"0","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCPINTLEXP","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":5,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":9,"label":"USPS
+        Priority Mail International","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":3,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":32,"label":"Economy
+        10 Days No Tracking","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP5DECON","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":false,"carrier_method_id":0,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"0","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":50,"label":"UPS
+        Store Pickup","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"custom","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":5,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":52,"label":"Fedex
+        International","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCPINTLECON","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":0,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"0","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":56,"label":"Pickup","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":null,"saturday_delivery":false,"shipium_ship_option":null,"shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"custom","valid_for_po_apo_fpo":true}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:11 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/shippingMethod
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"carrier_method_id":3,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":1,"label":"Ground
+        Shipping","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP3D","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":8,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":2,"label":"Next
+        Day Air","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP1DE","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":2,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":3,"label":"2
+        Day Air","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP2DE","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":9,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":5,"label":"USPS
+        Priority Mail","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"USPSPRIORITYONLY","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":5,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":8,"label":"UPS
+        Worldwide Expedited","malvern_method":false,"one_rate":"0","pickup":"0","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCPINTLEXP","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":5,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":9,"label":"USPS
+        Priority Mail International","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":3,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":32,"label":"Economy
+        10 Days No Tracking","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP5DECON","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":false,"carrier_method_id":0,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"0","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":50,"label":"UPS
+        Store Pickup","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"custom","valid_for_po_apo_fpo":true},{"active":true,"carrier_method_id":5,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":52,"label":"Fedex
+        International","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCPINTLECON","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false},{"active":true,"carrier_method_id":0,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"0","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":56,"label":"Pickup","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":null,"saturday_delivery":false,"shipium_ship_option":null,"shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"custom","valid_for_po_apo_fpo":true}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:11 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/shippingMethod/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:10 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '522'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"active":true,"carrier_method_id":3,"cod":false,"code":"CUST","exclude_product":false,"export_to_worldship":"1","force_volume_packing":0,"handling_charge":0,"handling_charge_type_id":1,"id":1,"label":"Ground
+        Shipping","malvern_method":false,"one_rate":"0","pickup":"1","pos_method":false,"production_cutoff_time":"15:00:00","production_time":"","saturday_delivery":false,"shipium_ship_option":"FCP3D","shipping_cutoff_time":"15:00:00","shippo_method":"0","trueship_method":false,"type":"ups","valid_for_po_apo_fpo":false}'
+  recorded_at: Thu, 25 Jun 2026 12:35:10 GMT
+recorded_with: VCR 6.4.0
