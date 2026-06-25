@@ -29,4 +29,11 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.allow_http_connections_when_no_cassette = true
   config.configure_rspec_metadata!
+
+  # Never persist the auth token to cassettes. The client sends it in the
+  # X-Auth-Token request header (CoresenseRest::Client.get_token). VCR matches
+  # on method + URI by default, so scrubbing the header does not affect playback.
+  config.before_record do |interaction|
+    interaction.request.headers.delete('X-Auth-Token')
+  end
 end
