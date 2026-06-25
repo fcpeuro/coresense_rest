@@ -384,9 +384,7 @@ module CoresenseRest
             order = Order.find(9372858)
             
             result = order.void
-            
-            result_hash = JSON.parse(result.body)
-            expect(result_hash["message"]).to eq 'Order has been voided successfully.'
+            expect(result["message"]).to eq 'The order was voided successfully'
           end
         end
       end
