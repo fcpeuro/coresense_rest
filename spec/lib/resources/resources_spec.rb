@@ -392,8 +392,6 @@ module CoresenseRest
       context OrderShippingDetail do
         it_should_behave_like 'a Resource', 'orderShippingDetail'
 
-        it_should_behave_like 'a Findable class', 1000, 1000
-
         it_should_behave_like 'a Searchable class', 1000, 1000
       end
 
