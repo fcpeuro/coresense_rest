@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/receivableType
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"abbrev":"AMEX","class":"credit card","default_payment_processor_id":0,"id":1,"label":"American
+        Express","payment_type_id":1},{"abbrev":"DISC","class":"credit card","default_payment_processor_id":0,"id":2,"label":"Discover","payment_type_id":1},{"abbrev":"MC","class":"credit
+        card","default_payment_processor_id":0,"id":3,"label":"MasterCard","payment_type_id":1},{"abbrev":"VISA","class":"credit
+        card","default_payment_processor_id":0,"id":5,"label":"Visa","payment_type_id":1},{"abbrev":"PayP","class":"internet","default_payment_processor_id":0,"id":10,"label":"PayPal","payment_type_id":3},{"abbrev":"CRED","class":"other","default_payment_processor_id":0,"id":12,"label":"Store
+        Credit","payment_type_id":5},{"abbrev":"Cash","class":"other","default_payment_processor_id":0,"id":13,"label":"Cash","payment_type_id":5},{"abbrev":"Chec","class":"check","default_payment_processor_id":0,"id":16,"label":"Check\/Money
+        Order","payment_type_id":2},{"abbrev":"Wire","class":"other","default_payment_processor_id":0,"id":19,"label":"Wire
+        Transfer","payment_type_id":5},{"abbrev":"Auth","class":"other","default_payment_processor_id":0,"id":20,"label":"Auth.net
+        (Credit\/Debit Card)","payment_type_id":5}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:57 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/receivableType
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"abbrev":"AMEX","class":"credit card","default_payment_processor_id":0,"id":1,"label":"American
+        Express","payment_type_id":1},{"abbrev":"DISC","class":"credit card","default_payment_processor_id":0,"id":2,"label":"Discover","payment_type_id":1},{"abbrev":"MC","class":"credit
+        card","default_payment_processor_id":0,"id":3,"label":"MasterCard","payment_type_id":1},{"abbrev":"VISA","class":"credit
+        card","default_payment_processor_id":0,"id":5,"label":"Visa","payment_type_id":1},{"abbrev":"PayP","class":"internet","default_payment_processor_id":0,"id":10,"label":"PayPal","payment_type_id":3},{"abbrev":"CRED","class":"other","default_payment_processor_id":0,"id":12,"label":"Store
+        Credit","payment_type_id":5},{"abbrev":"Cash","class":"other","default_payment_processor_id":0,"id":13,"label":"Cash","payment_type_id":5},{"abbrev":"Chec","class":"check","default_payment_processor_id":0,"id":16,"label":"Check\/Money
+        Order","payment_type_id":2},{"abbrev":"Wire","class":"other","default_payment_processor_id":0,"id":19,"label":"Wire
+        Transfer","payment_type_id":5},{"abbrev":"Auth","class":"other","default_payment_processor_id":0,"id":20,"label":"Auth.net
+        (Credit\/Debit Card)","payment_type_id":5}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:57 GMT
+recorded_with: VCR 6.4.0

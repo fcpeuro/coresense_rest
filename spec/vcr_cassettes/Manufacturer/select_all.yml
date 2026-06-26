@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/manufacturer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:25 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '708'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"custom_manufacturer_country":"","id":1,"name":"A&B","stamp":""},{"custom_manufacturer_country":"","id":2,"name":"Aceomatic","stamp":""},{"custom_manufacturer_country":"","id":3,"name":"Aftermarket","stamp":""},{"custom_manufacturer_country":"","id":4,"name":"Aisin","stamp":""},{"custom_manufacturer_country":"","id":5,"name":"Akebono","stamp":""},{"custom_manufacturer_country":"","id":6,"name":"APA","stamp":""},{"custom_manufacturer_country":"","id":7,"name":"ATE","stamp":""},{"custom_manufacturer_country":"","id":8,"name":"Atlantic
+        Enterprises","stamp":""},{"custom_manufacturer_country":"","id":9,"name":"Balo","stamp":""},{"custom_manufacturer_country":"","id":10,"name":"Beck
+        Arnley","stamp":""}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:25 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/manufacturer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '708'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"custom_manufacturer_country":"","id":1,"name":"A&B","stamp":""},{"custom_manufacturer_country":"","id":2,"name":"Aceomatic","stamp":""},{"custom_manufacturer_country":"","id":3,"name":"Aftermarket","stamp":""},{"custom_manufacturer_country":"","id":4,"name":"Aisin","stamp":""},{"custom_manufacturer_country":"","id":5,"name":"Akebono","stamp":""},{"custom_manufacturer_country":"","id":6,"name":"APA","stamp":""},{"custom_manufacturer_country":"","id":7,"name":"ATE","stamp":""},{"custom_manufacturer_country":"","id":8,"name":"Atlantic
+        Enterprises","stamp":""},{"custom_manufacturer_country":"","id":9,"name":"Balo","stamp":""},{"custom_manufacturer_country":"","id":10,"name":"Beck
+        Arnley","stamp":""}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:26 GMT
+recorded_with: VCR 6.4.0

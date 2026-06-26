@@ -1,0 +1,115 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/shipment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1001,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":142,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363387156","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1003,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":152,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363193945","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1004,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":155,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363106333","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1005,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":160,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0364108320","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1006,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":162,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363943910","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1007,"carrier_account_id":0,"cod_tracking_num":"","cost":17.95,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":168,"method_id":32,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"9.10181E+21","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1009,"carrier_account_id":0,"cod_tracking_num":"","cost":4.6,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":172,"method_id":32,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"9.10181E+21","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1010,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":175,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0362517105","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1011,"carrier_account_id":0,"cod_tracking_num":"","cost":4.6,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":177,"method_id":32,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"9.10181E+21","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1012,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":179,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0364291891","transit_time":0,"validated":false,"workflow_state_id":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:04 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/shipment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1001,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":142,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363387156","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1003,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":152,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363193945","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1004,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":155,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363106333","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1005,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":160,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0364108320","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1006,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":162,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363943910","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1007,"carrier_account_id":0,"cod_tracking_num":"","cost":17.95,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":168,"method_id":32,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"9.10181E+21","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1009,"carrier_account_id":0,"cod_tracking_num":"","cost":4.6,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":172,"method_id":32,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"9.10181E+21","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1010,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":175,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0362517105","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1011,"carrier_account_id":0,"cod_tracking_num":"","cost":4.6,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":177,"method_id":32,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"9.10181E+21","transit_time":0,"validated":false,"workflow_state_id":0},{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1012,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":179,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:05-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0364291891","transit_time":0,"validated":false,"workflow_state_id":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:05 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/contact/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '577'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"active":false,"address_line_1":"125 high rock ave","address_line_2":"","business_phone":"","city":"saratoga","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:26:51-04:00","email":"dcouchman@coresense.com","fax":"","first_name":"dave","id":1,"label":"default","last_name":"couchman","phone":"518-330-9363","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false}'
+  recorded_at: Thu, 25 Jun 2026 12:26:51 GMT
+recorded_with: VCR 6.4.0

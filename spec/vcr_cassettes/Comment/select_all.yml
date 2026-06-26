@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/comment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:36 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"assoc_entity":"order","assoc_entity_id":1000,"code":0,"id":7,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T00:50:00-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1002,"code":0,"id":8,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T06:05:51-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1002,"code":0,"id":9,"message":"Just-in-time
+        Fulfillment Automation Failed: Default Template missing on Vendor: Chase Parkway","privacy":"private","rep":"AUTOMATED","stamp":"2008-03-18T06:30:03-04:00","type":"Other"},{"assoc_entity":"order","assoc_entity_id":1015,"code":0,"id":10,"message":"Not
+        a Verified PayPal Member. ","privacy":"private","rep":"","stamp":"2008-03-18T08:09:54-04:00","type":"Financial"},{"assoc_entity":"order","assoc_entity_id":1032,"code":0,"id":11,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T10:57:27-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1032,"code":0,"id":12,"message":"Just-in-time
+        Fulfillment Automation Failed: Default Template missing on Vendor: Chase Parkway","privacy":"private","rep":"AUTOMATED","stamp":"2008-03-18T11:00:02-04:00","type":"Other"},{"assoc_entity":"order","assoc_entity_id":1039,"code":0,"id":13,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T12:11:34-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1047,"code":0,"id":14,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T13:06:08-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1056,"code":0,"id":15,"message":"Not
+        a Verified PayPal Member. ","privacy":"private","rep":"","stamp":"2008-03-18T14:21:13-04:00","type":"Financial"},{"assoc_entity":"order","assoc_entity_id":1059,"code":0,"id":16,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T14:58:56-04:00","type":"Support"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:36 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/comment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"assoc_entity":"order","assoc_entity_id":1000,"code":0,"id":7,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T00:50:00-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1002,"code":0,"id":8,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T06:05:51-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1002,"code":0,"id":9,"message":"Just-in-time
+        Fulfillment Automation Failed: Default Template missing on Vendor: Chase Parkway","privacy":"private","rep":"AUTOMATED","stamp":"2008-03-18T06:30:03-04:00","type":"Other"},{"assoc_entity":"order","assoc_entity_id":1015,"code":0,"id":10,"message":"Not
+        a Verified PayPal Member. ","privacy":"private","rep":"","stamp":"2008-03-18T08:09:54-04:00","type":"Financial"},{"assoc_entity":"order","assoc_entity_id":1032,"code":0,"id":11,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T10:57:27-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1032,"code":0,"id":12,"message":"Just-in-time
+        Fulfillment Automation Failed: Default Template missing on Vendor: Chase Parkway","privacy":"private","rep":"AUTOMATED","stamp":"2008-03-18T11:00:02-04:00","type":"Other"},{"assoc_entity":"order","assoc_entity_id":1039,"code":0,"id":13,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T12:11:34-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1047,"code":0,"id":14,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T13:06:08-04:00","type":"Support"},{"assoc_entity":"order","assoc_entity_id":1056,"code":0,"id":15,"message":"Not
+        a Verified PayPal Member. ","privacy":"private","rep":"","stamp":"2008-03-18T14:21:13-04:00","type":"Financial"},{"assoc_entity":"order","assoc_entity_id":1059,"code":0,"id":16,"message":"This
+        order received free shipping","privacy":"private","rep":"","stamp":"2008-03-18T14:58:56-04:00","type":"Support"}]'
+  recorded_at: Thu, 25 Jun 2026 12:26:37 GMT
+recorded_with: VCR 6.4.0

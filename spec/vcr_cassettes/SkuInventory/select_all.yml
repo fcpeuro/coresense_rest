@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/skuInventory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '808'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"location_id":113,"quantity":1,"sku_id":0,"status":"damaged","warehouse_id":1},{"location_id":1435012,"quantity":4,"sku_id":0,"status":"damaged","warehouse_id":11},{"location_id":0,"quantity":4,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":356,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":5987,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":7717,"quantity":3,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":9372,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":24565,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":0,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":6},{"location_id":0,"quantity":195,"sku_id":1,"status":"damaged","warehouse_id":11}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:14 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/skuInventory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:15 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '808'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"location_id":113,"quantity":1,"sku_id":0,"status":"damaged","warehouse_id":1},{"location_id":1435012,"quantity":4,"sku_id":0,"status":"damaged","warehouse_id":11},{"location_id":0,"quantity":4,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":356,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":5987,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":7717,"quantity":3,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":9372,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":24565,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":1},{"location_id":0,"quantity":1,"sku_id":1,"status":"damaged","warehouse_id":6},{"location_id":0,"quantity":195,"sku_id":1,"status":"damaged","warehouse_id":11}]'
+  recorded_at: Thu, 25 Jun 2026 12:35:15 GMT
+recorded_with: VCR 6.4.0

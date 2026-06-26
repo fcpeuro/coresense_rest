@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/transfer/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:22 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '367'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"close_date":"2008-04-15T10:09:25-04:00","destination_sublocation_id":0,"destination_warehouse_id":5,"distribution_purchase_order_id":0,"id":1,"issue_date":"2008-04-15T10:03:16-04:00","medium":"email","medium_id":5397,"notes":"","shipping_method_id":51,"source_sublocation_id":0,"source_warehouse_id":1,"status":"Closed","transfer_reason_code_id":0,"verified":false}'
+  recorded_at: Thu, 25 Jun 2026 12:35:22 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/customer/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:31:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '790'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"affiliate_id":0,"currency_rate":"","custom_account_manager":0,"custom_blocked":"no","custom_box_number":"","custom_campaign_opt_in":"","custom_channel":"1","custom_default_payment_type":0,"custom_guest_shopper":false,"custom_invalid_emails":"yes","custom_on_account":"no","custom_tax_exempt":"no","custom_tax_exempt_number":"","custom_winter2012promo":"","custom_wishlist_temp_order_num":0,"customer_billing_exported":false,"customer_shipping_exported":false,"customer_tier_id":0,"default_billing_contact_id":2229341,"default_preorder_contact_id":0,"default_shipping_contact_id":2229341,"employee_number":"","id":"1","last_key_code":"","last_modified":"2021-09-24T09:08:48-04:00","originating_brand_id":0,"product_upsell_last_sent":"","source_code":"","stamp":"2012-01-24T14:19:53-05:00"}'
+  recorded_at: Thu, 25 Jun 2026 12:31:14 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/customer/1/contact
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:31:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":true,"address_line_1":"125 high rock ave","address_line_2":"","business_phone":"","city":"saratoga","company":"","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:31:15-04:00","email":"dcouchman@coresense.com","fax":"","first_name":"dave","id":2229341,"label":"default","last_name":"couchman","phone":"5183309363","postal_code":"12866","requires_liftgate":true,"residential_address":false,"state_id":46,"verified":false},{"active":true,"address_line_1":null,"address_line_2":null,"business_phone":null,"city":null,"company":null,"country_id":0,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:31:15-04:00","email":null,"fax":null,"first_name":"testy","id":3391722,"label":null,"last_name":"test","phone":null,"postal_code":null,"requires_liftgate":false,"residential_address":false,"state_id":0,"verified":false},{"active":true,"address_line_1":"address_line_1","address_line_2":"address_line_2","business_phone":null,"city":"city","company":"company","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:31:15-04:00","email":null,"fax":null,"first_name":"first_name","id":6334334,"label":null,"last_name":"last_name","phone":"phone","postal_code":"postal_code","requires_liftgate":false,"residential_address":false,"state_id":0,"verified":false},{"active":true,"address_line_1":"address_line_1","address_line_2":"address_line_2","business_phone":null,"city":"city","company":"company","country_id":1,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:31:15-04:00","email":null,"fax":null,"first_name":"first_name","id":6334335,"label":null,"last_name":"last_name","phone":"phone","postal_code":"postal_code","requires_liftgate":false,"residential_address":false,"state_id":1,"verified":false},{"active":true,"address_line_1":null,"address_line_2":null,"business_phone":null,"city":null,"company":null,"country_id":0,"created_stamp":"0000-00-00
+        00:00:00","custom_customer_type":"0","custom_customer_vehicle":"","custom_ups_claim":"no","custom_vehicle":"","customer_id":1,"date_of_birth":"2026-06-25T08:31:15-04:00","email":null,"fax":null,"first_name":"testy","id":6339527,"label":null,"last_name":"test","phone":null,"postal_code":null,"requires_liftgate":false,"residential_address":false,"state_id":0,"verified":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:31:15 GMT
+recorded_with: VCR 6.4.0

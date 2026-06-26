@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/payment/1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '556'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"assoc_entity":"order","assoc_entity_id":2017,"category":"Order Payment","check_num":"0","client_id":537,"id":1000,"memo":"Payment
+        for Order #2017","payee":"","payment":"46.00","payment_gateway_response":"","payment_process_auth_code":"01030C","payment_process_message":"Address
+        (Street) and 5 digit ZIP match","payment_process_message_type":"message","payment_process_status":"captured","payment_process_transaction_id":"1783560173","payment_processor_id":1,"pos_id":0,"receivable_type_id":5,"stamp":"2008-03-30T12:00:04-04:00","user":"api","void":false}'
+  recorded_at: Thu, 25 Jun 2026 12:34:31 GMT
+recorded_with: VCR 6.4.0

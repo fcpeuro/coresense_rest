@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/affiliate?q%5B%5D=id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:24:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '419'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"active":true,"address1":"","address2":"","city":"","commission_rate_id":2,"company_name":"","contact_first_name":"","contact_last_name":"","country_id":0,"email":"scottd@fcpgroton.com","fax":"","id":1,"password":"sCn627qd.XgwQ","payment_notification_template_id":0,"phone":"","sale_notification":0,"sale_notification_template_id":60,"state_id":0,"url":"http:\/\/www.fcpgroton.com","username":"Scott
+        Drozd","zip":""}]'
+  recorded_at: Thu, 25 Jun 2026 12:24:47 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/affiliate?q%5B%5D=id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:24:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '419'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"active":true,"address1":"","address2":"","city":"","commission_rate_id":2,"company_name":"","contact_first_name":"","contact_last_name":"","country_id":0,"email":"scottd@fcpgroton.com","fax":"","id":1,"password":"sCn627qd.XgwQ","payment_notification_template_id":0,"phone":"","sale_notification":0,"sale_notification_template_id":60,"state_id":0,"url":"http:\/\/www.fcpgroton.com","username":"Scott
+        Drozd","zip":""}]'
+  recorded_at: Thu, 25 Jun 2026 12:24:48 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/affiliate?q%5B%5D=id=%201%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:24:49 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '419'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"active":true,"address1":"","address2":"","city":"","commission_rate_id":2,"company_name":"","contact_first_name":"","contact_last_name":"","country_id":0,"email":"scottd@fcpgroton.com","fax":"","id":1,"password":"sCn627qd.XgwQ","payment_notification_template_id":0,"phone":"","sale_notification":0,"sale_notification_template_id":60,"state_id":0,"url":"http:\/\/www.fcpgroton.com","username":"Scott
+        Drozd","zip":""}]'
+  recorded_at: Thu, 25 Jun 2026 12:24:49 GMT
+recorded_with: VCR 6.4.0

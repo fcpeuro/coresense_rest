@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/receivableType/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:56 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '126'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"abbrev":"AMEX","class":"credit card","default_payment_processor_id":0,"id":1,"label":"American
+        Express","payment_type_id":1}'
+  recorded_at: Thu, 25 Jun 2026 12:34:56 GMT
+recorded_with: VCR 6.4.0

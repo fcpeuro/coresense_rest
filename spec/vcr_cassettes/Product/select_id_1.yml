@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/product?q%5B%5D=id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:54 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"base_price":91.99,"custom_core":"no","custom_core_child":"0","custom_core_fee":"0","custom_make":"78","default_base_cogs":0,"default_fulfillment":"","default_needs_own_box":false,"default_shipping_depth":0,"default_shipping_height":0,"default_shipping_method_id":0,"default_shipping_weight":0,"default_shipping_width":0,"default_vendor_id":0,"description":"","digital_expiration_days":0,"digital_global_restrictions":"","digital_maximum_downloads":0,"globalshopex_country_of_origin":"HU","globalshopex_restricted":0,"grid_id":0,"id":1,"image_location":"images\/products\/thumb\/blank.JPG","last_inventory_movement":"2025-05-07
+        08:54:19","last_modified_stamp":"2026-01-09T23:25:01-05:00","last_onthefly_id":1,"last_sku_modified":"2023-10-03
+        14:00:11","manufacturer_id":32,"media_enabled":"0","minimum_advertised_price":0,"minimum_advertised_price_display":"map_type_1","name":"Volvo
+        Manual Antenna - Genuine Volvo 1384773","needs_own_box":false,"non_inventory":false,"override_sku_shipping_drivers":"0","part_num":"VOL-1384773","personalization_image_uri":"","personalization_template_id":0,"powerreviews_qa":"","powerreviews_rating":0,"powerreviews_reviews":"","pre_order":false,"pre_order_available_date":null,"pre_order_deadline":null,"pre_order_sale_date":null,"pricing_group_id":196,"product_class":null,"production_time":0,"replaces":0,"shipment_depth":"0.00","shipment_height":"0.00","shipment_width":"0.00","show_personalization_step":"1","sku_generation":"","style_locator":"000-000","supports_recurring_orders":false,"tax_code":null,"type":13,"void":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:54 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/product?q%5B%5D=id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"base_price":91.99,"custom_core":"no","custom_core_child":"0","custom_core_fee":"0","custom_make":"78","default_base_cogs":0,"default_fulfillment":"","default_needs_own_box":false,"default_shipping_depth":0,"default_shipping_height":0,"default_shipping_method_id":0,"default_shipping_weight":0,"default_shipping_width":0,"default_vendor_id":0,"description":"","digital_expiration_days":0,"digital_global_restrictions":"","digital_maximum_downloads":0,"globalshopex_country_of_origin":"HU","globalshopex_restricted":0,"grid_id":0,"id":1,"image_location":"images\/products\/thumb\/blank.JPG","last_inventory_movement":"2025-05-07
+        08:54:19","last_modified_stamp":"2026-01-09T23:25:01-05:00","last_onthefly_id":1,"last_sku_modified":"2023-10-03
+        14:00:11","manufacturer_id":32,"media_enabled":"0","minimum_advertised_price":0,"minimum_advertised_price_display":"map_type_1","name":"Volvo
+        Manual Antenna - Genuine Volvo 1384773","needs_own_box":false,"non_inventory":false,"override_sku_shipping_drivers":"0","part_num":"VOL-1384773","personalization_image_uri":"","personalization_template_id":0,"powerreviews_qa":"","powerreviews_rating":0,"powerreviews_reviews":"","pre_order":false,"pre_order_available_date":null,"pre_order_deadline":null,"pre_order_sale_date":null,"pricing_group_id":196,"product_class":null,"production_time":0,"replaces":0,"shipment_depth":"0.00","shipment_height":"0.00","shipment_width":"0.00","show_personalization_step":"1","sku_generation":"","style_locator":"000-000","supports_recurring_orders":false,"tax_code":null,"type":13,"void":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:55 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/product?q%5B%5D=id=%201%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"base_price":91.99,"custom_core":"no","custom_core_child":"0","custom_core_fee":"0","custom_make":"78","default_base_cogs":0,"default_fulfillment":"","default_needs_own_box":false,"default_shipping_depth":0,"default_shipping_height":0,"default_shipping_method_id":0,"default_shipping_weight":0,"default_shipping_width":0,"default_vendor_id":0,"description":"","digital_expiration_days":0,"digital_global_restrictions":"","digital_maximum_downloads":0,"globalshopex_country_of_origin":"HU","globalshopex_restricted":0,"grid_id":0,"id":1,"image_location":"images\/products\/thumb\/blank.JPG","last_inventory_movement":"2025-05-07
+        08:54:19","last_modified_stamp":"2026-01-09T23:25:01-05:00","last_onthefly_id":1,"last_sku_modified":"2023-10-03
+        14:00:11","manufacturer_id":32,"media_enabled":"0","minimum_advertised_price":0,"minimum_advertised_price_display":"map_type_1","name":"Volvo
+        Manual Antenna - Genuine Volvo 1384773","needs_own_box":false,"non_inventory":false,"override_sku_shipping_drivers":"0","part_num":"VOL-1384773","personalization_image_uri":"","personalization_template_id":0,"powerreviews_qa":"","powerreviews_rating":0,"powerreviews_reviews":"","pre_order":false,"pre_order_available_date":null,"pre_order_deadline":null,"pre_order_sale_date":null,"pricing_group_id":196,"product_class":null,"production_time":0,"replaces":0,"shipment_depth":"0.00","shipment_height":"0.00","shipment_width":"0.00","show_personalization_step":"1","sku_generation":"","style_locator":"000-000","supports_recurring_orders":false,"tax_code":null,"type":13,"void":false}]'
+  recorded_at: Thu, 25 Jun 2026 12:34:55 GMT
+recorded_with: VCR 6.4.0

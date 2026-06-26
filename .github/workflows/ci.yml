@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    env:
+      CI: "true" # spec_helper uses this to force VCR replay-only (no network)
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true # bundle install + cache gems
+
+      # credentials.yml is gitignored and read by before(:all). The endpoint
+      # MUST match the host recorded in the committed cassettes so VCR's
+      # method+URI matching replays them. user_id/key are dummy: the auth token
+      # is sent in a header VCR does not match on (and is scrubbed at record).
+      - name: Write placeholder credentials
+        run: |
+          cat > credentials.yml <<'YAML'
+          endpoint: https://api-fcpuat.coresense.com/v1
+          user_id: ci-placeholder
+          key: ci-placeholder
+          YAML
+
+      - name: Run all specs (VCR replay)
+        run: bundle exec rspec

@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/location
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":72,"id":1,"inventory_location_type_id":1,"is_distribution_staging":false,"label":"","length":18,"parent_id":0,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":36},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":2,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        01","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":3,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        02","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":4,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        03","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":5,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        04","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":72,"id":6,"inventory_location_type_id":1,"is_distribution_staging":false,"label":"","length":18,"parent_id":0,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":36},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":7,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        01","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":8,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        02","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":9,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        03","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":10,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        04","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:00 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/location
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:33:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":72,"id":1,"inventory_location_type_id":1,"is_distribution_staging":false,"label":"","length":18,"parent_id":0,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":36},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":2,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        01","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":3,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        02","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":4,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        03","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":5,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        04","length":0,"parent_id":1,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":72,"id":6,"inventory_location_type_id":1,"is_distribution_staging":false,"label":"","length":18,"parent_id":0,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":36},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":7,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        01","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":8,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        02","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":9,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        03","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0},{"active":false,"available_for_fulfillment":true,"breadcrumb_label":null,"description":"","height":0,"id":10,"inventory_location_type_id":2,"is_distribution_staging":false,"label":"Shelf
+        04","length":0,"parent_id":6,"physical_bin":null,"stamp":"2008-04-05T12:32:08-04:00","top_ancestor_id":null,"warehouse_id":1,"width":0}]'
+  recorded_at: Thu, 25 Jun 2026 12:33:01 GMT
+recorded_with: VCR 6.4.0

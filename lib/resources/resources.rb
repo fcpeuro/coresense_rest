@@ -201,7 +201,6 @@ module CoresenseRest
 
   class OrderShippingDetail < Resource
     extend Searchable
-    extend Findable
     attr_accessor :delayed_delivery_date, :estimated_delivery_date, :estimated_shipping_date, :id, :order_num,
                   :pickup_warehouse_id, :saved_shipping_tax_rate, :shipping_contact_id, :shipping_cost,
                   :shipping_method_id

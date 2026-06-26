@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/channel/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:26:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '345'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"access_level":0,"active":"1","brand_id":1,"channel_type":"web","data_table":"web_data","default_payment_processor_id":1,"icon_location":"images\/www_icon.gif","id":1,"label":"FCP
+        Groton","module_location":"channels\/web_site\/web_site_manager.php3","module_type":"internal","record_table":"","shippo_account_id":"0","tax_exempt_allowed":false}'
+  recorded_at: Thu, 25 Jun 2026 12:26:19 GMT
+recorded_with: VCR 6.4.0

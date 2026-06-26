@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-fcpuat.coresense.com/v1/order
+    body:
+      encoding: UTF-8
+      string: '{"customer_id":513674,"channel_id":8,"billing_contact_id":1508077,"order_status":1,"comments":"Payment
+        identifier: R907928159-JJ5F5T4R  Delivery between 01/31 - 02/03","items":[{"product_id":184846,"quantity":2,"shipping_method_id":1,"shipping_contact_id":1508077,"unit_price":"148.0","sales_tax_rate":"0.06808"},{"product_id":423873,"quantity":1,"shipping_method_id":1,"shipping_contact_id":1508077,"unit_price":"279.95","sales_tax_rate":"0.06808"},{"product_id":210444,"quantity":1,"shipping_method_id":1,"shipping_contact_id":1508077,"unit_price":"157.21","sales_tax_rate":"0.06808"}],"shipping_price":"7.99","due_date":"2020-04-29
+        12:49:11","shipping_tax_rate":"0.07009"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:26 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Content-Length:
+      - '16'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"id":"9386406"}'
+  recorded_at: Thu, 25 Jun 2026 12:34:26 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order/9386406
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:34:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"affiliate_id":0,"amazon_customer_id":0,"amazon_order_id":"","amt_paid":0,"billing_contact_id":3391726,"cancelled":false,"checked_out":false,"client_id":513674,"closed":false,"club_cc_reauthorization_sent":false,"cogs":0,"comments":"Payment
+        identifier: R907928159-JJ5F5T4R  Delivery between 01\/31 - 02\/03","compliant":false,"custom_exception_reason_code":"0","custom_fraudulent":false,"custom_insight_export":"no","custom_prepicked":"no","custom_prepicked_location":"","custom_shipping_insurance":null,"due_date":"2020-04-29T12:49:11-04:00","google_financial_status":"REVIEWING","google_fulfillment_status":"NEW","google_order_num":null,"grand_total":791.62,"id":"9386406","ip_address":"","key_code":"","layaway_expiration_date":null,"layaway_policy_id":0,"layaway_status":null,"locked":false,"mail_code":"","order_exported":false,"order_status":1,"originating_brand_id":1,"originating_channel_id":8,"originating_club_delivery_id":0,"originating_club_membership_id":0,"paid_stamp":"","payment_invoice_number":"6a3d205072350500","payment_type":0,"personalization":false,"refund_total":0,"salesman":"","shipping_cost":7.99,"shipping_tax_total":0.56,"stamp":"2026-06-25T08:34:24-04:00","total":733.16,"viewed":""}'
+  recorded_at: Thu, 25 Jun 2026 12:34:27 GMT
+recorded_with: VCR 6.4.0

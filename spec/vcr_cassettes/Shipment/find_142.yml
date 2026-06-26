@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/shipment/142
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:35:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '751'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"arrival_date":"","assoc_entity":"order","assoc_entity_id":1001,"carrier_account_id":0,"cod_tracking_num":"","cost":0,"custom_cost_mps":"0.00","custom_shipium_id":"","custom_shipium_id_mps":"","custom_shipment_cube":"","custom_shipment_pick_area":"","custom_tracking_num_mps":"","destination":"shipping
+        address","destination_id":0,"exported":true,"id":142,"method_id":1,"needs_recalculation":false,"pack_confirmation_stamp":"0000-00-00
+        00:00:00","pack_confirmation_user_id":null,"picked_up_date":"2026-06-25T08:35:04-04:00","ship_date":"2008-03-18T00:00:00-04:00","smartpost_tracking_num":"","source":"warehouse","source_id":1,"stamp":"","status":"shipped","tracking_num":"1Z745T9T0363387156","transit_time":0,"validated":false,"workflow_state_id":0}'
+  recorded_at: Thu, 25 Jun 2026 12:35:04 GMT
+recorded_with: VCR 6.4.0

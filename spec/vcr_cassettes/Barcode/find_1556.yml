@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/barcode/1556
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:25:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"barcode":"4048511085013","id":1556,"product_id":214662,"stamp":"2023-07-12T12:40:51-04:00"}'
+  recorded_at: Thu, 25 Jun 2026 12:25:28 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/order/9372858
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:46:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"affiliate_id":0,"amazon_customer_id":0,"amazon_order_id":"R520561941","amt_paid":19.01,"billing_contact_id":4823102,"cancelled":false,"checked_out":false,"client_id":1329803,"closed":false,"club_cc_reauthorization_sent":false,"cogs":0,"comments":"Payment
+        identifier: R520561941-JS5D22XY\r\n ","compliant":false,"custom_exception_reason_code":"0","custom_fraudulent":false,"custom_insight_export":"no","custom_prepicked":"no","custom_prepicked_location":"","custom_shipping_insurance":null,"due_date":"2026-05-05T22:14:15-04:00","google_financial_status":"REVIEWING","google_fulfillment_status":"NEW","google_order_num":null,"grand_total":19.01,"id":"9372858","ip_address":"","key_code":"","layaway_expiration_date":"2026-05-11
+        17:00:00","layaway_policy_id":0,"layaway_status":null,"locked":false,"mail_code":"","order_exported":false,"order_status":161,"originating_brand_id":1,"originating_channel_id":8,"originating_club_delivery_id":0,"originating_club_membership_id":0,"paid_stamp":"2026-05-05T22:14:17-04:00","payment_invoice_number":"69faa3f81b291056","payment_type":0,"personalization":false,"refund_total":0,"salesman":"","shipping_cost":6.99,"shipping_tax_total":0,"stamp":"2026-05-05T22:14:16-04:00","total":11.09,"viewed":""}'
+  recorded_at: Thu, 25 Jun 2026 12:46:21 GMT
+- request:
+    method: put
+    uri: https://api-fcpuat.coresense.com/v1/orderVoid/9372858
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:46:27 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":"The order was voided successfully"}'
+  recorded_at: Thu, 25 Jun 2026 12:46:27 GMT
+recorded_with: VCR 6.4.0

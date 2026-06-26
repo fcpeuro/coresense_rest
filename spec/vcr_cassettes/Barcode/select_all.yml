@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/barcode
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:24:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '936'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"barcode":"4048511085013","id":1556,"product_id":214662,"stamp":"2023-07-12T12:40:51-04:00"},{"barcode":"8435050607077","id":1557,"product_id":64448,"stamp":"2023-07-12T12:40:51-04:00"},{"barcode":"5703296048255","id":1558,"product_id":138370,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"4028977120459","id":1559,"product_id":143574,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"5710412255350","id":1560,"product_id":143585,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924525564","id":1561,"product_id":143587,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924525601","id":1562,"product_id":143588,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924525618","id":1563,"product_id":143590,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"8435050635698","id":1566,"product_id":210942,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924516593","id":1567,"product_id":138448,"stamp":"2023-07-12T12:40:52-04:00"}]'
+  recorded_at: Thu, 25 Jun 2026 12:24:57 GMT
+- request:
+    method: get
+    uri: https://api-fcpuat.coresense.com/v1/barcode
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 25 Jun 2026 12:24:58 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '936'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '[{"barcode":"4048511085013","id":1556,"product_id":214662,"stamp":"2023-07-12T12:40:51-04:00"},{"barcode":"8435050607077","id":1557,"product_id":64448,"stamp":"2023-07-12T12:40:51-04:00"},{"barcode":"5703296048255","id":1558,"product_id":138370,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"4028977120459","id":1559,"product_id":143574,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"5710412255350","id":1560,"product_id":143585,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924525564","id":1561,"product_id":143587,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924525601","id":1562,"product_id":143588,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924525618","id":1563,"product_id":143590,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"8435050635698","id":1566,"product_id":210942,"stamp":"2023-07-12T12:40:52-04:00"},{"barcode":"707924516593","id":1567,"product_id":138448,"stamp":"2023-07-12T12:40:52-04:00"}]'
+  recorded_at: Thu, 25 Jun 2026 12:24:58 GMT
+recorded_with: VCR 6.4.0

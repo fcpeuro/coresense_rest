@@ -23,10 +23,21 @@ RSpec.configure do |config|
 end
 
 VCR.configure do |config|
+  # In CI, replay committed cassettes only: never record, never touch the
+  # network. Locally, record new interactions on demand.
+  ci = !ENV['CI'].nil?
+
   config.cassette_library_dir = 'spec/vcr_cassettes'
-  config.default_cassette_options = { record: :new_episodes }
+  config.default_cassette_options = { record: ci ? :none : :new_episodes }
 
   config.hook_into :webmock
-  config.allow_http_connections_when_no_cassette = true
+  config.allow_http_connections_when_no_cassette = !ci
   config.configure_rspec_metadata!
+
+  # Never persist the auth token to cassettes. The client sends it in the
+  # X-Auth-Token request header (CoresenseRest::Client.get_token). VCR matches
+  # on method + URI by default, so scrubbing the header does not affect playback.
+  config.before_record do |interaction|
+    interaction.request.headers.delete('X-Auth-Token')
+  end
 end
